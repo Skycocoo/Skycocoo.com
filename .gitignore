@@ -4,3 +4,7 @@
 cmake-build-debug/CMakeFiles/
 
 \.DS_Store
+
+cmake-build-debug/
+
+CMakeLists\.txt

@@ -1,0 +1,13 @@
+header {
+    text-align: center;
+    width: 100%;
+    font-family:  'Helvetica', 'Arial', sans-serif;
+    position: relative;
+    padding-bottom: 5px;
+    padding-top: 5px;
+
+    /*color: midnightblue;*/
+    margin-top: 10px;
+    /*letter-spacing: 8px;*/
+
+}
