@@ -1,3 +1,18 @@
+colorlist{
+    color: #f3efe3;
+    color: #d9e29f;
+    color: #e44750;
+    color: #f8c0c1;
+    color: #d00300;
+
+}
+
+
+a{
+    text-decoration: none;
+}
+
+
 header {
     text-align: center;
     width: 100%;
@@ -9,5 +24,78 @@ header {
     /*color: midnightblue;*/
     margin-top: 10px;
     /*letter-spacing: 8px;*/
+}
+
+nav{
+    position: fixed;
+    z-index: 100;
+
+    top: 0;
+    left: 0;
+
+    margin: 0;
+    width: 100%;
+    height: 50px;
+
+    font-size: 15px;
+    background-color: rgb(255,255,255);
+}
+
+#navi{
+    margin-top: 0px;
+    margin-right: auto;
+    margin-bottom: 0px;
+    margin-left: auto;
+
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+
+    padding:10px;
 
 }
+
+#navi-logo{
+    float: left;
+    max-height: 50px;
+    max-width: 50px;
+}
+
+#navi-menu{
+    float: right;
+    background-color: rgb(255,255,255);
+}
+
+#navi-name{
+    display: block;
+    float: left;
+    font-size: 25px;
+    padding-left: 20px;
+    color: #f8c0c1;
+
+    letter-spacing: 2px;
+}
+
+ul {
+    list-style: none;
+    margin: auto;
+    padding: auto;
+}
+
+li{
+    float: left;
+    display: list-item;
+    text-align: center;
+}
+
+
+#navi-menu a{
+    display: block;
+    padding-left: 30px;
+    padding-right: 30px;
+    letter-spacing: 1px;
+    color: #d9e29f;
+    line-height: 50px;
+
+}
+
