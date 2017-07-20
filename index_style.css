@@ -53,7 +53,7 @@ nav{
     margin: 0;
     width: 100%;
     min-width: 300px;
-    height: 40px;
+    height: 60px;
 
     font-size: 10px;
     background-color: rgb(255,255,255);
@@ -71,14 +71,16 @@ nav{
 
     padding: 10px;
 
+    overflow: hidden;
+
+
 }
 
 #navi-logo{
     float: left;
-    max-height: 40px;
-    max-width: 40px;
+    max-height: 30px;
+    max-width: 30px;
     padding: 5px;
-    /*line-height: 50px;*/
 
 }
 
@@ -86,14 +88,16 @@ nav{
 #navi-name{
     float: left;
     font-size: 18px;
-    padding-left: 20px;
+    padding-left: 15px;
+    height: 40px;
     /*color: #f8c0c1;*/
-
-    letter-spacing: 8px;
+    margin-top: auto;
+    letter-spacing: 5px;
+    /*vertical-align: text-bottom;*/
 }
 
 #navi-name a{
-    line-height: 50px;
+    line-height: 40px;
     color: #f8c0c1;
 }
 
@@ -103,6 +107,8 @@ nav{
     background-color: rgb(255,255,255);
     padding-right: 30px;
     padding-left: 0;
+    height: 40px;
+
 }
 
 
@@ -123,8 +129,8 @@ ul {
     position: relative;
     padding-left: 30px;
     padding-right: 30px;
-    letter-spacing: 1px;
-    line-height: 50px;
+    letter-spacing: 2px;
+    line-height: 40px;
 
 }
 
@@ -134,7 +140,7 @@ ul {
 
 }
 
-@media (max-width: 537px){
+@media (max-width: 550px){
     #navi{
         position: fixed;
     }
@@ -145,7 +151,7 @@ ul {
 
     }
     #navi-menu li{
-        padding-left: 10px;
-        padding-right: 10px;
+        /*padding-left: 10px;*/
+        /*padding-right: 10px;*/
     }
 }
