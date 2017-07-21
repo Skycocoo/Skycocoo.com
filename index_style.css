@@ -41,11 +41,13 @@ body{
     min-width: 400px;
 }
 
-
+div{
+    display: block;
+}
 
 nav{
     position: fixed;
-    z-index: 100;
+    z-index: 1024;
 
     top: 0;
     left: 0;
@@ -76,17 +78,24 @@ nav{
 
 }
 
+
 #navi-logo{
-    float: left;
+    /*float: left;*/
+    display: inline;
+    position: fixed;
+    left: 40px;
     max-height: 30px;
     max-width: 30px;
     padding: 5px;
 
 }
 
-
 #navi-name{
-    float: left;
+    /*float: left;*/
+    display: inline;
+    position: fixed;
+    left: 80px;
+    /*top: -15px;*/
     font-size: 18px;
     padding-left: 15px;
     height: 40px;
@@ -102,13 +111,15 @@ nav{
 }
 
 
+
 #navi-menu{
-    float: right;
-    background-color: rgb(255,255,255);
-    padding-right: 30px;
-    padding-left: 0;
+    /*float: right;*/
+    display: inline;
+    position: fixed;
+    right: 0;
     height: 40px;
 
+    background-color: rgb(255,255,255);
 }
 
 
@@ -118,40 +129,42 @@ ul {
     margin: auto;
 }
 
-#navi-menu li{
+#navi-menu li1, #navi-menu li2, #navi-menu li3{
 
-    float: left;
-    display: block;
-
+    /*float: left;*/
+    display: inline;
+    /*display: block;*/
     /*display: list-item;*/
 
     text-align: center;
     position: relative;
-    padding-left: 30px;
-    padding-right: 30px;
+
+    /*margin-left: 10px;*/
+    /*margin-right: 10px;*/
+    padding-left: 20px;
+    padding-right: 20px;
     letter-spacing: 2px;
     line-height: 40px;
 
 }
 
+#navi-menu li1{
+    right: 10px;
+}
+
+#navi-menu li2{
+    right: 20px;
+}
+
+#navi-menu li3{
+    right: 30px;
+}
 
 #navi-menu a{
     color: #f8c0c1;
 
 }
 
-@media (max-width: 550px){
-    #navi{
-        position: fixed;
-    }
-    #navi-menu{
-        float: left;
-        margin-top: 10px;
-        margin-left: auto;
-
-    }
-    #navi-menu li{
-        /*padding-left: 10px;*/
-        /*padding-right: 10px;*/
-    }
+@media (max-width: 650px){
+    /*#navi-menu li1*/
 }
