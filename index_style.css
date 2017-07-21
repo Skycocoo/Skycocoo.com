@@ -38,7 +38,7 @@ a{
 
 
 body{
-    min-width: 400px;
+    min-width: 300px;
 }
 
 div{
@@ -166,5 +166,16 @@ ul {
 }
 
 @media (max-width: 650px){
-    /*#navi-menu li1*/
+    #navi-menu{
+        display: block;
+        left: 40px;
+        top: 70px;
+    }
+    #navi-menu li1, #navi-menu li2, #navi-menu li3{
+        display: block;
+        text-align: left;
+        position: relative;
+        left: 10px;
+
+    }
 }
