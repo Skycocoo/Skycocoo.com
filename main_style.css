@@ -208,19 +208,24 @@ content{
     z-index: 99;
 }
 
-#content-bg{
+#content-icon{
     position: fixed;
-    top: 20%;
+    top: 15%;
     /*left: 45%;*/
     width: 100%;
     display: inline;
     text-align: center;
 }
+
 #content-img{
     max-height: 10%;
     max-width: 10%;
     /*opacity: 1;*/
-    z-index: -1;
+    /*z-index: -1;*/
+
+    /*-vendor-animation-duration: 3s;*/
+    /*-vendor-animation-delay: 2s;*/
+    /*-vendor-animation-iteration-count: 1;*/
 }
 
 
