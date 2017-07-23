@@ -169,7 +169,7 @@ ul {
 content{
     width: 100%;
     position: fixed;
-    top: 40%;
+    top: 10%;
     /*left: 30%;*/
     /*z-index:100;*/
 }
@@ -209,18 +209,18 @@ content{
 }
 
 #content-icon{
-    position: fixed;
-    top: 15%;
+    /*position: fixed;*/
+    /*top: 10%;*/
     /*left: 45%;*/
-    width: 100%;
+    /*width: 100%;*/
     display: inline;
     text-align: center;
 }
 
 #content-img{
-    max-height: 10%;
-    max-width: 10%;
-    /*opacity: 1;*/
+    max-height: 15%;
+    max-width: 15%;
+    opacity: 0.9;
     /*z-index: -1;*/
 
     /*-vendor-animation-duration: 3s;*/
