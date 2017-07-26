@@ -1,0 +1,20 @@
+content{
+    width: 100%;
+    position: fixed;
+    top: 10%;
+    /*left: 30%;*/
+    /*z-index:100;*/
+}
+
+#content-header{
+    display: block;
+
+    /*text-align: left;*/
+    position: fixed;
+    left: 10%;
+
+    font-size: 56px;
+
+    color: #f8c0c1;
+    letter-spacing: 8px;
+}
