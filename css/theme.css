@@ -2,6 +2,15 @@
     font-family: Arial, sans-serif;
 }
 
+colorlist{
+    color: #f3efe3;
+    color: #d9e29f;
+    color: #e44750;
+    color: #f8c0c1;
+    color: #d00300;
+
+}
+
 a{
     text-decoration: none;
 }
@@ -153,6 +162,30 @@ ul {
 #navi-menu a{
     color: #f8c0c1;
 
+}
+
+footer{
+    position: fixed;
+    bottom: 10%;
+    width: 100%;
+    /*display: inline;*/
+    align-items: center;
+}
+
+#footer-media a {
+    display: block;
+    margin: 5px;
+    height: 30px;
+    width: 30px;
+    line-height: 34px;
+    border-radius: 15px;
+    text-align: center;
+    background-color: #d9e29f;
+}
+
+#footer-media a i{
+    color: white;
+    font-size: 20px;
 }
 
 @media (max-width: 650px){
