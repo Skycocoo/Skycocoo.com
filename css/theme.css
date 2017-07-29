@@ -36,9 +36,9 @@ a{
 
 
 
-body{
-    min-width: 300px;
-}
+/*body{*/
+    /*min-width: 300px;*/
+/*}*/
 
 div{
     display: block;
@@ -219,7 +219,7 @@ footer{
     #navi-menu{
         display: block;
         left: 40px;
-        top: 70px;
+        top: 50px;
     }
     #navi-menu li1, #navi-menu li2, #navi-menu li3{
         display: block;
@@ -227,6 +227,13 @@ footer{
         position: relative;
         left: 10px;
 
+    }
+    #footer-media{
+        display: none;
+    }
+    #footer-email{
+        left: 10px;
+        right:0;
     }
 }
 

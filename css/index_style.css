@@ -1,7 +1,7 @@
 content{
     width: 100%;
     position: fixed;
-    top: 10%;
+    top: 20%;
     /*left: 30%;*/
     /*z-index:100;*/
 }
@@ -60,33 +60,24 @@ content{
     /*-vendor-animation-iteration-count: 1;*/
 }
 
-/*!* Start by setting display:none to make this hidden.*/
-   /*Then we position it in relation to the viewport window*/
-   /*with position:fixed. Width, height, top and left speak*/
-   /*for themselves. Background we set to 80% white with*/
-   /*our animation centered, and no-repeating *!*/
-/*.modal {*/
-    /*display:    none;*/
-    /*position:   fixed;*/
-    /*z-index:    1000;*/
-    /*top:        0;*/
-    /*left:       0;*/
-    /*height:     100%;*/
-    /*width:      100%;*/
-    /*background: rgba( 255, 255, 255, .8 )*/
-    /*url('http://i.stack.imgur.com/FhHRx.gif')*/
-    /*50% 50%*/
-    /*no-repeat;*/
-/*}*/
-
-/*!* When the body has the loading class, we turn*/
-   /*the scrollbar off with overflow:hidden *!*/
-/*body.loading {*/
-    /*overflow: hidden;*/
-/*}*/
-
-/*!* Anytime the body has the loading class, our*/
-   /*modal element will be visible *!*/
-/*body.loading .modal {*/
-    /*display: block;*/
-/*}*/
+@media (max-width: 650px){
+    content{
+        top: 30%;
+    }
+    /*#content-img{*/
+        /*display: none;*/
+    /*}*/
+    #content-main{
+        font-size: 14px;
+        letter-spacing: 2px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    #content-name{
+        font-size: 40px;
+    }
+    #content-img{
+        max-width: 30%;
+        max-height: 30%;
+    }
+}
