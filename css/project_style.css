@@ -10,11 +10,52 @@ content{
     display: block;
 
     /*text-align: left;*/
-    position: fixed;
-    left: 10%;
-
+    /*position: fixed;*/
+    /*left: 10%;*/
+    margin-left: 150px;
     font-size: 56px;
 
     color: #f8c0c1;
     letter-spacing: 8px;
+}
+
+#content-proj{
+    width: 100%;
+    align-items: center;
+    /*display: block;*/
+
+    letter-spacing: 1px;
+    font-size: 18px;
+}
+
+/*try to use position relative or absolute?*/
+
+#content-proj date{
+    display: inline-block;
+    color: #f8c0c1;
+    margin-left: 200px;
+    margin-top: 20px;
+}
+
+#content-proj title{
+    display: inline-block;
+    font-size: 25px;
+    color: #f8c0c1;
+    margin-left: 42px;
+    margin-top: 20px;
+}
+
+#content-proj usage{
+    display: block;
+    color: #d9e29f;
+    margin-left: 415px;
+    margin-top: 10px;
+}
+
+#content-proj detail{
+    display: block;
+    width: 400px;
+    color: #f8c0c1;
+    margin-left: 415px;
+    margin-top: 10px;
 }
