@@ -59,3 +59,25 @@ content{
     margin-left: 415px;
     margin-top: 10px;
 }
+
+@media (max-width: 780px) {
+    content{
+        top: 30%;
+    }
+    #content-proj{
+        font-size: 12px;
+    }
+    #content-header, #content-proj date, #content-proj title, #content-proj usage, #content-proj detail{
+        margin-left: 50px;
+    }
+    #content-header{
+        font-size: 30px;
+    }
+    #content-proj detail{
+        width: 80%;
+    }
+    #content-proj title{
+        display: block;
+    }
+
+}
