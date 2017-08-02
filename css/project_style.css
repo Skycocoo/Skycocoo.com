@@ -1,11 +1,11 @@
-html{
-    overflow-y: auto;
-}
+
 
 content{
     width: 100%;
+    height: 90%;
     position: fixed;
     top: 10%;
+    overflow: scroll;
     /*left: 30%;*/
     /*z-index:100;*/
 }
@@ -23,46 +23,73 @@ content{
     letter-spacing: 8px;
 }
 
-proj{
-    width: 100%;
-    align-items: center;
-    /*display: block;*/
+#content-project{
+    /*width: 90%;*/
+    /*align-items: center;*/
+    position: relative;
+    top: 30px;
+}
 
+proj{
     letter-spacing: 1px;
-    font-size: 18px;
+    font-size: 16px;
 }
 
 /*try to use position relative or absolute?*/
 
 proj date{
-    display: inline-block;
+    display: block;
     color: #f8c0c1;
-    margin-left: 200px;
-    margin-top: 20px;
+    /*margin-left: 200px;*/
+    /*margin-top: 20px;*/
+    /*width: 170px;*/
+    height: 25px;
+    line-height: 25px;
+    position: relative;
+    left: 270px;
+}
+
+proj img{
+    max-width: 120px;
+    max-height: 120px;
+    position: relative;
+    left: 280px;
+    top: 20px;
 }
 
 proj title{
-    display: inline-block;
+    display: block;
     font-size: 25px;
     color: #f8c0c1;
-    margin-left: 42px;
-    margin-top: 20px;
+    position: relative;
+    top: -155px;
+    left: 450px;
+    /*margin-left: 42px;*/
+    /*margin-top: 20px;*/
 }
 
 proj usage{
     display: block;
     color: #d9e29f;
-    margin-left: 415px;
-    margin-top: 10px;
+    /*margin-left: 415px;*/
+    /*margin-top: 10px;*/
+    position: relative;
+    top: -140px;
+    left: 450px;
 }
 
 proj detail{
     display: block;
-    width: 400px;
+    width: 450px;
     color: #f8c0c1;
-    margin-left: 415px;
-    margin-top: 10px;
+    /*margin-left: 415px;*/
+    /*margin-top: 10px;*/
+    position: relative;
+    top: -120px;
+    left: 450px;
 }
+
+
 
 @media (max-width: 780px) {
     content{
