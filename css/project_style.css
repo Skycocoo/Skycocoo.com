@@ -1,3 +1,7 @@
+html{
+    overflow-y: auto;
+}
+
 content{
     width: 100%;
     position: fixed;
@@ -19,7 +23,7 @@ content{
     letter-spacing: 8px;
 }
 
-#content-proj{
+proj{
     width: 100%;
     align-items: center;
     /*display: block;*/
@@ -30,14 +34,14 @@ content{
 
 /*try to use position relative or absolute?*/
 
-#content-proj date{
+proj date{
     display: inline-block;
     color: #f8c0c1;
     margin-left: 200px;
     margin-top: 20px;
 }
 
-#content-proj title{
+proj title{
     display: inline-block;
     font-size: 25px;
     color: #f8c0c1;
@@ -45,14 +49,14 @@ content{
     margin-top: 20px;
 }
 
-#content-proj usage{
+proj usage{
     display: block;
     color: #d9e29f;
     margin-left: 415px;
     margin-top: 10px;
 }
 
-#content-proj detail{
+proj detail{
     display: block;
     width: 400px;
     color: #f8c0c1;
@@ -62,21 +66,21 @@ content{
 
 @media (max-width: 780px) {
     content{
-        top: 30%;
+        top: 32%;
     }
-    #content-proj{
+    proj{
         font-size: 12px;
     }
-    #content-header, #content-proj date, #content-proj title, #content-proj usage, #content-proj detail{
+    #content-header, proj date, proj title, proj usage, proj detail{
         margin-left: 50px;
     }
     #content-header{
         font-size: 30px;
     }
-    #content-proj detail{
+    proj detail{
         width: 80%;
     }
-    #content-proj title{
+    proj title{
         display: block;
     }
 
