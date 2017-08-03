@@ -8,6 +8,7 @@ colorlist{
     color: #e44750;
     color: #f8c0c1;
     color: #d00300;
+    color: #7c9aab;
 
 }
 
@@ -167,10 +168,11 @@ ul {
 footer{
     position: fixed;
     bottom: 0;
+    left: 0;
     display: block;
     width: 100%;
-    height: 50px;
-    background-color: white;
+    height: 40px;
+    background-color: #d9e29f;
 }
 
 #footer-media{
@@ -191,6 +193,7 @@ footer{
     border-radius: 15px;
     /*text-align: center;*/
     background-color: #d9e29f;
+    text-shadow: 0 0 10px grey;
     /*background-color: #f8c0c1;*/
 
 }
@@ -202,7 +205,8 @@ footer{
 
 #footer-email{
     display: inline;
-    color: #d9e29f;
+    /*color: #d9e29f;*/
+    color: white;
     /*color: #f8c0c1;*/
     height: 40px;
     margin: 5px;
@@ -213,6 +217,7 @@ footer{
     letter-spacing: 2px;
     position: fixed;
     right: 45px;
+    text-shadow: 0 0 10px lightgrey;
 
 }
 

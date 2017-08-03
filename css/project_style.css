@@ -5,7 +5,8 @@ content{
     height: 90%;
     position: fixed;
     top: 10%;
-    overflow: scroll;
+    overflow-y: scroll;
+    overflow-x: hidden;
     /*left: 30%;*/
     /*z-index:100;*/
 }
@@ -53,24 +54,25 @@ proj img{
     max-width: 120px;
     max-height: 120px;
     position: relative;
-    left: 280px;
+    left: 275px;
     top: 20px;
 }
 
 proj title{
     display: block;
     font-size: 25px;
-    color: #f8c0c1;
+    color: #7c9aab;
     position: relative;
-    top: -155px;
+    top: -152px;
     left: 450px;
+    width: 45%;
     /*margin-left: 42px;*/
     /*margin-top: 20px;*/
 }
 
 proj usage{
     display: block;
-    color: #d9e29f;
+    color: #f8c0c1;
     /*margin-left: 415px;*/
     /*margin-top: 10px;*/
     position: relative;
@@ -80,8 +82,8 @@ proj usage{
 
 proj detail{
     display: block;
-    width: 450px;
-    color: #f8c0c1;
+    width: 45%;
+    color: #7c9aab;
     /*margin-left: 415px;*/
     /*margin-top: 10px;*/
     position: relative;
@@ -90,25 +92,46 @@ proj detail{
 }
 
 
+@media (max-width: 1000px){
+    proj date{
+        left: 100px;
+    }
+    proj img{
+        left: 105px;
+    }
 
-@media (max-width: 780px) {
+    proj title, proj usage, proj detail{
+        left: 280px;
+    }
+    #content-header{
+        margin-left: 80px;
+    }
+}
+
+
+@media (max-width: 650px) {
     content{
-        top: 32%;
+        top: 30%;
     }
     proj{
         font-size: 12px;
     }
-    #content-header, proj date, proj title, proj usage, proj detail{
-        margin-left: 50px;
+    proj img, proj date{
+        left: 40px;
     }
+    proj title, proj usage, proj detail{
+        left: 80px;
+    }
+
     #content-header{
         font-size: 30px;
+        letter-spacing: 3px;
+        margin-left: 45px;
     }
-    proj detail{
-        width: 80%;
-    }
+
     proj title{
         display: block;
     }
 
 }
+
