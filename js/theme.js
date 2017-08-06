@@ -10,15 +10,19 @@ $(document).ready(function () {
 var Nav = {
     $menu: $("#navi-menu"),
     $square: $("#navi-logo"),
+
     initNav: function(){
-        this.$square.click(function(){
-            if(this.menuon()) {
-                this.hidem();
+        var self = this;
+
+        self.$square.click(function(){
+            if(self.menuon()) {
+                self.hidem();
             } else {
-                this.showm();
+                self.showm();
             }
         });
     },
+
     menuon: function(){
         return this.$menu.hasClass("active");
     },

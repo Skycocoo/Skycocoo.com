@@ -17,21 +17,21 @@ a{
 }
 
 /*bootstrap*/
-@media (min-width: 768px) {
-    body {
-        width: 750px;
-    }
-}
-@media (min-width: 992px) {
-    body {
-        width: 970px;
-    }
-}
-@media (min-width: 1200px) {
-    body {
-        width: 1170px;
-    }
-}
+/*@media (min-width: 768px) {*/
+    /*body {*/
+        /*width: 750px;*/
+    /*}*/
+/*}*/
+/*@media (min-width: 992px) {*/
+    /*body {*/
+        /*width: 970px;*/
+    /*}*/
+/*}*/
+/*@media (min-width: 1200px) {*/
+    /*body {*/
+        /*width: 1170px;*/
+    /*}*/
+/*}*/
 /*end*/
 
 
@@ -55,7 +55,7 @@ nav{
     margin: 0;
     width: 100%;
     min-width: 300px;
-    height: 60px;
+    /*height: 60px;*/
 
     font-size: 10px;
     background-color: rgb(255,255,255);
@@ -117,7 +117,7 @@ nav{
     display: inline;
     position: fixed;
     right: 0;
-    height: 40px;
+    /*height: 40px;*/
 
     background-color: rgb(255,255,255);
 }
@@ -145,6 +145,7 @@ ul {
     padding-right: 20px;
     letter-spacing: 2px;
     line-height: 40px;
+    height: 40px;
 
 }
 
@@ -222,19 +223,24 @@ footer{
 }
 
 @media (max-width: 650px){
-    #navi-menu .active{
+    #navi-menu.active{
         display: block;
         left: 40px;
-        top: 50px;
+        top: 60px;
     }
     #navi-menu {
-        display: none;
+        top: -500px;
+        background-color: rgba(255,255,255,0.7);
+
     }
     #navi-menu li1, #navi-menu li2, #navi-menu li3{
         display: block;
         text-align: left;
         position: relative;
         left: 10px;
+
+        box-shadow: 1px 1px 1px rgba(0,0,0,0.1);
+        width: 150px;
 
     }
     #footer-media{

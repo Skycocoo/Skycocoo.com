@@ -64,7 +64,8 @@ content{
 
 @media (max-width: 650px){
     content{
-        top: 30%;
+        position: relative;
+        top: 120px;
     }
     /*#content-img{*/
         /*display: none;*/
