@@ -222,10 +222,13 @@ footer{
 }
 
 @media (max-width: 650px){
-    #navi-menu{
+    #navi-menu .active{
         display: block;
         left: 40px;
         top: 50px;
+    }
+    #navi-menu {
+        display: none;
     }
     #navi-menu li1, #navi-menu li2, #navi-menu li3{
         display: block;
