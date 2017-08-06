@@ -111,7 +111,8 @@ proj detail{
 
 @media (max-width: 650px) {
     content{
-        top: 30%;
+        position: relative;
+        top: 80px;
     }
     proj{
         font-size: 12px;
@@ -129,8 +130,30 @@ proj detail{
         margin-left: 45px;
     }
 
+    proj img{
+        max-width: 60px;
+        max-height: 60px;
+        top: 5px;
+    }
+
     proj title{
         display: block;
+        font-size: 15px;
+        letter-spacing: 1px;
+        top: -55px;
+        left: 120px;
+        height: 50px;
+    }
+
+    proj usage{
+        top: -35px;
+        left: 40px;
+    }
+
+    proj detail{
+        top: -30px;
+        left: 40px;
+        width: 80%;
     }
 
 }
