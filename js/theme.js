@@ -8,12 +8,15 @@ $(document).ready(function () {
 });
 
 var Nav = {
+    $navi: $("#navi"),
     $menu: $("#navi-menu"),
     $square: $("#navi-logo"),
 
     initNav: function(){
         var self = this;
-
+        if(self.$navi.width() < 650){
+            self.$square.addClass("animated rubberBand");
+        }
         self.$square.click(function(){
             if(self.menuon()) {
                 self.hidem();
