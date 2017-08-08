@@ -36,7 +36,17 @@ proj{
     font-size: 16px;
 }
 
-/*try to use position relative or absolute?*/
+proj cate{
+    display: block;
+    color: #7c9aab;
+    font-size: 30px;
+    height: 25px;
+    line-height: 25px;
+    position: relative;
+    left: 270px;
+    margin-bottom: 30px;
+}
+
 
 proj date{
     display: block;
@@ -60,10 +70,10 @@ proj img{
 
 proj title{
     display: block;
-    font-size: 25px;
+    font-size: 20px;
     color: #7c9aab;
     position: relative;
-    top: -152px;
+    top: -148px;
     left: 450px;
     width: 45%;
     /*margin-left: 42px;*/
@@ -76,7 +86,7 @@ proj usage{
     /*margin-left: 415px;*/
     /*margin-top: 10px;*/
     position: relative;
-    top: -140px;
+    top: -135px;
     left: 450px;
 }
 
@@ -93,6 +103,9 @@ proj detail{
 
 
 @media (max-width: 1000px){
+    proj cate{
+        left: 100px;
+    }
     proj date{
         left: 100px;
     }
@@ -117,7 +130,7 @@ proj detail{
     proj{
         font-size: 12px;
     }
-    proj img, proj date{
+    proj cate, proj img, proj date{
         left: 40px;
     }
     proj title, proj usage, proj detail{
@@ -125,9 +138,9 @@ proj detail{
     }
 
     #content-header{
-        font-size: 30px;
+        font-size: 35px;
         letter-spacing: 3px;
-        margin-left: 45px;
+        margin-left: 40px;
     }
 
     proj img{
@@ -154,6 +167,11 @@ proj detail{
         top: -30px;
         left: 40px;
         width: 80%;
+    }
+
+    proj cate{
+        font-size: 23px;
+        margin-bottom: 10px;
     }
 
 }
