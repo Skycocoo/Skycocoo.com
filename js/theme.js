@@ -1,7 +1,3 @@
-/**
- * Created by luoyuxi on 2017/8/3.
- * Navigator inspired by https://liby.me/index.html
- */
 
 $(document).ready(function () {
     Nav.initNav();

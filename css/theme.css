@@ -178,6 +178,7 @@ footer{
 
 #footer-media{
     height: 40px;
+    line-height: 40px;
     display: inline;
     text-align: center;
     align-items: center;
