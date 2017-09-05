@@ -188,10 +188,10 @@ footer{
 
 #footer-media a {
     display: inline-block;
-    margin: 5px;
+    margin: 0 5px;
     height: 25px;
     width: 25px;
-    line-height: 25px;
+    line-height: 40px;
     border-radius: 15px;
     /*text-align: center;*/
     background-color: #7c9aab;
@@ -211,9 +211,9 @@ footer{
     color: white;
     /*color: #f8c0c1;*/
     height: 40px;
-    margin: 5px;
+    margin: 0 5px;
     text-align: center;
-    line-height: 25px;
+    line-height: 40px;
 
     font-size: 12px;
     letter-spacing: 2px;

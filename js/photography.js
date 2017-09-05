@@ -21,7 +21,11 @@ function demons () {
             // elem.background-image = url(dir);
             
         
-            $("#" + listp[i].name).append(elem);
+            var photo = $(elem).appendTo("#" + listp[i].name);
+            // photo.css("width", $(window).width())
+            // $("#" + listp[i].name).append(elem);
+            
+            
             // $("#" + listp[i].name).append(elem).css("display","none");
             // var photo = $(elem).appendTo("#" + listp[i].name);
             
@@ -29,6 +33,10 @@ function demons () {
             // photo.attr("id", listp[i].name + (j+1));
         }
     }
+    
+    $("img").on("load", function () {
+        
+    })
 }
 
 function scroll(){
