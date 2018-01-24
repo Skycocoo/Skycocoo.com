@@ -1,3 +1,7 @@
+html, body {
+  overflow: hidden;
+}
+
 * {
     font-family: Arial, sans-serif;
 }
@@ -20,9 +24,8 @@ a{
 nav{
     display: block;
     /*position: fixed;*/
-    position: absolute;
-
-    z-index: 1024;
+    position: relative;
+    /* z-index: 100; */
 
     top: 0;
     left: 0;
@@ -32,9 +35,11 @@ nav{
     min-width: 300px;
     /*height: 60px;*/
     background-color: rgb(255,255,255);
-    overflow: auto;
+    overflow: block;
     font-size: 10px;
 }
+
+
 
 #navi{
     display: block;
