@@ -1,7 +1,7 @@
 content{
     width: 100%;
-    /*position: relative;*/
-    position: absolute;
+    position: relative;
+    /*position: absolute;*/
     padding-top: 100px;
 
     display: block;
