@@ -12,31 +12,29 @@ var listp = [{
     cur: 0
 }];
 
-function demons () {
+function demos () {
     for (var i = 0; i < listp.length; i++) {
         for (var j = 0; j < listp[i].amount; j++) {
             var dir = "figures/" + listp[i].name + "/" + (j + 1) + ".jpg";
             var elem = "<div class=\"image\" style=\"background-image: url('" + dir + "');\" />";
             // var elem = "<img src=\"" + dir + "\" />";
             // elem.background-image = url(dir);
-            
-        
+
             var photo = $(elem).appendTo("#" + listp[i].name);
             // photo.css("width", $(window).width())
             // $("#" + listp[i].name).append(elem);
-            
-            
+
             // $("#" + listp[i].name).append(elem).css("display","none");
             // var photo = $(elem).appendTo("#" + listp[i].name);
-            
+
             // photo.css("display","none");
             // photo.attr("id", listp[i].name + (j+1));
         }
     }
-    
-    $("img").on("load", function () {
-        
-    })
+
+    // $("img").on("load", function () {
+    //
+    // })
 }
 
 function scroll(){
@@ -69,6 +67,6 @@ function traverse(step){
 
 
 $(document).ready(function(){
-    demons();
-    
+    demos();
+
 });

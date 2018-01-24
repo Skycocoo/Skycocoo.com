@@ -210,7 +210,7 @@ footer{
 
 }
 
-@media (max-width: 650px){
+/* @media (max-width: 650px){
     #navi-menu.active{
         display: block;
         left: 40px;
@@ -238,19 +238,4 @@ footer{
         left: 10px;
         right:0;
     }
-}
-
-/*#content-namebg{*/
-/*position: fixed;*/
-/*top: 50.4%;*/
-/*left: 40.4%;*/
-/*!*float: left;*!*/
-/*display: inline;*/
-
-/*font-size: 56px;*/
-/*height: 0;*/
-/*color: #e44750;*/
-/*letter-spacing: 8px;*/
-
-/*z-index: 99;*/
-/*}*/
+} */

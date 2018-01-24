@@ -65,14 +65,11 @@ content{
     /*-vendor-animation-iteration-count: 1;*/
 }
 
-@media (max-width: 650px){
+/* @media (max-width: 650px){
     content{
         position: absolute;
         top: 120px;
     }
-    /*#content-img{*/
-        /*display: none;*/
-    /*}*/
     #content-main{
         font-size: 14px;
         letter-spacing: 2px;
@@ -86,4 +83,4 @@ content{
         max-width: 30%;
         max-height: 30%;
     }
-}
+} */

@@ -106,7 +106,7 @@ proj detail{
 }
 
 
-@media (max-width: 1000px){
+/* @media (max-width: 1000px){
     proj cate{
         left: 100px;
     }
@@ -123,10 +123,10 @@ proj detail{
     #content-header{
         margin-left: 80px;
     }
-}
+} */
 
 
-@media (max-width: 650px) {
+/* @media (max-width: 650px) {
     content{
         position: relative;
         top: 80px;
@@ -178,5 +178,4 @@ proj detail{
         margin-bottom: 10px;
     }
 
-}
-
+} */
