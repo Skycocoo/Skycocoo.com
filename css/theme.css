@@ -1,5 +1,6 @@
-html, body {
-  overflow: hidden;
+body {
+    overflow-x: hidden;
+    margin-top: 0px;
 }
 
 * {
