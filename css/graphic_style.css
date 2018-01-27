@@ -1,16 +1,16 @@
 content {
     position: relative;
     display: block;
-    margin-top: 100px;
+    margin-top: 70px;
 }
 
 #content-header {
     display: block;
     margin-left: 150px;
 
-    font-size: 56px;
+    font-size: 50px;
     color: #f8c0c1;
-    letter-spacing: 8px;
+    letter-spacing: 5px;
 }
 
 #temp {
@@ -18,7 +18,7 @@ content {
     text-align: center;
     line-height: 500px;
 
-    font-size: 50px;
+    font-size: 30px;
     color: #f8c0c1;
     letter-spacing: 2px;
 }

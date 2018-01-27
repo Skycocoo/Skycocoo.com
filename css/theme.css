@@ -157,8 +157,8 @@ footer {
     text-align: center;
     /* align-items: center; */
 
-    /* background-color: #7c9aab; */
     background-color: white;
+    /* background-color: #7c9aab; */
     /* text-shadow: 0 0 10px grey; */
 }
 
@@ -166,6 +166,11 @@ footer {
     color: #7c9aab;
 }
 
+#footer-index {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
 
 #footer-email {
     display: inline-block;
@@ -185,17 +190,6 @@ footer {
 }
 
 
-#footer-index {
-    background-color: white;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-}
-
-#footer-index-media {
-    background-color: #d9e29f !important;
-    text-shadow: none !important;
-}
 
 /* @media (max-width: 650px){
     #navi-menu.active{

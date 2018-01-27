@@ -1,7 +1,7 @@
 content {
     position: relative;
     display: block;
-    margin-top: 100px;
+    margin-top: 70px;
 
     overflow-y: scroll;
     overflow-x: hidden;
@@ -11,16 +11,16 @@ content {
     display: block;
     margin-left: 150px;
 
-    font-size: 56px;
+    font-size: 50px;
     color: #f8c0c1;
-    letter-spacing: 8px;
+    letter-spacing: 5px;
 }
 
 
 photolist {
     position: relative;
     margin-top: 30px;
-    left: 270px;
+    left: 250px;
     display: block;
 
     width: 70%;

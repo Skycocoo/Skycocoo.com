@@ -1,21 +1,22 @@
 content {
     position: relative;
     display: block;
-    margin-top: 100px;
+    margin-top: 70px;
 }
 
 #content-header {
     display: block;
     margin-left: 150px;
 
-    font-size: 56px;
+    font-size: 50px;
     color: #f8c0c1;
-    letter-spacing: 8px;
+    letter-spacing: 5px;
 }
 
 #content-project {
     position: relative;
     top: 30px;
+    left: 80px;
 }
 
 proj {
@@ -25,7 +26,7 @@ proj {
 
 proj cate {
     position: relative;
-    left: 270px;
+    left: 170px;
     margin-bottom: 30px;
     display: block;
 
@@ -39,7 +40,7 @@ proj cate {
 
 proj date {
     position: relative;
-    left: 270px;
+    left: 170px;
     display: block;
 
     color: #f8c0c1;
@@ -49,18 +50,23 @@ proj date {
 
 proj img {
     position: relative;
-    left: 275px;
     top: 20px;
+    left: 180px;
 
     max-width: 120px;
     max-height: 120px;
 }
 
+proj descrip {
+    position: relative;
+    display: block;
+    top: -150px;
+    left: 350px;
+}
+
 proj title {
     position: relative;
-    top: -148px;
-    left: 450px;
-
+    top: 5px;
     display: block;
     width: 40%;
 
@@ -70,8 +76,7 @@ proj title {
 
 proj usage {
     position: relative;
-    top: -135px;
-    left: 450px;
+    top: 20px;
     display: block;
 
     color: #f8c0c1;
@@ -79,16 +84,11 @@ proj usage {
 
 proj detail {
     position: relative;
-    top: -120px;
-    left: 450px;
-
+    top: 30px;
     display: block;
     width: 45%;
 
     color: #7c9aab;
-
-    /*margin-left: 415px;*/
-    /*margin-top: 10px;*/
 }
 
 
