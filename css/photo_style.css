@@ -1,0 +1,82 @@
+content {
+    position: relative;
+    display: block;
+    margin-top: 100px;
+
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+#content-header {
+    display: block;
+    margin-left: 150px;
+
+    font-size: 56px;
+    color: #f8c0c1;
+    letter-spacing: 8px;
+}
+
+
+photolist {
+    position: relative;
+    margin-top: 30px;
+    left: 270px;
+    display: block;
+
+    width: 70%;
+}
+
+slide {
+    position: relative;
+    display: block;
+    margin-top: 10px;
+}
+
+photo {
+    position: relative;
+    display: block;
+}
+
+.image {
+    display: inline-block;
+    margin: 10px;
+
+    height: 160px;
+    width: 160px;
+    background-size: cover;
+    background-position: center;
+
+    border: 10px solid white;
+    box-shadow: 0 0 20px #dddddd;
+}
+
+
+descrip {
+    position: relative;
+    display: block;
+    text-align: left;
+
+    letter-spacing: 1px;
+    font-size: 15px;
+
+    height: 40px;
+    line-height: 40px;
+    /* text-align: center; */
+    align-items: center;
+}
+
+descrip title {
+    display: inline-block;
+    margin-left: 10px;
+
+    font-size: 30px;
+    color: #7c9aab;
+}
+
+descrip tag{
+    display: inline-block;
+    margin-left: 10px;
+
+    font-size: 12px;
+    color: #f8c0c1;
+}

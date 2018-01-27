@@ -1,7 +1,4 @@
 
-$(document).ready(function () {
-    Nav.initNav();
-});
 
 var Nav = {
     $navi: $("#navi"),
@@ -32,3 +29,8 @@ var Nav = {
         this.$menu.addClass("active");
     }
 };
+
+
+$(document).ready(function () {
+    Nav.initNav();
+});
