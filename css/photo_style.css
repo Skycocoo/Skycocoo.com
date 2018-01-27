@@ -1,6 +1,6 @@
 content {
-    display: block;
     position: relative;
+    display: block;
     margin-top: 100px;
 
     overflow-y: scroll;

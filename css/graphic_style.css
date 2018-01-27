@@ -1,0 +1,24 @@
+content {
+    position: relative;
+    display: block;
+    margin-top: 100px;
+}
+
+#content-header {
+    display: block;
+    margin-left: 150px;
+
+    font-size: 56px;
+    color: #f8c0c1;
+    letter-spacing: 8px;
+}
+
+#temp {
+    display: block;
+    text-align: center;
+    line-height: 500px;
+
+    font-size: 50px;
+    color: #f8c0c1;
+    letter-spacing: 2px;
+}
