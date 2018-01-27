@@ -7,25 +7,23 @@ body {
     font-family: Arial, sans-serif;
 }
 
-colorlist{
+colorlist {
     color: #f3efe3;
     color: #d9e29f;
     color: #e44750;
     color: #f8c0c1;
     color: #d00300;
     color: #7c9aab;
-
 }
 
-a{
+a {
     text-decoration: none;
 }
 
 
-nav{
+nav {
     display: block;
     position: fixed;
-    /* position: relative; */
     z-index: 1;
 
     top: 0;
@@ -34,186 +32,161 @@ nav{
     margin: 0;
     width: 100%;
     min-width: 300px;
-    /*height: 60px;*/
     background-color: rgb(255,255,255);
     overflow: block;
     font-size: 10px;
 }
 
-
-
-#navi{
+#navi {
     display: block;
-    margin-top: 0;
-    margin-right: 20px;
-    margin-bottom: 0;
-    margin-left: 20px;
+    margin: 0, 20px, 0, 20px;
 
     width: 100%;
     height: 40px;
     line-height: 40px;
-
     padding: 10px;
 
     background-color: rgb(255,255,255);
-    /*overflow: auto;*/
-
-
-
 }
 
 
-#navi-logo{
-    /*float: left;*/
+#navi-logo {
     display: inline;
     position: fixed;
+
     left: 40px;
     max-height: 30px;
     max-width: 30px;
     padding: 5px;
-
 }
 
-#navi-name{
-    /*float: left;*/
+#navi-name {
     display: inline;
     position: fixed;
+
     left: 80px;
-    /*top: -15px;*/
     font-size: 18px;
     padding-left: 15px;
     height: 40px;
-    /*color: #f8c0c1;*/
+
     margin-top: auto;
     letter-spacing: 5px;
-    /*vertical-align: text-bottom;*/
 }
 
-#navi-name a{
+#navi-name a {
     line-height: 40px;
     color: #f8c0c1;
 }
 
-
-
 #navi-menu{
-    /*float: right;*/
     display: inline;
     position: fixed;
     right: 0;
-    /*height: 40px;*/
-
     background-color: rgb(255,255,255);
 }
-
-
 
 ul {
     list-style: none;
     margin: auto;
 }
 
-#navi-menu li1, #navi-menu li2, #navi-menu li3{
-
+#navi-menu li1, #navi-menu li2, #navi-menu li3 {
     /*float: left;*/
     display: inline;
-    /*display: block;*/
-    /*display: list-item;*/
 
     text-align: center;
     position: relative;
 
-    /*margin-left: 10px;*/
-    /*margin-right: 10px;*/
     padding-left: 20px;
     padding-right: 20px;
+
     letter-spacing: 2px;
     line-height: 40px;
     height: 40px;
-
 }
 
-#navi-menu li1{
+#navi-menu li1 {
     right: 10px;
 }
 
-#navi-menu li2{
+#navi-menu li2 {
     right: 20px;
 }
 
-#navi-menu li3{
+#navi-menu li3 {
     right: 30px;
 }
 
-#navi-menu a{
+#navi-menu a {
     color: #f8c0c1;
 
 }
 
-footer{
-    /*position: fixed;*/
+footer {
     position: relative;
-    top: 50px;
 
-    bottom: 0;
-    left: 0;
     display: block;
     width: 100%;
     height: 40px;
     background-color: #7c9aab;
-
-    z-index: 1000;
 }
 
-#footer-media{
+#footer-media {
+    position: relative;
+    display: inline-block;
+
     height: 40px;
     line-height: 40px;
-    display: inline;
-    text-align: center;
-    align-items: center;
-    position: fixed;
     margin-left: 30px;
 }
 
 #footer-media a {
     display: inline-block;
-    line-height: 25px;
 
-    margin: 0 5px;
-
-
+    margin: 0 2px;
     height: 25px;
     width: 25px;
-    border-radius: 25px;
-    text-align: center;
-    /*align-items: center;*/
-    background-color: #7c9aab;
-    text-shadow: 0 0 10px grey;
-    /*background-color: #f8c0c1;*/
+    line-height: 25px;
 
-}
-
-#footer-media a i{
     color: white;
     font-size: 16px;
+
+    border-radius: 25px;
+    text-align: center;
+    /* align-items: center; */
+
+    background-color: #7c9aab;
+    text-shadow: 0 0 10px grey;
 }
 
-#footer-email{
-    display: inline;
-    /*color: #d9e29f;*/
+
+#footer-email {
+    display: inline-block;
+    position: absolute;
+    right: 30px;
+
     color: white;
-    /*color: #f8c0c1;*/
-    height: 40px;
     margin: 0 5px;
-    text-align: center;
+
+    font-size: 11px;
+    letter-spacing: 2px;
+    height: 40px;
     line-height: 40px;
 
-    font-size: 12px;
-    letter-spacing: 2px;
-    position: fixed;
-    right: 45px;
     text-shadow: 0 0 10px lightgrey;
+}
 
+
+#footer-index {
+    background-color: white;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+#footer-index-media {
+    background-color: #d9e29f !important;
+    text-shadow: none !important;
 }
 
 /* @media (max-width: 650px){
