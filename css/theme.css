@@ -1,6 +1,6 @@
 body {
     overflow-x: hidden;
-    margin-top: 0px;
+    margin: 0px;
 }
 
 * {
@@ -24,9 +24,9 @@ a{
 
 nav{
     display: block;
-    /*position: fixed;*/
-    position: relative;
-    /* z-index: 100; */
+    position: fixed;
+    /* position: relative; */
+    z-index: 1;
 
     top: 0;
     left: 0;
