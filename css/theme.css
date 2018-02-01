@@ -219,13 +219,14 @@ footer {
     #navi-menu.active {
         display: block;
         top: 60px;
-        right: 40px;
+        
+        /* right: 40px; */
     }
 
     #navi-menu {
         top: -500px;
-        background-color: rgba(255,255,255,1);
-
+        background-color: rgba(255,255,255,0.5);
+        width: 100%;
     }
 
     #navi-menu li1, #navi-menu li2, #navi-menu li3 {
@@ -233,12 +234,7 @@ footer {
         position: relative;
         left: 10px;
 
-        width: auto;
         text-align: center;
-
-
-        /* box-shadow: 1px 1px 1px rgba(0,0,0,0.1); */
-
     }
 
 }

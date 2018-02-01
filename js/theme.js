@@ -8,7 +8,7 @@ var Nav = {
     initNav: function(){
         var self = this;
         if(self.$navi.width() < 750){
-            self.$square.addClass("animated rubberBand");
+            // self.$square.addClass("animated rubberBand");
             self.$square.addClass("active");
         }
         self.$square.click(function(){
@@ -25,9 +25,11 @@ var Nav = {
     },
     hidem: function () {
         this.$menu.removeClass("active");
+        // this.$menu.removeClass("animated pulse");
     },
     showm: function () {
         this.$menu.addClass("active");
+        // this.$menu.addClass("animated pulse");
     }
 };
 

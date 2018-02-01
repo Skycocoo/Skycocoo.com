@@ -1,10 +1,10 @@
-content{
+content {
     position: relative;
     margin-top: 150px;
     display: block;
 }
 
-#content-name{
+#content-name {
     display: block;
     text-align: center;
 
@@ -13,7 +13,7 @@ content{
     letter-spacing: 8px;
 }
 
-#content-main{
+#content-main {
     display: block;
 
     text-align: center;
@@ -25,29 +25,33 @@ content{
     letter-spacing: 5px;
 }
 
-#content-icon{
-    display: inline;
+#content-icon {
+    display: block;
     text-align: center;
+
+    width: 100%;
 }
 
-#content-img{
+#content-img {
     max-height: 15%;
     max-width: 15%;
     opacity: 0.9;
+
+    margin-bottom: 20px;
 }
 
-@media (max-width: 750px){
+@media (max-width: 750px) and (min-width: 300px){
 
-    #content-main{
+    #content-main {
         font-size: 14px;
         letter-spacing: 2px;
         padding-left: 10px;
         padding-right: 10px;
     }
-    #content-name{
+    #content-name {
         font-size: 40px;
     }
-    #content-img{
+    #content-img {
         max-width: 30%;
         max-height: 30%;
     }
