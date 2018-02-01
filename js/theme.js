@@ -2,7 +2,7 @@
 
 var Nav = {
     $navi: $("#navi"),
-    $menu: $("#navi-menu"),
+    $menu: $("#navi-menu-mobi-out"),
     $square: $("#navi-menu-mobi"),
 
     initNav: function(){

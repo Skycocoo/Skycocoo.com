@@ -39,7 +39,7 @@ nav {
 
 #navi {
     display: block;
-    margin: 0, 20px, 0, 20px;
+    margin: 0 20px 0 20px;
 
     width: 100%;
     height: 40px;
@@ -210,26 +210,53 @@ footer {
     margin: 5px;
 }
 
+#navi-menu-mobi-out {
+    display: none;
+}
 
 @media (max-width: 750px) and (min-width: 300px){
+    #navi-menu {
+        display: none;
+    }
+
     #navi-menu-mobi.active {
         display: block;
     }
 
-    #navi-menu.active {
-        display: block;
+
+    #navi-menu-mobi-out.active {
         top: 60px;
-        
+        transition: all 0.2s;
         /* right: 40px; */
     }
 
-    #navi-menu {
+    #navi-menu-mobi-out {
+        display: block;
+        position: relative;
         top: -500px;
-        background-color: rgba(255,255,255,0.5);
+
+        background-color: rgba(255, 255, 255, 1);
         width: 100%;
+        font-size: 12px;
+        letter-spacing: 1px;
+        line-height: 40px;
+        color: #f8c0c1;
     }
 
-    #navi-menu li1, #navi-menu li2, #navi-menu li3 {
+    #navi-menu-mobi-out.ul {
+        list-style: none;
+        margin: auto;
+    }
+
+    #navi-menu-mobi-out a {
+        color: #f8c0c1;
+    }
+
+    #navi-menu-mobi-out #active {
+        color: #7c9aab;
+    }
+
+    #navi-menu-mobi-out li1, #navi-menu-mobi-out li2, #navi-menu-mobi-out li3 {
         display: block;
         position: relative;
         left: 10px;
