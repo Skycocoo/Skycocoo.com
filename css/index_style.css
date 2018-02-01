@@ -36,11 +36,8 @@ content{
     opacity: 0.9;
 }
 
-/* @media (max-width: 650px){
-    content{
-        position: absolute;
-        top: 120px;
-    }
+@media (max-width: 750px){
+
     #content-main{
         font-size: 14px;
         letter-spacing: 2px;
@@ -54,4 +51,4 @@ content{
         max-width: 30%;
         max-height: 30%;
     }
-} */
+}

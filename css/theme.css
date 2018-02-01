@@ -119,7 +119,10 @@ ul {
 
 #navi-menu a {
     color: #f8c0c1;
+}
 
+#navi-menu #active {
+    color: #7c9aab;
 }
 
 footer {
@@ -191,7 +194,7 @@ footer {
 
 
 
-/* @media (max-width: 650px){
+@media (max-width: 750px){
     #navi-menu.active{
         display: block;
         left: 40px;
@@ -219,4 +222,4 @@ footer {
         left: 10px;
         right:0;
     }
-} */
+}

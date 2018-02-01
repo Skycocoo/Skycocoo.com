@@ -41,13 +41,13 @@ photo {
     display: inline-block;
     margin: 10px;
 
-    height: 160px;
-    width: 160px;
+    height: 150px;
+    width: 150px;
     background-size: cover;
     background-position: center;
 
-    border: 10px solid white;
-    box-shadow: 0 0 20px #dddddd;
+    border: 15px solid white;
+    box-shadow: 0 0 20px #eeeeee;
 }
 
 

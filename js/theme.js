@@ -7,7 +7,7 @@ var Nav = {
 
     initNav: function(){
         var self = this;
-        if(self.$navi.width() < 650){
+        if(self.$navi.width() < 750){
             self.$square.addClass("animated rubberBand");
         }
         self.$square.click(function(){
