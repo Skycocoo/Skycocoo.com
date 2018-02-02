@@ -91,6 +91,23 @@ proj detail {
     color: #7c9aab;
 }
 
+@media (max-width: 1000px) and (min-width: 750px){
+    content {
+        position: relative;
+        margin: 0;
+        top: 80px;
+        left: 0px;
+    }
+
+    #content-header {
+        margin-left: 100px;
+    }
+
+    #content-project {
+        left: 0px;
+    }
+
+}
 
 
 @media (max-width: 750px) and (min-width: 300px){
@@ -121,7 +138,7 @@ proj detail {
 
     proj cate, proj img, proj title, proj date, proj descrip, proj usage, proj detail {
         left: 0px;
-        width: 80%;
+        width: 240px;
     }
 
     proj item {
