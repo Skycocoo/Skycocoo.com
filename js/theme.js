@@ -13,6 +13,7 @@ var Nav = {
         }
         self.$square.click(function(){
             self.$menu.toggleClass("active");
+            self.$square.toggleClass("rot");
         });
     },
 };

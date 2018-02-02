@@ -221,12 +221,23 @@ footer {
 
     #navi-menu-mobi.active {
         display: block;
+
+        -moz-transition: all 0.2s linear;
+        -webkit-transition: all 0.2s linear;
+        transition: all 0.2s linear;
+
+    }
+
+    #navi-menu-mobi.rot {
+        -moz-transform:rotate(90deg);
+        -webkit-transform:rotate(90deg);
+        transform:rotate(90deg);
     }
 
 
     #navi-menu-mobi-out.active {
         top: 60px;
-        transition: all 0.2s;
+        transition: all 0.3s;
         /* right: 40px; */
     }
 
