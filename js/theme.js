@@ -12,25 +12,9 @@ var Nav = {
             self.$square.addClass("active");
         }
         self.$square.click(function(){
-            if(self.menuon()) {
-                self.hidem();
-            } else {
-                self.showm();
-            }
+            self.$menu.toggleClass("active");
         });
     },
-
-    menuon: function(){
-        return this.$menu.hasClass("active");
-    },
-    hidem: function () {
-        this.$menu.removeClass("active");
-        // this.$menu.removeClass("animated pulse");
-    },
-    showm: function () {
-        this.$menu.addClass("active");
-        // this.$menu.addClass("animated pulse");
-    }
 };
 
 
