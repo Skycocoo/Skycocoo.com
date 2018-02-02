@@ -42,6 +42,10 @@ content {
 
 @media (max-width: 750px) and (min-width: 300px){
 
+    content {
+        margin-top: 15px;
+    }
+
     #content-main {
         font-size: 14px;
         letter-spacing: 2px;

@@ -24,7 +24,6 @@ a {
 nav {
     display: block;
     position: fixed;
-    z-index: 1;
 
     top: 0;
     left: 0;
@@ -35,6 +34,8 @@ nav {
     background-color: rgb(255,255,255);
     overflow: block;
     font-size: 10px;
+
+    z-index: 2;
 }
 
 #navi {
@@ -257,6 +258,8 @@ footer {
         line-height: 50px;
 
         box-shadow: 0 0 20px #eeeeee;
+
+        z-index: 1;
     }
 
     #navi-menu-mobi-out.ul {
