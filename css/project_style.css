@@ -113,9 +113,9 @@ proj detail {
 @media (max-width: 750px) and (min-width: 300px){
     content {
         position: relative;
-        margin: 0;
+        margin: 160px 0 0 0;
         top: -80px;
-        left: 15px;
+        left: 35px;
     }
 
     proj {
