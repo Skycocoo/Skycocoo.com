@@ -1,18 +1,3 @@
-content {
-    position: relative;
-    display: block;
-    margin-top: 70px;
-}
-
-#content-header {
-    display: block;
-    margin-left: 150px;
-
-    font-size: 50px;
-    color: #f8c0c1;
-    letter-spacing: 5px;
-}
-
 #content-project {
     position: relative;
     top: 30px;
@@ -111,24 +96,11 @@ proj detail {
 
 
 @media (max-width: 450px) and (min-width: 300px){
-    content {
-        position: relative;
-        margin: 160px 0 0 0;
-        top: -80px;
-        left: 35px;
-    }
-
     proj {
         position: relative;
         display: block;
         font-size: 12px;
         margin-top: 20px;
-    }
-
-    #content-header {
-        font-size: 35px;
-        letter-spacing: 3px;
-        margin-left: 40px;
     }
 
     #content-project {

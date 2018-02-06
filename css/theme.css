@@ -1,3 +1,5 @@
+/* ************* General style ************* */
+
 body {
     overflow-x: hidden;
     margin: 0px;
@@ -20,6 +22,8 @@ a {
     text-decoration: none;
 }
 
+
+/* ************* Navigator Bar ************* */
 
 nav {
     display: block;
@@ -49,7 +53,6 @@ nav {
 
     background-color: rgb(255,255,255);
 }
-
 
 #navi-logo {
     display: inline;
@@ -126,6 +129,30 @@ ul {
     color: #7c9aab;
 }
 
+
+/* ************* Content ************* */
+
+content {
+    position: relative;
+    display: block;
+    margin-top: 70px;
+
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+#content-header {
+    display: block;
+    margin-left: 150px;
+
+    font-size: 50px;
+    color: #f8c0c1;
+    letter-spacing: 5px;
+}
+
+
+/* ************* Footer ************* */
+
 footer {
     position: relative;
     display: block;
@@ -193,6 +220,9 @@ footer {
     /* text-shadow: 0 0 10px lightgrey; */
 }
 
+
+/* ************* Navigation Bar; Mobile version ************* */
+
 #navi-menu-mobi {
     display: none;
     position: absolute;
@@ -215,7 +245,39 @@ footer {
     display: none;
 }
 
-@media (max-width: 750px) and (min-width: 300px){
+
+/* ************* Responsive Design; iPad ************* */
+
+@media (max-width: 1000px) and (min-width: 450px){
+    content {
+        margin: 0;
+        padding-bottom: 80px;
+        top: 80px;
+        left: 0px;
+    }
+
+    #content-header {
+        margin-left: 100px;
+    }
+}
+
+
+/* ************* Responsive Design; phone ************* */
+
+@media (max-width: 450px) and (min-width: 300px){
+    content {
+        position: relative;
+        margin: 160px 0 0 0;
+        top: -80px;
+        left: 35px;
+    }
+
+    #content-header {
+        font-size: 35px;
+        letter-spacing: 3px;
+        margin-left: 40px;
+    }
+
     #navi-menu {
         display: none;
     }
@@ -234,7 +296,6 @@ footer {
         -webkit-transform:rotate(90deg);
         transform:rotate(90deg);
     }
-
 
     #navi-menu-mobi-out.active {
         top: 60px;

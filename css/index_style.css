@@ -43,7 +43,8 @@ content {
 @media (max-width: 750px) and (min-width: 300px){
 
     content {
-        margin-top: 160px;
+        left: 0;
+        margin: 220px 0 0 0;
     }
 
     #content-main {
