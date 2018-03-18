@@ -5,11 +5,7 @@
     display: block;
     left: 170px;
     top: 100px;
-
-    /* width: 200px; */
-    /* height: 200px; */
 }
-
 
 #content-icon {
     width: 200px;
@@ -17,11 +13,7 @@
     text-align: center;
 }
 
-
 #content-img {
-    /* max-height: 10%;
-    max-width: 10%; */
-
     opacity: 0.9;
 
     height: 120px;
@@ -30,7 +22,7 @@
     margin-bottom: 10px;
 
     border: 10px solid white;
-    box-shadow: 0 0 3px #eeeeee;
+    box-shadow: 0 0 2px #eeeeee;
 }
 
 #content-name {
@@ -84,7 +76,6 @@ cate {
     font-size: 25px;
 }
 
-
 .item {
     width: 80%;
     position: relative;
@@ -105,21 +96,63 @@ cate {
     display: inline-block;
     top: 5px;
     right: -100px;
-    /* margin-left: 15px; */
 
     width: 100%;
     height: 5px;
     background-color: #eeeeee;
 }
 
+.progress-long {
+    position: absolute;
+    display: inline-block;
+    top: 5px;
+    right: -100px;
+
+    width: 90%;
+    height: 5px;
+    background-color: #eeeeee;
+}
+
+
 .bar {
     position: absolute;
     display: inline-block;
-    /* top: 10px; */
-
 
     height: 5px;
     background-color: #f8c0c1;
+}
+
+
+@media (max-width: 1000px) and (min-width: 450px){
+
+    #content-intro {
+        position: relative;
+        left: 100px;
+
+        height: 370px;
+    }
+
+    #content-name {
+        display: block;
+        position: relative;
+        left: 220px;
+        top: -140px;
+    }
+
+    #content-desc {
+        left: 220px;
+        top: -140px;
+        width: 40%;
+    }
+
+    #content-main {
+        left: 70px;
+        top: -120px;
+    }
+
+    .progress-long {
+        width: 80%;
+    }
 }
 
 

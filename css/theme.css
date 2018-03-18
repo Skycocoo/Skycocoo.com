@@ -40,6 +40,8 @@ nav {
     font-size: 10px;
 
     z-index: 2;
+
+    box-shadow: 0 0 3px #eeeeee;
 }
 
 #navi {
@@ -135,7 +137,7 @@ ul {
 content {
     position: relative;
     display: block;
-    margin-top: 70px;
+    margin-top: 80px;
 
     overflow-y: scroll;
     overflow-x: hidden;
@@ -162,6 +164,8 @@ footer {
 
     /* background-color: #7c9aab; */
     background-color: white;
+
+    box-shadow: 0 0 3px #eeeeee;
 }
 
 #footer-media {
