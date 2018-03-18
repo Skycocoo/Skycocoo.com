@@ -123,7 +123,7 @@ cate {
 }
 
 #index-page {
-    position: absolute;
+    position: fixed;
     bottom: 0;
 }
 

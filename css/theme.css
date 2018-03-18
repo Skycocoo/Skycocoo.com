@@ -139,7 +139,7 @@ content {
     display: block;
     margin-top: 80px;
 
-    overflow-y: scroll;
+    overflow-y: hidden;
     overflow-x: hidden;
 }
 
