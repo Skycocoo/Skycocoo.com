@@ -5,16 +5,17 @@ content {
 }
 
 
-#content-icon {
+#content-intro {
     position: relative;
     display: block;
-
     left: 170px;
+}
 
+
+#content-icon {
     width: 200px;
     height: 200px;
     text-align: center;
-
 }
 
 
@@ -29,8 +30,8 @@ content {
 
     margin-bottom: 10px;
 
-    /* border: 15px solid white;
-    box-shadow: 0 0 20px #eeeeee; */
+    border: 10px solid white;
+    box-shadow: 0 0 3px #dddddd;
 }
 
 #content-name {
@@ -43,15 +44,18 @@ content {
 
 
 #content-desc {
-    display: block;
+    position: relative;
+    left: 20px;
+    top: 10px;
 
-    text-align: center;
+    text-align: left;
     line-height: 150%;
+    width: 200px;
+    height: 200px;
 
-    margin-top: 20px;
-    font-size: 20px;
+    font-size: 14px;
     color: #f8c0c1;
-    letter-spacing: 5px;
+    letter-spacing: 1px;
 }
 
 
