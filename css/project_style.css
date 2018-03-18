@@ -76,6 +76,12 @@ proj detail {
     color: #7c9aab;
 }
 
+proj a {
+    text-decoration: underline;
+    text-decoration-color: #e4ecf1;
+    /* text-decoration-style: dotted; */
+}
+
 @media (max-width: 1000px) and (min-width: 450px){
     content {
         position: relative;
