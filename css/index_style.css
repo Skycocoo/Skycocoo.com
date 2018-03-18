@@ -1,14 +1,16 @@
 content {
     position: relative;
-    margin-top: 150px;
+    margin-top: 100px;
     display: block;
 }
 
+/* Left bar: brief information */
 
 #content-intro {
     position: relative;
     display: block;
     left: 170px;
+    top: 100px;
 }
 
 
@@ -40,9 +42,6 @@ content {
     letter-spacing: 3px;
 }
 
-
-
-
 #content-desc {
     position: relative;
     left: 20px;
@@ -56,6 +55,73 @@ content {
     font-size: 14px;
     color: #f8c0c1;
     letter-spacing: 1px;
+}
+
+
+
+/* Right bar: detailed display of skills */
+
+#content-main {
+    position: relative;
+    display: block;
+    left: 450px;
+    top: -400px;
+
+    width: 45%;
+}
+
+block {
+    position: relative;
+    display: block;
+    left: 40px;
+}
+
+cate {
+    position: relative;
+    left: 50px;
+    margin: 20px 0 20px 0;
+    display: block;
+
+    color: #7c9aab;
+    font-size: 25px;
+}
+
+
+.item {
+    width: 80%;
+    position: relative;
+    display: block;
+    margin-bottom: -5px;
+
+    height: 50px;
+    left: 100px;
+}
+
+.name {
+    color: #7c9aab;
+    font-size: 15px;
+}
+
+.progress {
+    position: absolute;
+    display: inline-block;
+    top: 5px;
+    right: -100px;
+    /* margin-left: 15px; */
+
+    width: 100%;
+    height: 5px;
+    background-color: #eeeeee;
+}
+
+.bar {
+    position: absolute;
+    display: inline-block;
+    /* top: 10px; */
+
+
+    height: 5px;
+    background-color: #f8c0c1;
 }
 
 
