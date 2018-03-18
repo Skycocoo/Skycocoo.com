@@ -1,16 +1,13 @@
-content {
-    position: relative;
-    margin-top: 100px;
-    display: block;
-}
-
 /* Left bar: brief information */
 
 #content-intro {
-    position: relative;
+    position: absolute;
     display: block;
     left: 170px;
     top: 100px;
+
+    /* width: 200px; */
+    /* height: 200px; */
 }
 
 
@@ -33,7 +30,7 @@ content {
     margin-bottom: 10px;
 
     border: 10px solid white;
-    box-shadow: 0 0 3px #dddddd;
+    box-shadow: 0 0 3px #eeeeee;
 }
 
 #content-name {
@@ -45,7 +42,7 @@ content {
 #content-desc {
     position: relative;
     left: 20px;
-    top: 10px;
+    top: 12px;
 
     text-align: left;
     line-height: 150%;
@@ -64,10 +61,11 @@ content {
 #content-main {
     position: relative;
     display: block;
-    left: 450px;
-    top: -400px;
+    left: 400px;
+    margin-top: 80px;
 
     width: 45%;
+    height: 100%;
 }
 
 block {
@@ -82,7 +80,7 @@ cate {
     margin: 20px 0 20px 0;
     display: block;
 
-    color: #7c9aab;
+    color: #f8c0c1;
     font-size: 25px;
 }
 
