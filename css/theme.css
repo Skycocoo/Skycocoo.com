@@ -36,7 +36,7 @@ nav {
     width: 100%;
     min-width: 300px;
     background-color: rgb(255,255,255);
-    overflow: block;
+    overflow: hidden;
     font-size: 10px;
 
     z-index: 2;
