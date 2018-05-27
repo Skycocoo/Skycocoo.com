@@ -1,45 +1,77 @@
-#loader {
-    display: block;
-    position: relative;
-    width: 100%;
-    height: 500px;
+body {
 
-    background-color: #fffbc7;
-
-    left: 0;
-    top: 0;
 }
 
-#loading {
+.loader {
+    display: inline-block;
+    position: relative;
+    width: 300px;
+    height: 300px;
+
+    /* line-height: 300px; */
+
+    /* padding: 50px 0px 50px 0px; */
+    margin: 20px;
+
+    background-color: #133B40;
+}
+
+.loader-wrapper {
+    display: block;
+
+    /* not an inline element: setting line-height is not working */
+    /* line-height: 300px; */
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    /* transform by half of its width & height */
+    transform: translate(-50%, -50%);
+}
+
+.loaded {
+    /* to hide an element: */
+    /* https://stackoverflow.com/questions/272360/does-opacity0-have-exactly-the-same-effect-as-visibilityhidden/273076#273076 */
+
+    display: none !important;
+    /* visibility: hidden; */
+    /* opacity: 0; */
+}
+
+#load1 {
     display: block;
     position: relative;
+
+
 
     width: 100px;
     height: 100px;
 
-    top: 200px;
+    /* top: 200px; */
     margin: auto;
 
 
 
-    border: 15px solid transparent;
+    border: 5px solid transparent;
 
     /* only showing the top border of the box */
-    border-top-color: #ffffff;
+    border-top-color: #26757F;
+    border-left-color: #26757F;
 
     /* transform the box to a circle */
     border-radius: 100px;
 
     /* highlight the trace */
-    box-shadow: 0 0 20px #ffffff;
+    /* box-shadow: 0 0 20px #ffffff; */
 
     /* spinning the border by setting up keyframes */
-    -webkit-animation: spin 1.5s ease infinite;
-    animation: spin 1.5s ease infinite;
+    -webkit-animation: spin 1s linear infinite;
+    animation: spin 1s linear infinite;
 }
 
 
-#loading::before {
+#load1::before {
     content: "";
     position: absolute;
     top: 5px;
@@ -47,16 +79,16 @@
     right: 5px;
     bottom: 5px;
 
-    border: 10px solid transparent;
-    border-bottom-color: #7edcff;
+    border: 5px solid transparent;
+    border-top-color: #00B5CC;
     border-radius: 100px;
-    box-shadow: 0 0 20px #ffffff;
+    /* box-shadow: 0 0 20px #ffffff; */
 
     -webkit-animation: spin 1.5s infinite;
     animation: spin 1.5s infinite;
 }
 
-#loading::after {
+#load1::after {
     content: "";
     position: absolute;
     top: 15px;
@@ -64,13 +96,13 @@
     right: 15px;
     bottom: 15px;
 
-    border: 10px solid transparent;
-    border-top-color: #d7ff77;
+    border: 5px solid transparent;
+    border-top-color: #4CEBFF;
     border-radius: 100px;
-    box-shadow: 0 0 20px #ffffff;
+    /* box-shadow: 0 0 20px #ffffff; */
 
-    -webkit-animation: spin 1.5s infinite;
-    animation: spin 1.5s infinite;
+    -webkit-animation: spin 3s infinite;
+    animation: spin 3s infinite;
 }
 
 @-webkit-keyframes spin {
@@ -96,3 +128,73 @@
         transform: rotate(360deg);
     }
 }
+
+
+
+#load2 {
+    display: block;
+    position: relative;
+
+    width: 300px;
+    height: 300px;
+
+    /* spinning the border by setting up keyframes */
+    -webkit-animation: bg 3s infinite;
+    animation: bg 3s infinite;
+}
+
+
+#load2::after {
+    content: "";
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    right: 100px;
+    bottom: 100px;
+
+    border: 5px solid transparent;
+    border-top-color: #4CEBFF;
+    border-radius: 100px;
+    box-shadow: 0 0 20px #ffffff;
+
+    -webkit-animation: bg1 3s infinite;
+    animation: bg1 3s infinite;
+}
+
+
+@-webkit-keyframes bg {
+    0% {
+        background-color: #000000;
+    }
+
+    100% {
+        background-color: #ffffff;
+    }
+}
+
+@-webkit-keyframes bg1 {
+    0% {
+        border-top-color: #ffffff;
+
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+
+    100% {
+        border-top-color: #000000;
+
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+/*
+@keyframes bg {
+    0% {
+        background-color: #000000;
+    }
+
+    100% {
+        border-top-color: #ffffff;
+    }
+} */
