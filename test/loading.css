@@ -323,85 +323,14 @@ body {
 }
 
 
-
-/* #load3 {
+#load4 {
     display: block;
     position: relative;
+    /* top: -100px; */
+    /* left: -100px; */
 
-    width: 100px;
-    height: 100px;
-    border: 5px solid transparent;
-    border-color: #00B5CC;
-    border-radius: 100px;
-
-    -webkit-animation: arrow 3s linear infinite;
-    animation: arrow 3s linear infinite;
+    width: 20px;
+    height: 20px;
+    border-radius: 20px;
+    background-color: #00B5CC;
 }
-
-#load3::before {
-    content: "";
-    display: block;
-    position: relative;
-
-    margin: auto;
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 0px 10px 16.32px 10px;
-    border-color: transparent transparent #000000 transparent;
-
-    -webkit-animation: arrow-helper 3s linear infinite;
-    animation: arrow-helper 3s linear infinite;
-
-}
-
-
-@-webkit-keyframes arrow {
-    0% {
-        border-color: #133B40;
-
-        -webkit-transform: rotate(0deg);
-        transform: rotate(0deg);
-    }
-
-    100% {
-        border-color: #4CEBFF;
-        -webkit-transform: rotate(360deg);
-        transform: rotate(360deg);
-
-    }
-}
-
-@keyframes arrow {
-    0% {
-        border-color: #133B40;
-        -webkit-transform: rotate(0deg);
-        transform: rotate(0deg);
-    }
-
-    100% {
-        border-color: #4CEBFF;
-        -webkit-transform: rotate(360deg);
-        transform: rotate(360deg);
-    }
-}
-
-@-webkit-keyframes arrow-helper {
-    0% {
-        border-color: transparent transparent #133B40 transparent;
-    }
-
-    100% {
-        border-color: transparent transparent #4CEBFF transparent;
-    }
-}
-
-@keyframes arrow-helper {
-    0% {
-        border-color: transparent transparent #133B40 transparent;
-    }
-
-    100% {
-        border-color: transparent transparent #4CEBFF transparent;
-    }
-} */
