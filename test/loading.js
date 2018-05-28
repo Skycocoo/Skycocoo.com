@@ -8,43 +8,30 @@ function fade() {
 }
 
 var time = 0;
-var length = 100;
 
 function load4() {
     var id = setInterval(
         function(){
-            if (time >= 300) clearInterval(id);
-            var sine = length * Math.sin(time / 10);
-            var cosine = length * Math.cos(time / 10);
-            $("#load4").css({"top": cosine, "left": -sine});
-            // var test = (sine).toString() + "px " + (cosine).toString() + "px 0px 0px";
-            // console.log(test);
-            // $("#load4").css({"translate-origin": test});
-            time++;
+            // stop the loop when time exceed 3s
+            if (time >= 28.3) clearInterval(id);
+
+            time += 0.1;
+            var sine = Math.sin(time);
+            var cosine = Math.cos(time);
+
+            // function reference:
+            // https://math.stackexchange.com/a/7991
+            $("#load4").css({"top": 40 * sine * cosine,
+                             "left": 40 * cosine,
+                             "background-color": "rgb(" + (20 + 20 * sine) + ", " + (181 + 50 * sine) + ", " + (204 + 50 * cosine) + ")"
+                            });
+
         }, 10
     );
 };
 
 
 $(document).ready(function(){
-    fade();
+    // fade();
     load4();
 });
-
-
-// var startTime, endTime;
-//
-// function start() {
-//   startTime = new Date();
-// };
-//
-// function end() {
-//   endTime = new Date();
-//   var timeDiff = endTime - startTime; //in ms
-//   // strip the ms
-//   timeDiff /= 1000;
-//
-//   // get seconds
-//   var seconds = Math.round(timeDiff);
-//   console.log(seconds + " seconds");
-// }
