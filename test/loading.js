@@ -24,11 +24,11 @@ function load4() {
 
             // function reference:
             // https://math.stackexchange.com/a/7991
-            $("#load4").css({"top": 70 * sine * cosine,
-                             "left": 70 * cosine,
-                             "background-color": "rgb(" + (20 + 20 * randsin) + ", " + (181 + 50 * randsin) + ", " + (204 + 50 * randcos) + ")"
-                            });
-
+            $("#load4").css({
+                "top": 70 * sine * cosine,
+                "left": 70 * cosine,
+                "background-color": "rgb(" + (20 + 20 * randsin) + ", " + (181 + 50 * randsin) + ", " + (204 + 50 * randcos) + ")"
+            });
         }, 10
     );
 };
