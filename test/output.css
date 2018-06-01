@@ -371,4 +371,14 @@
   background-color: #000000;
 }
 
+#load6 {
+  display: block;
+  position: relative;
+  width: 0;
+  height: 0;
+  border-color: transparent transparent #f8c0c1 transparent;
+  border-width: 0px 100px 173.20508076px 100px;
+  border-style: solid;
+}
+
 /*# sourceMappingURL=output.css.map */

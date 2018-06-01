@@ -1,4 +1,6 @@
-// testing SCSS syntax
+// Created by Yuxi Luo; May 2018
+
+@import "_general.scss";
 
 $size: 300px;
 
@@ -28,41 +30,6 @@ $color0: #4CEBFF;
 
 .loaded {
     display: none !important;
-}
-
-// https://stackoverflow.com/a/20026077/8127729
-$browser: null;
-@mixin keyframes($name) {
-    @-webkit-keyframes #{$name} {
-        $browser: "-webkit-";
-        @content;
-    }
-    @-moz-keyframes #{$name} {
-        $browser: "-moz-";
-        @content;
-    }
-    @-o-keyframes #{$name} {
-        $browser: "-o-";
-        @content;
-    }
-    @keyframes #{$name} {
-        $browser: "";
-        @content;
-    }
-}
-
-@mixin animation($animate...) {
-    $length: length($animate);
-    $result: ();
-
-    @for $i from 1 through $length {
-        $result: append($result, nth($animate, $i), space);
-    }
-
-    -webkit-animation: $result;
-    -moz-animation: $result;
-    -o-animation: $result;
-    animation: $result;
 }
 
 @mixin psudo($distance) {
@@ -139,8 +106,8 @@ $browser: null;
     display: block;
     position: relative;
 
-    width: 300px;
-    height: 300px;
+    width: $size;
+    height: $size;
 
     @include animation("background", 3s, infinite);
 
@@ -273,7 +240,27 @@ $browser: null;
 }
 
 #load5-bg {
-    width: 300px;
-    height: 300px;
+    width: $size;
+    height: $size;
     background-color: #000000;
+}
+
+////////////////// load6 //////////////////
+
+$pink1: #e44750;
+$pink0: #f8c0c1;
+$blue: #7c9aab;
+
+$rootThree: 1.7320508076;
+$slide: 100px;
+
+#load6 {
+    display: block;
+    position: relative;
+    width: 0;
+    height: 0;
+
+    border-color: transparent transparent $pink0 transparent;
+    border-width: 0px $slide $slide*$rootThree $slide;
+    border-style: solid;
 }
