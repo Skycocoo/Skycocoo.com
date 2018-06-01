@@ -1,0 +1,155 @@
+// Created by Yuxi Luo; May 2018
+
+@import "../_general.scss";
+
+$size: 300px;
+$mel: #e44750;
+$mel-border: #dde4ab;
+$mel-dot: #f8c0c1;
+
+$dot: 10px;
+$side: 100px;
+$rootThree: 1.7320508076;
+
+$rotate: 45deg;
+
+.loader {
+    display: inline-block;
+    position: relative;
+    width: $size;
+    height: $size;
+    margin: 20px;
+}
+
+.loader-wrapper {
+    display: block;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    /* transform by half of its width & height -> center */
+    transform: translate(-50%, -50%);
+}
+
+@mixin dot($size) {
+    display: block;
+    width: 0;
+    height: 0;
+    z-index: 1;
+
+    position: absolute;
+
+    border-style: solid;
+    border-color: $mel-dot;
+    border-width: $size;
+
+    // radius: topleft - topright - bottomright - bottomleft
+    border-radius: 0% 100% 50% 50% /
+                   0% 50% 50% 100%;
+}
+
+.melon-dot {
+    // position: (side, side): (50%, 50%)
+    top: $side;
+    left: $side;
+    @include dot($dot);
+    transform: rotate(45deg);
+
+    @include animation("spin-dot", 3s, infinite, alternate, ease-in-out);
+
+    &::before {
+        content: "";
+        // the translation should be in object frame
+        // meaning that because the parent is rotated by 45 degree
+        // the coordinate of position is also rotated
+        left: -2*$dot;
+        top: 2*$dot;
+        @include dot($dot);
+    }
+
+    &::after {
+        content: "";
+        left: 2*$dot;
+        top: -2*$dot;
+        @include dot($dot);
+    }
+}
+
+.melon {
+    display: block;
+    position: relative;
+
+    width: 0;
+    height: 0;
+
+    border-style: solid;
+
+    border-color: transparent transparent $mel transparent;
+    border-width: 0px $side $side*$rootThree $side;
+
+    // setting the transform center to be the center of the triangle
+    transform-origin: 50% 66.66%;
+
+    @include animation("spin", 3s, infinite, alternate);
+}
+
+
+$border: $side/5;
+$border-width: 2 * ($side - $border);
+$offset: -(5/$rootThree*100);
+
+.melon-border {
+    display: block;
+
+    width: $border-width;
+    height: 0;
+
+    border-style: solid;
+    border-color: $mel-border;
+    border-width: 0px $border $border $border;
+    border-radius: 0px 0px $border $border;
+
+    // transform-origin: 50% 50%;
+    transform-origin: 50% unquote($offset+'%');
+
+    @include animation("spin", 3s, linear, infinite, alternate);
+
+}
+
+
+@include keyframes("spin") {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    33.33% {
+        transform: rotate(120deg);
+    }
+
+    66.66% {
+        transform: rotate(240deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@include keyframes("spin-dot") {
+    0% {
+        transform: rotate(0deg + $rotate);
+    }
+
+    33.33% {
+        transform: rotate(120deg + $rotate);
+    }
+
+    66.66% {
+        transform: rotate(240deg + $rotate);
+    }
+
+    100% {
+        transform: rotate(360deg + $rotate);
+    }
+}

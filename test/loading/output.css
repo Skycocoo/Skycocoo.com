@@ -371,47 +371,34 @@
   background-color: #000000;
 }
 
-.triangle {
+.melon-dot {
   display: block;
-  position: absolute;
-  left: -100px;
   width: 0;
   height: 0;
-  border-color: transparent transparent #f8c0c1 transparent;
-  border-width: 0px 100px 56.7350269179px 100px;
   border-style: solid;
-  transform-origin: 50% 0;
-  transform: rotate(0deg);
-  -webkit-animation: "spin" 1s linear infinite;
-  -moz-animation: "spin" 1s linear infinite;
-  -o-animation: "spin" 1s linear infinite;
-  animation: "spin" 1s linear infinite;
+  border-color: #7c9aab;
+  border-width: 10px;
+  border-radius: 0px 10px 10px 10px;
+  transform: rotate(45deg);
 }
-.triangle::before {
-  content: "";
+
+.melon {
   display: block;
-  position: absolute;
-  left: -100px;
+  position: relative;
   width: 0;
   height: 0;
-  border-color: transparent transparent #f8c0c1 transparent;
-  border-width: 0px 100px 56.7350269179px 100px;
   border-style: solid;
-  transform-origin: 50% 0;
-  transform: rotate(120deg);
+  border-color: transparent transparent #f8c0c1 transparent;
+  border-width: 0px 100px 173.20508076px 100px;
+  transform-origin: 50% 66.66%;
 }
-.triangle::after {
-  content: "";
+
+.melon-border {
   display: block;
-  position: absolute;
-  left: -100px;
-  width: 0;
-  height: 0;
-  border-color: transparent transparent #f8c0c1 transparent;
-  border-width: 0px 100px 56.7350269179px 100px;
   border-style: solid;
-  transform-origin: 50% 0;
-  transform: rotate(240deg);
+  border-color: #e44750;
+  border-width: 10px;
+  border-radius: 0px 0px 10px 10px;
 }
 
 /*# sourceMappingURL=output.css.map */
