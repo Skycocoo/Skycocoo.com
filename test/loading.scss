@@ -251,16 +251,45 @@ $pink1: #e44750;
 $pink0: #f8c0c1;
 $blue: #7c9aab;
 
-$rootThree: 1.7320508076;
 $slide: 100px;
+$rootThree: 1.7320508076;
+// -1: solve round-off error for division of root(3)
+$slide-inner: $slide / $rootThree - 1;
 
-#load6 {
+$start1: 0deg;
+$start2: 120deg;
+$start3: 240deg;
+$step: 120deg;
+
+@mixin triangle($degree) {
     display: block;
-    position: relative;
+    position: absolute;
+    left: -$slide;
+
     width: 0;
     height: 0;
 
     border-color: transparent transparent $pink0 transparent;
-    border-width: 0px $slide $slide*$rootThree $slide;
+    border-width: 0px $slide $slide-inner $slide;
     border-style: solid;
+
+    // setting the transform center to be the center-top of the triangle
+    transform-origin: 50% 0;
+    transform: rotate($degree);
+
+}
+
+.triangle {
+    @include triangle(0deg);
+    @include animation("spin", 1s, linear, infinite);
+
+    &::before {
+        content: "";
+        @include triangle(120deg);
+    }
+
+    &::after {
+        content: "";
+        @include triangle(240deg);
+    }
 }
