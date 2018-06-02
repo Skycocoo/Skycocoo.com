@@ -1,3 +1,9 @@
+// var loadTime;
+// window.onload = function () {
+//     loadTime = window.performance.timing.domContentLoadedEventEnd-window.performance.timing.navigationStart;
+//     console.log('Page load time is '+ loadTime);
+// }
+
 function fade() {
     setTimeout(
         function(){
@@ -77,6 +83,8 @@ function load5() {
         }, 10
     );
 };
+
+
 
 
 $(document).ready(function(){
