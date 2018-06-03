@@ -1,11 +1,4 @@
-function fade(loading) {
-    setTimeout(
-        function(){
-            $(".loader").addClass("loaded");
-        },
-        loading
-    );
-}
+// Created by Yuxi Luo; 2017
 
 var listp = [{
     name: "trees",
@@ -24,8 +17,9 @@ var listp = [{
     tag: "#Sunrise #Rainbow",
 }];
 
-var current = 0;
-var window_height = $(window).height();
+var current = 0,
+    window_height = $(window).height();
+
 
 function demo() {
     if (current < listp.length) {
@@ -36,9 +30,11 @@ function demo() {
 
         $(descrip).appendTo("#" + listp[current].name);
 
-        for (var j = 0; j < listp[current].amount; j++) {
-            var dir = "figures/" + listp[current].name + "/" + (j + 1) + ".jpg";
-            var elem = "<div class=\"image\" style=\"background-image: url('" + dir + "');\" />";
+
+        for (var i = 0; i < listp[current].amount; i++) {
+            var dir = "figures/" + listp[current].name + "/" + (i + 1) + ".jpg",
+                elem = "<div class=\"image\" style=\"background-image: url('" + dir + "');\" />";
+
             // append images to id
             var photo = $(elem).appendTo("#" + listp[current].name);
         }
@@ -63,5 +59,8 @@ function load() {
 
 $(document).ready(function(){
     load();
-    fade(1500);
 });
+
+window.onload = function(){
+    $(".loader").addClass("loaded");
+};

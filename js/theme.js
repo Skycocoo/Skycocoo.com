@@ -1,6 +1,4 @@
-// need to solve frame redirect
-// document.getElementById("id").clientHeight
-// document.getElementById("id").clientWidth
+// Created by Yuxi Luo; 2017
 
 var Nav = {
     $navi: $("#navi"),
