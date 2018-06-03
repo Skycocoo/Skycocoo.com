@@ -8,7 +8,7 @@ $mel-border: #dde4ab;
 $mel-dot: #f8c0c1;
 
 $dot: 10px;
-$side: 80px;
+$side: 50px;
 $rootThree: 1.7320508076;
 
 $rotate: 45deg;
@@ -56,7 +56,7 @@ $rotate: 45deg;
     @include dot($dot);
     transform: rotate(45deg);
 
-    @include animation("spin-dot", 3s, infinite, alternate, ease-in-out);
+    @include animation("spin-dot", 2s, infinite, alternate, ease-in-out);
 
     &::before {
         content: "";
@@ -91,13 +91,13 @@ $rotate: 45deg;
     // setting the transform center to be the center of the triangle
     transform-origin: 50% 66.66%;
 
-    @include animation("spin", 3s, infinite);
+    @include animation("spin", 1.5s, infinite, ease-in-out);
 }
 
 
-$border: $side / 4;
+$border: $side / 3;
 $border-width: 2 * ($side - $border);
-$offset: -(4/$rootThree*100);
+$offset: -(3/$rootThree*100);
 
 .melon-border {
     display: block;
@@ -113,7 +113,7 @@ $offset: -(4/$rootThree*100);
     // transform-origin: 50% 50%;
     transform-origin: 50% unquote($offset+'%');
 
-    @include animation("spin", 3s, linear, infinite);
+    @include animation("spin", 1.5s, linear, infinite);
 
 }
 

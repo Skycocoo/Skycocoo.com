@@ -1,7 +1,7 @@
 .loader {
   display: block;
   position: absolute;
-  z-index:2;
+  z-index: 2;
 
   /* width: 300px;
   height: 300px; */
@@ -29,24 +29,6 @@
   display: none !important;
 }
 
-.melon-dot {
-  top: 80px;
-  left: 80px;
-  display: block;
-  width: 0;
-  height: 0;
-  z-index: 1;
-  position: absolute;
-  border-style: solid;
-  border-color: #f8c0c1;
-  border-width: 10px;
-  border-radius: 0% 100% 50% 50%/0% 50% 50% 100%;
-  transform: rotate(45deg);
-  -webkit-animation: "spin-dot" 3s infinite alternate ease-in-out;
-  -moz-animation: "spin-dot" 3s infinite alternate ease-in-out;
-  -o-animation: "spin-dot" 3s infinite alternate ease-in-out;
-  animation: "spin-dot" 3s infinite alternate ease-in-out;
-}
 .melon-dot::before {
   content: "";
   left: -20px;
@@ -76,6 +58,7 @@
   border-radius: 0% 100% 50% 50%/0% 50% 50% 100%;
 }
 
+
 .melon {
   display: block;
   position: relative;
@@ -83,27 +66,27 @@
   height: 0;
   border-style: solid;
   border-color: transparent transparent #e44750 transparent;
-  border-width: 0px 80px 138.564064608px 80px;
+  border-width: 0px 50px 86.60254038px 50px;
   transform-origin: 50% 66.66%;
-  -webkit-animation: "spin" 3s infinite;
-  -moz-animation: "spin" 3s infinite;
-  -o-animation: "spin" 3s infinite;
-  animation: "spin" 3s infinite;
+  -webkit-animation: "spin" 1.5s infinite ease-in-out;
+  -moz-animation: "spin" 1.5s infinite ease-in-out;
+  -o-animation: "spin" 1.5s infinite ease-in-out;
+  animation: "spin" 1.5s infinite ease-in-out;
 }
 
 .melon-border {
   display: block;
-  width: 120px;
+  width: 66.6666666667px;
   height: 0;
   border-style: solid;
   border-color: #dde4ab;
-  border-width: 0px 20px 20px 20px;
-  border-radius: 0px 0px 20px 20px;
-  transform-origin: 50% -230.9401076717%;
-  -webkit-animation: "spin" 3s linear infinite;
-  -moz-animation: "spin" 3s linear infinite;
-  -o-animation: "spin" 3s linear infinite;
-  animation: "spin" 3s linear infinite;
+  border-width: 0px 16.6666666667px 16.6666666667px 16.6666666667px;
+  border-radius: 0px 0px 16.6666666667px 16.6666666667px;
+  transform-origin: 50% -173.2050807538%;
+  -webkit-animation: "spin" 1.5s linear infinite;
+  -moz-animation: "spin" 1.5s linear infinite;
+  -o-animation: "spin" 1.5s linear infinite;
+  animation: "spin" 1.5s linear infinite;
 }
 
 @-webkit-keyframes spin {
