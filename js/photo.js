@@ -35,5 +35,5 @@ function fade(loading) {
 
 $(document).ready(function(){
     demos();
-    fade(1500);
+    fade(2500);
 });
