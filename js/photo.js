@@ -32,7 +32,7 @@ function demo() {
 
 
         for (var i = 0; i < listp[current].amount; i++) {
-            var dir = "figures/" + listp[current].name + "/" + (i + 1) + ".jpg",
+            var dir = "img/" + listp[current].name + "/" + (i + 1) + ".jpg",
                 elem = "<div class=\"image\" style=\"background-image: url('" + dir + "');\" />";
 
             // append images to id
@@ -44,7 +44,7 @@ function demo() {
 }
 
 $(window).scroll(function () {
-    if ($(window).scrollTop() == $(document).height() - window_height) {
+    if ($(window).scrollTop() >= $(document).height() - window_height - 100) {
         demo();
     }
 });
