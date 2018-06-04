@@ -57,11 +57,11 @@ function load() {
     }
 }
 
+$(window).on('load', function() {
+    $(".loader").addClass("loaded");
+});
+
 
 $(document).ready(function(){
     load();
-
-    $(window).on("load", function() {
-        $(".loader").addClass("loaded");
-    });
 });
