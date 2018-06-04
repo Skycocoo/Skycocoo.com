@@ -39,6 +39,7 @@ function demo() {
             var photo = $(elem).appendTo("#" + listp[current].name);
         }
         current += 1;
+        // $(".loader").addClass("loaded");
     }
 }
 
@@ -59,8 +60,8 @@ function load() {
 
 $(document).ready(function(){
     load();
-});
 
-window.onload = function(){
-    $(".loader").addClass("loaded");
-};
+    $(window).on("load", function() {
+        $(".loader").addClass("loaded");
+    });
+});
