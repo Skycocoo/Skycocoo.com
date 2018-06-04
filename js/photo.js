@@ -20,7 +20,6 @@ var listp = [{
 var current = 0,
     window_height = $(window).height();
 
-
 function demo() {
     if (current < listp.length) {
         var descrip = "<descrip>" +
@@ -39,7 +38,6 @@ function demo() {
             var photo = $(elem).appendTo("#" + listp[current].name);
         }
         current += 1;
-        // $(".loader").addClass("loaded");
     }
 }
 
@@ -57,7 +55,7 @@ function load() {
     }
 }
 
-$(window).on('load', function() {
+$(window).on("load", function() {
     $(".loader").addClass("loaded");
 });
 
