@@ -23,9 +23,3 @@ Work around with [nvm](https://github.com/creationix/nvm/issues/576) (using diff
 ```
 nvm install v8.9.0
 ```
-
-#### [CSS Pseudo element](https://www.w3schools.com/css/css_pseudo_elements.asp)
-
-#### [Preloading animation](https://ihatetomatoes.net/create-css3-spinning-preloader/)
-
-#### [CSS Advanced Border-radius](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Background_and_Borders/Border-radius_generator)
