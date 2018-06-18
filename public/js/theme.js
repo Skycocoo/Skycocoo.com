@@ -5,7 +5,7 @@ var Nav = {
     $menu: $("#navi-menu-mobi-out"),
     $square: $("#navi-menu-mobi"),
 
-    initNav: function(){
+    initNav: function() {
         var self = this;
         if(self.$navi.width() < 750){
             // self.$square.addClass("animated rubberBand");
@@ -15,10 +15,17 @@ var Nav = {
             self.$menu.toggleClass("active");
             self.$square.toggleClass("rot");
         });
-    },
+    }
 };
+
+function footer() {
+    if ($("body").height() < $(window).height()) {
+        $("footer").addClass("float");
+    }
+}
 
 
 $(document).ready(function () {
     Nav.initNav();
+    footer();
 });

@@ -168,6 +168,11 @@ footer {
     box-shadow: 0 0 3px #eeeeee;
 }
 
+footer.float {
+    position: fixed;
+    bottom: 0;
+}
+
 #footer-media {
     position: relative;
     display: inline-block;
