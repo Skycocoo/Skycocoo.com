@@ -1,24 +1,37 @@
 // Created by Yuxi Luo; 2017
 
 var listp = [{
-    name: "trees",
-    amount: 16,
-    title: "Trees NYC",
-    tag: "#Iphone #Seasons #Trees",
-}, {
-    name: "manhattan",
-    amount: 8,
-    title: "Manhattan NYC",
-    tag: "#Skline #Silhouette",
-}, {
-    name: "bklyn",
-    amount: 2,
-    title: "Brooklyn NYC",
-    tag: "#Sunrise #Rainbow",
-}];
+        name: "trees",
+        amount: 16,
+        title: "Trees NYC",
+        tag: "#Iphone #Seasons #Trees",
+    }, {
+        name: "manhattan",
+        amount: 8,
+        title: "Manhattan NYC",
+        tag: "#Skline #Silhouette",
+    }, {
+        name: "bklyn",
+        amount: 2,
+        title: "Brooklyn NYC",
+        tag: "#Sunrise #Rainbow",
+    }],
+    current = 0,
+    window_height = $(window).height(),
 
-var current = 0,
-    window_height = $(window).height();
+    semaphore = {
+        val: 1,
+        down: function() {
+            if (this.val == 1) {
+                this.val -= 1;
+            }
+        },
+        up: function() {
+            if (this.val == 0) {
+                this.val += 1;
+            }
+        }
+    };
 
 function demo() {
     if (current < listp.length) {
@@ -55,11 +68,32 @@ function load() {
     }
 }
 
+
+
+
 $(window).on("load", function() {
-    $(".loader").addClass("loaded");
+    if (semaphore.val == 0) {
+        $(".loader").addClass("loaded");
+    } else {
+        semaphore.down();
+    }
 });
+
+function fade(loading) {
+    setTimeout(
+        function(){
+            if (semaphore.val == 0) {
+                $(".loader").addClass("loaded");
+            } else {
+                semaphore.down();
+            }
+        },
+        loading
+    );
+}
 
 
 $(document).ready(function(){
     load();
+    fade(1500);
 });
