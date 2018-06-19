@@ -5,9 +5,7 @@ Personal website
 
 ## Todo
 
-ejs
-
-mongodb
+database (mongodb)
 
 
 ## Notes
@@ -22,4 +20,12 @@ Work around with [nvm](https://github.com/creationix/nvm/issues/576) (using diff
 
 ```
 nvm install v8.9.0
+```
+
+#### express
+
+test:
+
+```
+npm init
 ```

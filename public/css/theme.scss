@@ -1,0 +1,90 @@
+$size: 300px;
+
+$color3: #133B40;
+$color2: #26757F;
+$color1: #00B5CC;
+$color0: #4CEBFF;
+
+.loader {
+    display: block;
+    position: fixed;
+    left: 0;
+    top: 0;
+
+    width: 100%;
+    height: 100%;
+    margin: 0;
+
+    z-index: 3;
+}
+
+.loader-wrapper {
+    display: block;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    /* transform by half of its width & height -> center */
+    transform: translate(-50%, -50%);
+}
+
+.loaded {
+    display: none !important;
+}
+
+@mixin psudo($horiz, $vert) {
+    content: "";
+    position: absolute;
+    top: $vert;
+    left: $horiz;
+    right: $horiz;
+    bottom: $vert;
+}
+
+@mixin helper($width, $height, $radius, $time) {
+    @include psudo(calc((#{$width} - #{$radius}) / 2),
+                   calc((#{$height} - #{$radius}) / 2));
+
+    border: 5px solid transparent;
+    border-radius: $radius;
+    box-shadow: 0 0 20px #ffffff;
+
+    animation: circle $time infinite;
+}
+
+#load {
+    display: block;
+    position: relative;
+
+    width: 100vw;
+    height: 100vh;
+
+    animation: background 3s infinite;
+
+    &::after {
+        @include helper(100vw, 100vh, 100px, 3s);
+    }
+}
+
+@keyframes background {
+    0% {
+        background-color: #000000;
+    }
+
+    100% {
+        background-color: #ffffff;
+    }
+}
+
+@keyframes circle {
+    0% {
+        border-top-color: #ffffff;
+        transform: rotate(0deg);
+    }
+
+    100% {
+        border-top-color: #000000;
+        transform: rotate(360deg);
+    }
+}
