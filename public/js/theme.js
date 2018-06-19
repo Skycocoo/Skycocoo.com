@@ -1,14 +1,14 @@
 // Created by Yuxi Luo; 2017
 
-var Nav = {
+// nav bar
+var nav = {
     $navi: $("#navi"),
     $menu: $("#navi-menu-mobi-out"),
     $square: $("#navi-menu-mobi"),
 
-    initNav: function() {
+    init: function() {
         var self = this;
-        if(self.$navi.width() < 750){
-            // self.$square.addClass("animated rubberBand");
+        if (self.$navi.width() < 750){
             self.$square.addClass("active");
         }
         self.$square.click(function(){
@@ -18,6 +18,47 @@ var Nav = {
     }
 };
 
+// loader
+var loader = {
+    $load: $(".loader"),
+    semaphore: {
+        val: 1,
+        down: function() {
+            if (this.val == 1) {
+                this.val -= 1;
+            }
+        },
+        up: function() {
+            if (this.val == 0) {
+                this.val += 1;
+            }
+        }
+    },
+    init: function(loading) {
+        var self = this;
+
+        $(window).on("load", function() {
+            if (self.semaphore.val == 0) {
+                self.$load.addClass("loaded");
+            } else {
+                self.semaphore.down();
+            }
+        });
+
+        setTimeout(
+            function(){
+                if (self.semaphore.val == 0) {
+                    self.$load.addClass("loaded");
+                } else {
+                    self.semaphore.down();
+                }
+            },
+            loading
+        );
+    }
+};
+
+// footer
 function footer() {
     if ($("body").height() < $(window).height()) {
         $("footer").addClass("float");
@@ -25,7 +66,10 @@ function footer() {
 }
 
 
+
 $(document).ready(function () {
-    Nav.initNav();
+    nav.init();
+    loader.init(2980);
     footer();
+
 });

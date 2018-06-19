@@ -27,7 +27,7 @@
   position: relative;
   width: 100vw;
   height: 100vh;
-  animation: background 3s infinite;
+  animation: background 2s infinite ease-in;
 }
 #load::after {
   content: "";
@@ -39,15 +39,18 @@
   border: 5px solid transparent;
   border-radius: 100px;
   box-shadow: 0 0 20px #ffffff;
-  animation: circle 3s infinite;
+  animation: circle 2s infinite linear;
 }
 
 @keyframes background {
   0% {
     background-color: #000000;
   }
+  50% {
+    background-color: #cccccc;
+  }
   100% {
-    background-color: #ffffff;
+    background-color: #000000;
   }
 }
 @keyframes circle {
@@ -55,8 +58,12 @@
     border-top-color: #ffffff;
     transform: rotate(0deg);
   }
-  100% {
+  50% {
     border-top-color: #000000;
+    transform: rotate(180deg);
+  }
+  100% {
+    border-top-color: #ffffff;
     transform: rotate(360deg);
   }
 }
