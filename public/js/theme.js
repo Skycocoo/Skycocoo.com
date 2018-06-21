@@ -37,21 +37,25 @@ var loader = {
     init: function(loading) {
         var self = this;
 
-        $(window).on("load", function() {
-            if (self.semaphore.val == 0) {
-                self.$load.addClass("loaded");
-            } else {
-                self.semaphore.down();
-            }
-        });
+        // // only when loading images/videos
+        // $(window).on("load", function() {
+        //     console.log("onload: " + self.semaphore.val);
+        //     if (self.semaphore.val == 0) {
+        //         self.$load.addClass("loaded");
+        //     } else {
+        //         self.semaphore.down();
+        //     }
+        // });
 
         setTimeout(
             function(){
-                if (self.semaphore.val == 0) {
-                    self.$load.addClass("loaded");
-                } else {
-                    self.semaphore.down();
-                }
+                self.$load.addClass("loaded");
+                // console.log("timeout: " + self.semaphore.val);
+                // if (self.semaphore.val == 0) {
+                //     self.$load.addClass("loaded");
+                // } else {
+                //     self.semaphore.down();
+                // }
             },
             loading
         );
@@ -69,7 +73,8 @@ function footer() {
 
 $(document).ready(function () {
     nav.init();
-    loader.init(2980);
+    loader.init(10);
+    // loader.init(2980);
     footer();
 
 });

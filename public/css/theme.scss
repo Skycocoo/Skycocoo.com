@@ -1,5 +1,73 @@
 $loader_rad: 100px;
 
+// general
+
+body {
+    overflow-x: hidden;
+    margin: 0;
+    background-color: #000000;
+}
+
+* {
+    font-family: Arial, sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+// nav
+
+$nav-width: 200px;
+$content-width: calc(100vw - #{$nav-width});
+
+
+nav {
+    display: block;
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    margin: 0;
+    width: $nav-width;
+    height: 100vh;
+
+    box-shadow: 0 0 3px #eeeeee;
+}
+
+#navi-logo {
+    display: block;
+    text-align: center;
+
+    width: $nav-width;
+    height: $nav-width;
+}
+
+#navi-logo a {
+    display: block;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+
+    font-family: Helvetica, sans-serif;
+    font-size: 40px;
+    color: #ffffff;
+
+    transition: all 0.25s linear;
+}
+
+#navi-logo a:hover {
+    // no spread in text-shadow?
+    text-shadow: 0 0 10px #eeeeee, 0 0 10px #eeeeee;
+}
+
+
+
+
+// loader
+
 .loader {
     display: block;
     position: fixed;

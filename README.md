@@ -27,5 +27,5 @@ nvm install v8.9.0
 test:
 
 ```
-npm init
+npm start
 ```
