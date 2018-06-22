@@ -20,7 +20,7 @@ var nav = {
 
 // loader
 var loader = {
-    $load: $(".loader"),
+    $load: $("loader"),
     semaphore: {
         val: 1,
         down: function() {

@@ -1,3 +1,5 @@
+<!-- Created by Yuxi Luo; 2018 -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,24 +8,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
     <!-- <link rel="shortcut icon" href="img/icon1.png" /> -->
-    
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/theme.css">
     <!-- prefixfree: will load stylesheet one more time -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
 
-    <title> Yuxi Luo </title>
+    <title> Yuxi Luo - About </title>
 </head>
 
 <body>
-
-    <%- include("general/nav.ejs") %>
-
-    <div class="loader">
+    <loader>
         <div class="loader-wrapper">
             <div id="load"></div>
         </div>
-    </div>
+    </loader>
+
+    <%- include("general/nav.ejs") %>
+
+    <content>
+        <header id="content-header">
+            <h1> About </h1>
+        </header>
+        
+        <div class="content-block">
+            <div class="content-name"> Info </div>
+            <div class="content-main">
+                A lazy person seeks to create beautiful things in Web with Computer Graphics
+            </div>
+        </div>
+
+        <div class="content-block">
+            <div class="content-name"> Skills </div>
+            <div class="content-main">
+
+            </div>
+        </div>
+
+    </content>
+
+
 
 
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"

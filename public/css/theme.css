@@ -1,100 +1,16 @@
 body {
   overflow-x: hidden;
   margin: 0;
-  background-color: #000000; }
+  background-color: #111111; }
 
 * {
-  font-family: Arial, sans-serif; }
+  font-family: Arial, sans-serif;
+  color: #ffffff; }
 
 a {
   text-decoration: none; }
 
-nav {
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  margin: 0;
-  width: 200px;
-  height: 100vh;
-  background-color: #111111;
-  box-shadow: 0 0 60px #666666; }
-
-.navi-wrapper {
-  display: block;
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%); }
-
-#navi-logo {
-  text-align: center;
-  width: 200px;
-  height: 200px;
-  position: absolute;
-  top: 0; }
-  #navi-logo a {
-    display: block;
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
-    font-family: Helvetica, sans-serif;
-    font-weight: bold;
-    font-size: 42px;
-    letter-spacing: 5px;
-    color: #ffffff;
-    transition: all 0.25s linear; }
-    #navi-logo a:hover {
-      text-shadow: 0 0 10px #cccccc, 0 0 10px #cccccc; }
-
-#navi-menu {
-  text-align: center;
-  width: 200px;
-  height: 200px;
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
-  padding: 0;
-  list-style: none; }
-  #navi-menu a {
-    color: #ffffff;
-    line-height: 55px;
-    text-shadow: 0 0 10px #ffffff;
-    font-size: 22px; }
-
-#navi-media {
-  text-align: center;
-  width: 200px;
-  height: 200px;
-  position: absolute;
-  bottom: 0; }
-  #navi-media a {
-    display: block;
-    color: #ffffff;
-    line-height: 50px; }
-    #navi-media a i {
-      font-size: 22px;
-      text-shadow: 0 0 10px #ffffff; }
-
-.navi-sub {
-  display: block;
-  position: relative;
-  height: 100vh;
-  top: 0; }
-
-#navi-email {
-  display: block;
-  position: relative;
-  left: 200px;
-  top: 50%;
-  transform: translateY(-50%);
-  transform-origin: 50% 50%;
-  color: #cccccc;
-  font-size: 10px;
-  writing-mode: vertical-lr;
-  text-orientation: upright;
-  letter-spacing: 3px; }
-
-.loader {
+loader {
   display: block;
   position: fixed;
   left: 0;
@@ -120,7 +36,7 @@ nav {
   position: relative;
   width: 100vw;
   height: 100vh;
-  animation: background 2s infinite ease-in; }
+  animation: background 2s infinite ease-out; }
   #load::after {
     content: "";
     position: absolute;
@@ -131,7 +47,7 @@ nav {
     border: 5px solid transparent;
     border-radius: 100px;
     box-shadow: 0 0 20px #ffffff;
-    animation: circle 2s ease-in; }
+    animation: circle 2s ease-out; }
 
 @keyframes background {
   0% {
@@ -151,3 +67,101 @@ nav {
   100% {
     border-top-color: #eeeeee;
     transform: rotate(360deg); } }
+
+nav {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0;
+  width: 200px;
+  height: 100vh;
+  background-color: #222222;
+  box-shadow: 0 0 60px #666666; }
+
+.navi-center {
+  display: block;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%); }
+
+.navi-sub {
+  display: block;
+  position: absolute;
+  height: 100vh;
+  top: 0; }
+
+#navi-logo {
+  text-align: center;
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  top: 0; }
+  #navi-logo a {
+    display: block;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 42px;
+    letter-spacing: 5px;
+    transition: all 0.25s linear; }
+    #navi-logo a:hover {
+      text-shadow: 0 0 10px #cccccc, 0 0 10px #cccccc; }
+
+#navi-menu {
+  text-align: center;
+  width: 200px;
+  height: 200px;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 0;
+  list-style: none; }
+  #navi-menu a {
+    line-height: 55px;
+    font-size: 22px; }
+
+#navi-media {
+  text-align: center;
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  bottom: 0; }
+  #navi-media a {
+    display: block;
+    line-height: 50px; }
+    #navi-media a i {
+      font-size: 22px; }
+
+#navi-email {
+  display: block;
+  position: relative;
+  left: 200px;
+  top: 50%;
+  transform: translateY(-50%);
+  transform-origin: 50% 50%;
+  color: #cccccc;
+  font-size: 10px;
+  writing-mode: vertical-lr;
+  text-orientation: upright;
+  letter-spacing: 3px; }
+
+content {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 200px;
+  margin: 0;
+  padding: 0 0 0 50px;
+  width: calc(100vw - 200px);
+  height: 100vh; }
+
+#content-header {
+  width: calc(100vw - 200px);
+  height: 200px; }
+  #content-header h1 {
+    margin: 0;
+    font-size: 60px;
+    line-height: 200px; }

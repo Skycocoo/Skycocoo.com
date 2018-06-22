@@ -1,152 +1,28 @@
-$loader_rad: 100px;
+// Created by Yuxi Luo; 2018
 
-// general
+////////////////////// general //////////////////////
 
 body {
     overflow-x: hidden;
     margin: 0;
-    background-color: #000000;
+    background-color: #111111;
 }
 
 * {
     font-family: Arial, sans-serif;
+    color: #ffffff;
 }
 
 a {
     text-decoration: none;
 }
 
-// nav
 
-$nav-width: 200px;
-$content-width: calc(100vw - #{$nav-width});
+////////////////////// loader //////////////////////
 
-@mixin div-navi() {
-    text-align: center;
-    width: $nav-width;
-    height: $nav-width;
-}
+$loader-rad: 100px;
 
-nav {
-    display: block;
-    position: absolute;
-
-    top: 0;
-    left: 0;
-
-    margin: 0;
-    width: $nav-width;
-    height: 100vh;
-
-    background-color: #111111;
-    box-shadow: 0 0 60px #666666;
-}
-
-.navi-wrapper {
-    display: block;
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-
-#navi-logo {
-    @include div-navi();
-    position: absolute;
-    top: 0;
-
-    a {
-        display: block;
-        position: relative;
-        top: 50%;
-        transform: translateY(-50%);
-
-        font-family: Helvetica, sans-serif;
-        font-weight: bold;
-        font-size: 42px;
-        letter-spacing: 5px;
-        color: #ffffff;
-
-        // line-height: 60px;
-        // text-decoration: underline;
-
-
-        transition: all 0.25s linear;
-
-        &:hover {
-            // no spread in text-shadow?
-            text-shadow: 0 0 10px #cccccc, 0 0 10px #cccccc;
-        }
-    }
-}
-
-
-#navi-menu {
-    @include div-navi();
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
-
-    padding: 0;
-    list-style: none;
-
-    a {
-        color: #ffffff;
-        line-height: 55px;
-        text-shadow: 0 0 10px #ffffff;
-
-        font-size: 22px;
-    }
-}
-
-#navi-media {
-    @include div-navi();
-    position: absolute;
-    bottom: 0;
-
-    a {
-        display: block;
-        color: #ffffff;
-        line-height: 50px;
-
-        i {
-            font-size: 22px;
-            text-shadow: 0 0 10px #ffffff;
-        }
-    }
-}
-
-
-.navi-sub {
-    display: block;
-    position: relative;
-    height: 100vh;
-
-    top: 0;
-}
-
-#navi-email {
-    display: block;
-    position: relative;
-    left: $nav-width;
-    top: 50%;
-    transform: translateY(-50%);
-    transform-origin: 50% 50%;
-
-    color: #cccccc;
-    font-size: 10px;
-
-    writing-mode: vertical-lr;
-    text-orientation: upright;
-    letter-spacing: 3px;
-}
-
-
-
-
-// loader
-
-.loader {
+loader {
     display: block;
     position: fixed;
     left: 0;
@@ -191,7 +67,7 @@ nav {
     border-radius: $radius;
     box-shadow: 0 0 20px #ffffff;
 
-    animation: circle $time ease-in;
+    animation: circle $time ease-out;
 }
 
 #load {
@@ -201,10 +77,10 @@ nav {
     width: 100vw;
     height: 100vh;
 
-    animation: background 2s infinite ease-in;
+    animation: background 2s infinite ease-out;
 
     &::after {
-        @include helper(100vw, 100vh, $loader_rad, 2s);
+        @include helper(100vw, 100vh, $loader-rad, 2s);
     }
 }
 
@@ -236,5 +112,148 @@ nav {
     100% {
         border-top-color: #eeeeee;
         transform: rotate(360deg);
+    }
+}
+
+
+////////////////////// nav //////////////////////
+
+$nav-width: 200px;
+
+@mixin div-navi() {
+    text-align: center;
+    width: $nav-width;
+    height: $nav-width;
+}
+
+nav {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    margin: 0;
+    width: $nav-width;
+    height: 100vh;
+
+    background-color: #222222;
+    box-shadow: 0 0 60px #666666;
+}
+
+.navi-center {
+    display: block;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.navi-sub {
+    display: block;
+    position: absolute;
+    height: 100vh;
+    top: 0;
+}
+
+#navi-logo {
+    @include div-navi();
+    position: absolute;
+    top: 0;
+
+    a {
+        display: block;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+
+        font-family: Helvetica, sans-serif;
+        font-weight: bold;
+        font-size: 42px;
+        letter-spacing: 5px;
+        // line-height: 60px;
+        // text-decoration: underline;
+
+        transition: all 0.25s linear;
+
+        &:hover {
+            // no spread in text-shadow?
+            text-shadow: 0 0 10px #cccccc, 0 0 10px #cccccc;
+        }
+    }
+}
+
+#navi-menu {
+    @include div-navi();
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+
+    padding: 0;
+    list-style: none;
+
+    a {
+        line-height: 55px;
+        // text-shadow: 0 0 10px #ffffff;
+
+        font-size: 22px;
+    }
+}
+
+#navi-media {
+    @include div-navi();
+    position: absolute;
+    bottom: 0;
+
+    a {
+        display: block;
+        line-height: 50px;
+
+        i {
+            font-size: 22px;
+            // text-shadow: 0 0 10px #ffffff;
+        }
+    }
+}
+
+#navi-email {
+    display: block;
+    position: relative;
+    left: $nav-width;
+    top: 50%;
+    transform: translateY(-50%);
+    transform-origin: 50% 50%;
+
+    color: #cccccc;
+    font-size: 10px;
+
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+    letter-spacing: 3px;
+}
+
+////////////////////// content //////////////////////
+
+$content-width: calc(100vw - #{$nav-width});
+
+content {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: $nav-width;
+
+    margin: 0;
+    padding: 0 0 0 50px;
+    width: $content-width;
+    height: 100vh;
+}
+
+#content-header {
+    // text-align: center;
+    width: $content-width;
+    height: $nav-width;
+
+    h1 {
+        margin: 0;
+        font-size: 60px;
+        line-height: $nav-width;
     }
 }

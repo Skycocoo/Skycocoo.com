@@ -2,5 +2,7 @@
 *\node_modules
 
 *.pdf
+*.css
+*.css.map
 
 archive/1.0.0/
