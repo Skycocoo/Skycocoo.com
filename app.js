@@ -13,16 +13,16 @@ var app = express();
 app.set('views', path.join(__dirname, 'public/view'));
 app.set('view engine', 'ejs');
 
+// sass dependency
 app.use(sassMiddleware({
-    src: path.join(__dirname, './public/css'),
-    dest: path.join(__dirname, './public/css'),
+    src: path.join(__dirname, 'public/css'),
+    dest: path.join(__dirname, 'public/css'),
     indentedSyntax: false, // true = .sass and false = .scss
-    sourceMap: true,
+    sourceMap: false,
     prefix: '/css',
     debug: true,
     // outputStyle: 'compressed',
 }));
-
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));

@@ -74,7 +74,7 @@ function footer() {
 $(document).ready(function () {
     nav.init();
     loader.init(10);
-    // loader.init(2980);
+    // loader.init(2000);
     footer();
 
 });

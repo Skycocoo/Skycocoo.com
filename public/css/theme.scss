@@ -21,6 +21,11 @@ a {
 $nav-width: 200px;
 $content-width: calc(100vw - #{$nav-width});
 
+@mixin div-navi() {
+    text-align: center;
+    width: $nav-width;
+    height: $nav-width;
+}
 
 nav {
     display: block;
@@ -33,33 +38,107 @@ nav {
     width: $nav-width;
     height: 100vh;
 
-    box-shadow: 0 0 3px #eeeeee;
+    background-color: #111111;
+    box-shadow: 0 0 60px #666666;
 }
 
-#navi-logo {
-    display: block;
-    text-align: center;
-
-    width: $nav-width;
-    height: $nav-width;
-}
-
-#navi-logo a {
+.navi-wrapper {
     display: block;
     position: relative;
     top: 50%;
     transform: translateY(-50%);
-
-    font-family: Helvetica, sans-serif;
-    font-size: 40px;
-    color: #ffffff;
-
-    transition: all 0.25s linear;
 }
 
-#navi-logo a:hover {
-    // no spread in text-shadow?
-    text-shadow: 0 0 10px #eeeeee, 0 0 10px #eeeeee;
+
+#navi-logo {
+    @include div-navi();
+    position: absolute;
+    top: 0;
+
+    a {
+        display: block;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+
+        font-family: Helvetica, sans-serif;
+        font-weight: bold;
+        font-size: 42px;
+        letter-spacing: 5px;
+        color: #ffffff;
+
+        // line-height: 60px;
+        // text-decoration: underline;
+
+
+        transition: all 0.25s linear;
+
+        &:hover {
+            // no spread in text-shadow?
+            text-shadow: 0 0 10px #cccccc, 0 0 10px #cccccc;
+        }
+    }
+}
+
+
+#navi-menu {
+    @include div-navi();
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+
+    padding: 0;
+    list-style: none;
+
+    a {
+        color: #ffffff;
+        line-height: 55px;
+        text-shadow: 0 0 10px #ffffff;
+
+        font-size: 22px;
+    }
+}
+
+#navi-media {
+    @include div-navi();
+    position: absolute;
+    bottom: 0;
+
+    a {
+        display: block;
+        color: #ffffff;
+        line-height: 50px;
+
+        i {
+            font-size: 22px;
+            text-shadow: 0 0 10px #ffffff;
+        }
+    }
+}
+
+
+.navi-sub {
+    display: block;
+    position: relative;
+    height: 100vh;
+
+    top: 0;
+}
+
+#navi-email {
+    display: block;
+    position: relative;
+    left: $nav-width;
+    top: 50%;
+    transform: translateY(-50%);
+    transform-origin: 50% 50%;
+
+    color: #cccccc;
+    font-size: 10px;
+
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+    letter-spacing: 3px;
 }
 
 
@@ -112,7 +191,7 @@ nav {
     border-radius: $radius;
     box-shadow: 0 0 20px #ffffff;
 
-    animation: circle $time infinite linear;
+    animation: circle $time ease-in;
 }
 
 #load {
@@ -155,7 +234,7 @@ nav {
     }
 
     100% {
-        border-top-color: #ffffff;
+        border-top-color: #eeeeee;
         transform: rotate(360deg);
     }
 }

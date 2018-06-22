@@ -17,26 +17,82 @@ nav {
   margin: 0;
   width: 200px;
   height: 100vh;
-  box-shadow: 0 0 3px #eeeeee; }
+  background-color: #111111;
+  box-shadow: 0 0 60px #666666; }
 
-#navi-logo {
-  display: block;
-  text-align: center;
-  width: 200px;
-  height: 200px; }
-
-#navi-logo a {
+.navi-wrapper {
   display: block;
   position: relative;
   top: 50%;
-  transform: translateY(-50%);
-  font-family: Helvetica, sans-serif;
-  font-size: 40px;
-  color: #ffffff;
-  transition: all 0.25s linear; }
+  transform: translateY(-50%); }
 
-#navi-logo a:hover {
-  text-shadow: 0 0 10px #eeeeee, 0 0 10px #eeeeee; }
+#navi-logo {
+  text-align: center;
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  top: 0; }
+  #navi-logo a {
+    display: block;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 42px;
+    letter-spacing: 5px;
+    color: #ffffff;
+    transition: all 0.25s linear; }
+    #navi-logo a:hover {
+      text-shadow: 0 0 10px #cccccc, 0 0 10px #cccccc; }
+
+#navi-menu {
+  text-align: center;
+  width: 200px;
+  height: 200px;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 0;
+  list-style: none; }
+  #navi-menu a {
+    color: #ffffff;
+    line-height: 55px;
+    text-shadow: 0 0 10px #ffffff;
+    font-size: 22px; }
+
+#navi-media {
+  text-align: center;
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  bottom: 0; }
+  #navi-media a {
+    display: block;
+    color: #ffffff;
+    line-height: 50px; }
+    #navi-media a i {
+      font-size: 22px;
+      text-shadow: 0 0 10px #ffffff; }
+
+.navi-sub {
+  display: block;
+  position: relative;
+  height: 100vh;
+  top: 0; }
+
+#navi-email {
+  display: block;
+  position: relative;
+  left: 200px;
+  top: 50%;
+  transform: translateY(-50%);
+  transform-origin: 50% 50%;
+  color: #cccccc;
+  font-size: 10px;
+  writing-mode: vertical-lr;
+  text-orientation: upright;
+  letter-spacing: 3px; }
 
 .loader {
   display: block;
@@ -75,7 +131,7 @@ nav {
     border: 5px solid transparent;
     border-radius: 100px;
     box-shadow: 0 0 20px #ffffff;
-    animation: circle 2s infinite linear; }
+    animation: circle 2s ease-in; }
 
 @keyframes background {
   0% {
@@ -93,7 +149,5 @@ nav {
     border-top-color: #000000;
     transform: rotate(180deg); }
   100% {
-    border-top-color: #ffffff;
+    border-top-color: #eeeeee;
     transform: rotate(360deg); } }
-
-/*# sourceMappingURL=style.css.map */
