@@ -82,8 +82,7 @@ nav {
   margin: 0;
   width: 200px;
   height: 100vh;
-  background-color: #222222;
-  box-shadow: 0 0 60px #666666; }
+  background-color: #222222; }
 
 .navi-sub {
   display: block;
@@ -96,7 +95,8 @@ nav {
   width: 200px;
   height: 200px;
   position: absolute;
-  top: 0; }
+  top: 0;
+  transition: text-shadow 0.1s linear; }
   #navi-logo a {
     display: block;
     position: relative;
@@ -113,6 +113,7 @@ nav {
       font-size: 42px;
       letter-spacing: 5px; }
   #navi-logo:hover {
+    text-shadow: 0 0 10px #cccccc, 0 0 10px #cccccc;
     box-sizing: border-box;
     border-style: solid;
     border-color: #ffffff;
@@ -126,55 +127,63 @@ nav {
   height: 200px;
   position: relative;
   top: 50%;
-  transform: translateY(-50%);
+  transform: translateY(-72%);
   padding: 0;
   list-style: none; }
-  #navi-menu li:hover::after {
+  #navi-menu li a {
+    display: block;
+    width: 200px;
+    line-height: 55px;
+    font-size: 22px; }
+  #navi-menu li::after {
     content: "";
     left: 0;
     bottom: 0;
     display: block;
     border-style: solid;
     border-color: #ffffff;
-    border-width: 0 0 5px 0; }
-  #navi-menu a {
-    display: block;
-    width: 200px;
-    line-height: 55px;
-    font-size: 22px; }
+    border-width: 0 0 5px 0;
+    opacity: 0;
+    transition: all 0.3s linear; }
+  #navi-menu li:hover::after {
+    opacity: 1; }
+  #navi-menu li:hover a {
+    text-shadow: 0 0 10px #cccccc, 0 0 10px #cccccc; }
 
 #navi-media {
   text-align: center;
   width: 200px;
   height: 200px;
   position: absolute;
-  bottom: 0; }
+  bottom: 30px; }
   #navi-media a {
     display: block;
     line-height: 50px; }
     #navi-media a i {
       font-size: 22px; }
-    #navi-media a:hover::after {
+    #navi-media a::after {
       content: "";
       left: 0;
       bottom: 0;
       display: block;
       border-style: solid;
       border-color: #ffffff;
-      border-width: 0 0 5px 0; }
+      border-width: 0 0 5px 0;
+      opacity: 0;
+      transition: all 0.3s linear; }
+    #navi-media a:hover::after {
+      opacity: 1; }
+    #navi-media a:hover i {
+      text-shadow: 0 0 10px #cccccc, 0 0 10px #cccccc; }
 
 #navi-email {
-  display: block;
-  position: relative;
-  left: 200px;
-  top: 50%;
-  transform: translateY(-50%);
-  transform-origin: 50% 50%;
+  position: absolute;
+  width: 200px;
+  text-align: center;
+  bottom: 10px;
   color: #cccccc;
-  font-size: 10px;
-  writing-mode: vertical-lr;
-  text-orientation: upright;
-  letter-spacing: 3px; }
+  font-size: 5px;
+  letter-spacing: 2px; }
 
 content {
   display: block;
