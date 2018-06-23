@@ -1,5 +1,5 @@
 body {
-  overflow-x: hidden;
+  overflow: hidden;
   margin: 0;
   background-color: #111111; }
 
@@ -9,6 +9,12 @@ body {
 
 a {
   text-decoration: none; }
+
+.center {
+  display: block;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%); }
 
 loader {
   display: block;
@@ -79,12 +85,6 @@ nav {
   background-color: #222222;
   box-shadow: 0 0 60px #666666; }
 
-.navi-center {
-  display: block;
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%); }
-
 .navi-sub {
   display: block;
   position: absolute;
@@ -154,7 +154,7 @@ content {
   top: 0;
   left: 200px;
   margin: 0;
-  padding: 0 0 0 50px;
+  padding: 0 0 0 120px;
   width: calc(100vw - 200px);
   height: 100vh; }
 
@@ -165,3 +165,38 @@ content {
     margin: 0;
     font-size: 60px;
     line-height: 200px; }
+
+.content-block {
+  width: calc(calc(100vw - 200px) - 120px - 50px);
+  margin: 0 0 60px 0; }
+
+.content-name {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  font-size: 35px;
+  text-align: center;
+  line-height: 80px;
+  vertical-align: middle; }
+  .content-name::after {
+    content: "";
+    display: block;
+    position: relative;
+    right: 30px;
+    border-style: solid;
+    border-color: transparent transparent transparent #ffffff;
+    border-width: 0px 15px 15px 15px;
+    transform: translate(80%, -140%) rotate(135deg); }
+
+.content-main {
+  display: inline-block;
+  position: relative;
+  left: 70px;
+  vertical-align: middle;
+  width: calc(calc(calc(100vw - 200px) - 120px - 50px) - 80px - 70px);
+  font-size: 16px;
+  line-height: 20px; }
+
+th, td {
+  padding: 0 10px 4px 0;
+  text-align: left; }

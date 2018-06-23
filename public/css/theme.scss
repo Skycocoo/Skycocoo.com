@@ -3,7 +3,7 @@
 ////////////////////// general //////////////////////
 
 body {
-    overflow-x: hidden;
+    overflow: hidden;
     margin: 0;
     background-color: #111111;
 }
@@ -17,6 +17,12 @@ a {
     text-decoration: none;
 }
 
+.center {
+    display: block;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
 
 ////////////////////// loader //////////////////////
 
@@ -140,13 +146,6 @@ nav {
     box-shadow: 0 0 60px #666666;
 }
 
-.navi-center {
-    display: block;
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
 .navi-sub {
     display: block;
     position: absolute;
@@ -233,6 +232,11 @@ nav {
 ////////////////////// content //////////////////////
 
 $content-width: calc(100vw - #{$nav-width});
+$content-block-width: calc(#{$content-width} - 120px - 50px);
+
+$font-header: 60px;
+$font-subheader: 35px;
+$font-main: 16px;
 
 content {
     display: block;
@@ -241,7 +245,7 @@ content {
     left: $nav-width;
 
     margin: 0;
-    padding: 0 0 0 50px;
+    padding: 0 0 0 120px;
     width: $content-width;
     height: 100vh;
 }
@@ -253,7 +257,74 @@ content {
 
     h1 {
         margin: 0;
-        font-size: 60px;
+        font-size: $font-header;
         line-height: $nav-width;
     }
 }
+
+.content-block {
+    width: $content-block-width;
+    margin: 0 0 60px 0;
+}
+
+
+.content-name {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+
+    font-size: $font-subheader;
+    text-align: center;
+    line-height: 80px;
+
+    vertical-align: middle;
+
+    &::after {
+        content: "";
+        display: block;
+        position: relative;
+        right: 30px;
+        border-style: solid;
+        border-color: transparent transparent transparent #ffffff;
+        border-width: 0px 15px 15px 15px;
+        // border-radius: 0px 0px 20px 20px;
+
+        // // radius: topleft - topright - bottomright - bottomleft
+        // border-radius: 0% 100% 50% 50% /
+        //                0% 50% 50% 100%;
+
+
+        // border: 25px solid rgba(0,0,0,0);
+        // border-bottom: 25px solid #F1C617;
+        transform: translate(80%, -140%) rotate(135deg);
+    }
+    // border: 5px solid #ffffff;
+}
+
+.content-main {
+    display: inline-block;
+    position: relative;
+    left: 70px;
+    vertical-align: middle;
+    width: calc(#{$content-block-width} - 80px - 70px);
+
+    font-size: $font-main;
+    line-height: 20px;
+}
+
+th, td {
+    padding: 0 10px 4px 0;
+    text-align: left;
+}
+
+
+
+
+
+
+
+
+
+
+
+// (｡･∀･)ﾉﾞ
