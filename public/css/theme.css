@@ -60,8 +60,11 @@ loader {
     background-color: #000000; }
   50% {
     background-color: #cccccc; }
+  88% {
+    opacity: 1; }
   100% {
-    background-color: #000000; } }
+    background-color: #000000;
+    opacity: 0; } }
 
 @keyframes circle {
   0% {
@@ -92,28 +95,27 @@ nav {
 
 #navi-logo {
   text-align: center;
-  width: 200px;
-  height: 200px;
+  left: 1px;
+  top: 1px;
+  width: 199px;
+  height: 199px;
   position: absolute;
   top: 0;
   transition: text-shadow 0.1s linear; }
   #navi-logo a {
     display: block;
-    position: relative;
-    width: 200px;
-    height: 200px; }
+    position: relative; }
     #navi-logo a p {
       padding: 0;
       margin: 0;
       left: 0;
       top: 50%;
-      transform: translateY(50%) translate(5px, 5px);
+      transform: translateY(50%) translate(0, 5px);
       font-family: Helvetica, sans-serif;
       font-weight: bold;
       font-size: 42px;
       letter-spacing: 5px; }
   #navi-logo:hover {
-    text-shadow: 0 0 10px #cccccc, 0 0 10px #cccccc;
     box-sizing: border-box;
     border-style: solid;
     border-color: #ffffff;

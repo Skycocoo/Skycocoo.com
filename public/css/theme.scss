@@ -99,8 +99,13 @@ loader {
         background-color: #cccccc;
     }
 
+    88% {
+        opacity: 1;
+    }
+
     100% {
         background-color: #000000;
+        opacity: 0;
     }
 }
 
@@ -176,22 +181,27 @@ nav {
 }
 
 #navi-logo {
-    @include div-navi();
+    // @include div-navi();
+    // fix default mouse position (0, 0) will hover over logo
+    text-align: center;
+    left: 1px;
+    top: 1px;
+    width: $nav-width - 1px;
+    height: $nav-width - 1px;
+
     position: absolute;
     top: 0;
 
     a {
         display: block;
         position: relative;
-        width: $nav-width;
-        height: $nav-width;
 
         p {
             padding: 0;
             margin: 0;
             left: 0;
             top: 50%;
-            transform: translateY(50%) translate(5px, 5px);
+            transform: translateY(50%) translate(0, 5px);
 
             font-family: Helvetica, sans-serif;
             font-weight: bold;
@@ -208,7 +218,7 @@ nav {
             transform: translateY(50%);
         }
 
-        text-shadow: 0 0 10px #cccccc, 0 0 10px #cccccc;
+        // text-shadow: 0 0 10px #cccccc, 0 0 10px #cccccc;
         box-sizing: border-box;
         border-style: solid;
         border-color: #ffffff;
