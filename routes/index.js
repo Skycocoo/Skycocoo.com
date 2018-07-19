@@ -1,8 +1,14 @@
-var express = require('express');
-var router = express.Router();
+const express = require('express');
+const uploadRouter = require('./upload');
 
-router.get('/', function(req, res, next) {
-    res.render('index');
-});
+module.exports = () => {
+    const router = express.Router();
 
-module.exports = router;
+    router.get('/', (req, res, next) => {
+        res.render('index');
+    });
+
+    router.use('/upload', uploadRouter());
+
+    return router;
+};

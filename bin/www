@@ -23,9 +23,12 @@ function normalizePort(val) {
  }
 
  mongoose.connect(config.mongodb.dsn)
-  .then(() => {
-    debug('Successfully connected to MongoDb');
-  });
+    .then(() => {
+        debug('Successfully connected to MongoDb');
+    })
+    .catch((err) => {
+        debug('Catch a Promise error: ' + err.message);
+    });
 
 var port = normalizePort(process.env.PORT || '3000');
 app.set('port', port);
