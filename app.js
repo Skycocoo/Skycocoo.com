@@ -5,10 +5,9 @@ const sassMiddleware = require('node-sass-middleware');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 
-const router = require('./routes/index')
+const router = require('./route/index')
 
 const app = express();
-
 // view engine setup
 app.set('views', path.join(__dirname, 'public/view'));
 app.set('view engine', 'ejs');

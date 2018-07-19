@@ -2,14 +2,6 @@
 
 Personal website
 
-
-## Todo
-
-database (mongodb)
-
-
-## Notes
-
 #### NPM
 
 ```

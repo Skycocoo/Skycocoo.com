@@ -1,7 +1,8 @@
 *\.DS_Store
 *\node_modules
 
+*.psd
+*.png
 *.pdf
+*.css
 *.css.map
-
-archive/1.0.0/
