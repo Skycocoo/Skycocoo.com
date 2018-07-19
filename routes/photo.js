@@ -7,9 +7,11 @@ module.exports = () => {
     const router = express.Router();
 
     router.get('/', (req, res) => {
-        // 'data:' + docs.contentType + ';base64,' + base64ArrayBuffer(docs.data)
-
-        res.render('photo', {image: ''});
+        const images = imageService.getAll((err, docs) => {
+            if (err) throw err;
+            const images = docs.map((doc) => 'data:' + doc.contentType + ';base64,' + base64ArrayBuffer(doc.data));
+            res.render('photo', {images: images});
+        });
     });
 
     return router;

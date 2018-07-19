@@ -31,8 +31,9 @@
             <h1> Photography </h1>
         </header>
 
-        <img src="<%= image %>">
-
+        <% for(let i = 0; i < images.length; i++) { %>
+             <img src="<%= images[i] %>"></img>
+        <% } %>
 
     </content>
 
