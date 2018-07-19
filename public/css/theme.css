@@ -10,12 +10,6 @@ body {
 a {
   text-decoration: none; }
 
-.center {
-  display: block;
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%); }
-
 loader {
   display: block;
   position: fixed;
@@ -87,19 +81,13 @@ nav {
   height: 100vh;
   background-color: #222222; }
 
-.navi-sub {
-  display: block;
-  position: absolute;
-  height: 100vh;
-  top: 0; }
-
 #navi-logo {
   text-align: center;
   left: 1px;
   top: 1px;
   width: 199px;
   height: 199px;
-  position: absolute;
+  position: relative;
   top: 0;
   transition: text-shadow 0.1s linear; }
   #navi-logo a {
@@ -127,22 +115,24 @@ nav {
     #navi-logo:hover p {
       transform: translateY(50%); }
 
-#navi-menu {
-  text-align: center;
-  width: 200px;
-  height: 200px;
+ul {
+  display: block;
   position: relative;
-  top: 50%;
-  transform: translateY(-72%);
   padding: 0;
+  margin: 0;
   list-style: none; }
-  #navi-menu li a {
+  ul li a {
     display: block;
     position: relative;
     width: 200px;
     line-height: 55px;
-    font-size: 22px; }
-  #navi-menu li::after {
+    font-size: 22px;
+    text-align: center; }
+  ul li.active {
+    border-style: solid;
+    border-color: #ffffff;
+    border-width: 0 5px 0 0; }
+  ul li::after {
     content: "";
     left: 0;
     bottom: 0;
@@ -152,42 +142,14 @@ nav {
     border-width: 0 0 5px 0;
     opacity: 0;
     transition: all 0.3s linear; }
-  #navi-menu li:hover::after {
+  ul li:hover:not(.active)::after {
     opacity: 1; }
-  #navi-menu li:hover a, #navi-menu li.active a {
+  ul li:hover a {
     text-shadow: 0 0 10px #cccccc, 0 0 10px #cccccc; }
-  #navi-menu li.active {
-    border-style: solid;
-    border-color: #ffffff;
-    border-width: 0 5px 0 5px; }
-    #navi-menu li.active a {
-      left: -5px; }
 
 #navi-media {
-  text-align: center;
-  width: 200px;
-  height: 200px;
   position: absolute;
   bottom: 30px; }
-  #navi-media a {
-    display: block;
-    line-height: 50px; }
-    #navi-media a i {
-      font-size: 22px; }
-    #navi-media a::after {
-      content: "";
-      left: 0;
-      bottom: 0;
-      display: block;
-      border-style: solid;
-      border-color: #ffffff;
-      border-width: 0 0 5px 0;
-      opacity: 0;
-      transition: all 0.3s linear; }
-    #navi-media a:hover::after {
-      opacity: 1; }
-    #navi-media a:hover i {
-      text-shadow: 0 0 10px #cccccc, 0 0 10px #cccccc; }
 
 #navi-email {
   position: absolute;

@@ -17,12 +17,12 @@ a {
     text-decoration: none;
 }
 
-.center {
-    display: block;
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
-}
+// .center {
+//     display: block;
+//     position: relative;
+//     top: 50%;
+//     transform: translateY(-50%);
+// }
 
 ////////////////////// loader //////////////////////
 
@@ -46,15 +46,14 @@ nav {
     // box-shadow: 0 0 50px #666666;
 }
 
-.navi-sub {
-    display: block;
-    position: absolute;
-    height: 100vh;
-    top: 0;
-}
+// .navi-sub {
+//     display: block;
+//     position: absolute;
+//     height: 100vh;
+//     top: 0;
+// }
 
 #navi-logo {
-    // @include div-navi();
     // fix default mouse position (0, 0) will hover over logo
     text-align: center;
     left: 1px;
@@ -62,7 +61,7 @@ nav {
     width: $nav-width - 1px;
     height: $nav-width - 1px;
 
-    position: absolute;
+    position: relative;
     top: 0;
 
     a {
@@ -105,41 +104,11 @@ nav {
     }
 }
 
-@mixin div-navi() {
-    text-align: center;
-    width: $nav-width;
-    height: $nav-width;
-}
-
-@mixin hover-navi() {
-    &::after {
-        content: "";
-        left: 0;
-        bottom: 0;
-
-        display: block;
-        border-style: solid;
-        border-color: #ffffff;
-        border-width: 0 0 5px 0;
-
-        opacity: 0;
-        transition: all 0.3s linear;
-    }
-
-    &:hover {
-        &::after {
-            opacity: 1;
-        }
-    }
-}
-
-#navi-menu {
-    @include div-navi();
+ul {
+    display: block;
     position: relative;
-    top: 50%;
-    transform: translateY(-72%);
-
     padding: 0;
+    margin: 0;
     list-style: none;
 
     li {
@@ -149,44 +118,42 @@ nav {
             width: $nav-width;
             line-height: 55px;
             font-size: 22px;
-        }
-
-        @include hover-navi();
-        &:hover a, &.active a {
-            text-shadow: 0 0 10px #cccccc, 0 0 10px #cccccc;
+            text-align: center;
         }
 
         &.active {
             border-style: solid;
             border-color: #ffffff;
-            border-width: 0 5px 0 5px;
+            border-width: 0 5px 0 0;
+        }
 
-            a {
-                left: -5px;
-            }
+        &::after {
+            content: "";
+            left: 0;
+            bottom: 0;
+
+            display: block;
+            border-style: solid;
+            border-color: #ffffff;
+            border-width: 0 0 5px 0;
+
+            opacity: 0;
+            transition: all 0.3s linear;
+        }
+
+        &:hover:not(.active)::after {
+            opacity: 1;
+        }
+
+        &:hover a {
+            text-shadow: 0 0 10px #cccccc, 0 0 10px #cccccc;
         }
     }
 }
 
 #navi-media {
-    @include div-navi();
     position: absolute;
     bottom: 30px;
-
-    a {
-        display: block;
-        line-height: 50px;
-
-        i {
-            font-size: 22px;
-        }
-
-        @include hover-navi();
-        &:hover i {
-            text-shadow: 0 0 10px #cccccc, 0 0 10px #cccccc;
-            // text-shadow: 0 0 10px #ffffff;
-        }
-    }
 }
 
 #navi-email {

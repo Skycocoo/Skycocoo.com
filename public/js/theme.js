@@ -58,18 +58,9 @@ var loader = {
     }
 };
 
-// footer
-function footer() {
-    if ($("body").height() < $(window).height()) {
-        $("footer").addClass("float");
-    }
-}
-
 
 $(document).ready(function () {
     navi.init();
     loader.init(10);
     // loader.init(1980);
-    footer();
-
 });
