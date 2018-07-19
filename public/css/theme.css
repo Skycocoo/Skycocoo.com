@@ -104,7 +104,9 @@ nav {
   transition: text-shadow 0.1s linear; }
   #navi-logo a {
     display: block;
-    position: relative; }
+    position: relative;
+    width: 200px;
+    height: 200px; }
     #navi-logo a p {
       padding: 0;
       margin: 0;
@@ -120,6 +122,8 @@ nav {
     border-style: solid;
     border-color: #ffffff;
     border-width: 5px; }
+    #navi-logo:hover a {
+      left: -5px; }
     #navi-logo:hover p {
       transform: translateY(50%); }
 
@@ -149,7 +153,7 @@ nav {
     transition: all 0.3s linear; }
   #navi-menu li:hover::after {
     opacity: 1; }
-  #navi-menu li:hover a {
+  #navi-menu li:hover a, #navi-menu li.active a {
     text-shadow: 0 0 10px #cccccc, 0 0 10px #cccccc; }
 
 #navi-media {
@@ -199,11 +203,15 @@ content {
 
 #content-header {
   width: calc(100vw - 200px);
-  height: 200px; }
+  height: 200px;
+  line-height: 200px;
+  transition: text-shadow 0.1s linear; }
   #content-header h1 {
     margin: 0;
-    font-size: 60px;
-    line-height: 200px; }
+    font-size: 60px; }
+    #content-header h1:hover {
+      text-decoration: underline;
+      text-underline-position: under; }
 
 .content-block {
   width: calc(calc(100vw - 200px) - 120px - 50px);
@@ -216,7 +224,11 @@ content {
   font-size: 35px;
   text-align: center;
   line-height: 80px;
-  vertical-align: middle; }
+  vertical-align: middle;
+  transition: text-shadow 0.1s linear; }
+  .content-name:hover {
+    text-decoration: underline;
+    text-underline-position: under; }
   .content-name::after {
     content: "";
     display: block;

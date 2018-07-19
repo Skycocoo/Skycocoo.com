@@ -1,0 +1,103 @@
+// Created by Yuxi Luo; 2018
+
+////////////////////// loader //////////////////////
+
+$loader-rad: 100px;
+
+loader {
+    display: block;
+    position: fixed;
+    left: 0;
+    top: 0;
+
+    width: 100%;
+    height: 100%;
+    margin: 0;
+
+    z-index: 3;
+}
+
+.loader-wrapper {
+    display: block;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    /* transform by half of its width & height -> center */
+    transform: translate(-50%, -50%);
+}
+
+.loaded {
+    display: none !important;
+}
+
+@mixin psudo($horiz, $vert) {
+    content: "";
+    position: absolute;
+    top: $vert;
+    left: $horiz;
+    right: $horiz;
+    bottom: $vert;
+}
+
+@mixin helper($width, $height, $radius, $time) {
+    @include psudo(calc((#{$width} - #{$radius}) / 2),
+                   calc((#{$height} - #{$radius}) / 2));
+
+    border: 5px solid transparent;
+    border-radius: $radius;
+    box-shadow: 0 0 20px #ffffff;
+
+    animation: circle $time ease-out;
+}
+
+#load {
+    display: block;
+    position: relative;
+
+    width: 100vw;
+    height: 100vh;
+
+    animation: background 2s infinite ease-out;
+
+    &::after {
+        @include helper(100vw, 100vh, $loader-rad, 2s);
+    }
+}
+
+@keyframes background {
+    0% {
+        background-color: #000000;
+    }
+
+    50% {
+        background-color: #cccccc;
+    }
+
+    88% {
+        opacity: 1;
+    }
+
+    100% {
+        background-color: #000000;
+        opacity: 0;
+    }
+}
+
+@keyframes circle {
+    0% {
+        border-top-color: #ffffff;
+        transform: rotate(0deg);
+    }
+
+    50% {
+        border-top-color: #000000;
+        transform: rotate(180deg);
+    }
+
+    100% {
+        border-top-color: #eeeeee;
+        transform: rotate(360deg);
+    }
+}
