@@ -1,21 +1,17 @@
 // Created by Yuxi Luo; 2017
 
 // nav bar
-var nav = {
-    $navi: $("#navi"),
-    $menu: $("#navi-menu-mobi-out"),
-    $square: $("#navi-menu-mobi"),
-
+var navi = {
+    menu: $("#navi-menu li a"),
     init: function() {
-        var self = this;
-        if (self.$navi.width() < 750){
-            self.$square.addClass("active");
-        }
-        self.$square.click(function(){
-            self.$menu.toggleClass("active");
-            self.$square.toggleClass("rot");
-        });
-    }
+        const url = window.location.href;
+        this.menu.each((index, elem) => {
+            // highlight nav based on current page
+            if (url == elem) {
+                $(elem).parent().toggleClass("active");
+            }
+        })
+    },
 };
 
 // loader
@@ -71,7 +67,7 @@ function footer() {
 
 
 $(document).ready(function () {
-    nav.init();
+    navi.init();
     loader.init(10);
     // loader.init(1980);
     footer();

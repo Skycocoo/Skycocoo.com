@@ -9,7 +9,7 @@ module.exports = () => {
     router.get('/', (req, res) => {
         // 'data:' + docs.contentType + ';base64,' + base64ArrayBuffer(docs.data)
 
-        res.render('upload', {image: ''});
+        res.render('photo', {image: ''});
     });
 
     return router;

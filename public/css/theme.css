@@ -138,6 +138,7 @@ nav {
   list-style: none; }
   #navi-menu li a {
     display: block;
+    position: relative;
     width: 200px;
     line-height: 55px;
     font-size: 22px; }
@@ -155,6 +156,12 @@ nav {
     opacity: 1; }
   #navi-menu li:hover a, #navi-menu li.active a {
     text-shadow: 0 0 10px #cccccc, 0 0 10px #cccccc; }
+  #navi-menu li.active {
+    border-style: solid;
+    border-color: #ffffff;
+    border-width: 0 5px 0 5px; }
+    #navi-menu li.active a {
+      left: -5px; }
 
 #navi-media {
   text-align: center;

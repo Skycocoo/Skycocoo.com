@@ -126,7 +126,7 @@ nav {
         transition: all 0.3s linear;
     }
 
-    &:hover{
+    &:hover {
         &::after {
             opacity: 1;
         }
@@ -145,6 +145,7 @@ nav {
     li {
         a {
             display: block;
+            position: relative;
             width: $nav-width;
             line-height: 55px;
             font-size: 22px;
@@ -153,7 +154,16 @@ nav {
         @include hover-navi();
         &:hover a, &.active a {
             text-shadow: 0 0 10px #cccccc, 0 0 10px #cccccc;
-            // text-shadow: 0 0 10px #ffffff;
+        }
+
+        &.active {
+            border-style: solid;
+            border-color: #ffffff;
+            border-width: 0 5px 0 5px;
+
+            a {
+                left: -5px;
+            }
         }
     }
 }

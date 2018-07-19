@@ -2,6 +2,7 @@
 
 const express = require('express');
 const uploadRouter = require('./upload');
+const photoRouter = require('./photo');
 
 module.exports = () => {
     const router = express.Router();
@@ -11,6 +12,7 @@ module.exports = () => {
     });
 
     router.use('/upload', uploadRouter());
+    router.use('/photo', photoRouter());
 
     return router;
 };
