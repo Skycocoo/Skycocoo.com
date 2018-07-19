@@ -124,7 +124,10 @@ ul {
         &.active {
             border-style: solid;
             border-color: #ffffff;
-            border-width: 0 5px 0 0;
+            border-width: 0 5px 0 5px;
+            a {
+                left: -5px;
+            }
         }
 
         &::after {
