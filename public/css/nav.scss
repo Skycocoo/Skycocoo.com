@@ -1,0 +1,122 @@
+// Created by Yuxi Luo; 2018
+
+////////////////////// nav //////////////////////
+$nav-width: 200px;
+
+nav {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    margin: 0;
+    width: $nav-width;
+    height: 100vh;
+
+    background-color: #222;
+}
+
+#navi-logo {
+    // fix default mouse position (0, 0) will hover over logo
+    text-align: center;
+    left: 1px;
+    top: 1px;
+    width: $nav-width - 1px;
+    height: $nav-width - 1px;
+
+    position: relative;
+    top: 0;
+
+    a {
+        display: block;
+        position: relative;
+        width: $nav-width;
+        height: $nav-width;
+
+        p {
+            padding: 0;
+            margin: 0;
+            left: 0;
+            top: 50%;
+            transform: translateY(50%) translate(0, 5px);
+
+            font-family: Helvetica, sans-serif;
+            font-weight: bold;
+            font-size: 42px;
+            letter-spacing: 5px;
+        }
+
+    }
+
+    transition: text-shadow 0.1s linear;
+
+    &:hover {
+        a {
+            left: -5px;
+        }
+        p {
+            // center the logo for the border
+            transform: translateY(50%);
+        }
+
+        // text-shadow: 0 0 10px #cccccc, 0 0 10px #cccccc;
+        box-sizing: border-box;
+        border-style: solid;
+        border-color: #fff;
+        border-width: 5px;
+    }
+}
+
+ul {
+    display: block;
+    position: relative;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+
+    li {
+        a {
+            display: block;
+            position: relative;
+            width: $nav-width;
+            line-height: 55px;
+            font-size: 22px;
+            text-align: center;
+        }
+
+        &.active {
+            border-style: solid;
+            border-color: #fff;
+            border-width: 0 5px 0 5px;
+            a {
+                left: -5px;
+            }
+        }
+
+        @include div-afater();
+
+        &:hover:not(.active)::after {
+            opacity: 1;
+            transition: opacity 0.2s linear;
+        }
+
+        &:hover a {
+            text-shadow: 0 0 10px #ddd, 0 0 10px #ddd;
+        }
+    }
+}
+
+#navi-media {
+    position: absolute;
+    bottom: 30px;
+}
+
+#navi-email {
+    position: absolute;
+    width: $nav-width;
+    text-align: center;
+    bottom: 10px;
+    color: #ccc;
+    font-size: 5px;
+    letter-spacing: 2px;
+}

@@ -1,0 +1,79 @@
+// Created by Yuxi Luo; 2018
+
+////////////////////// general //////////////////////
+
+$blue: #8AD0EE;
+$blue2: #6CA3BB;
+$blue3: #40616E;
+$white: #D4E8F1;
+$grey: #616B6E;
+$pink: #F1A4B0;
+$yellow: #BBB65A;
+$orange: #EEC08A;
+
+body {
+    overflow: hidden;
+    margin: 0;
+    background-color: #1e1e1e;
+}
+
+* {
+    font-family: Arial, sans-serif;
+    color: #dedede;
+}
+
+a {
+    text-decoration: none;
+}
+
+@mixin div-afater() {
+    &::after {
+        content: "";
+        left: 0;
+        bottom: 0;
+
+        display: block;
+        border-style: solid;
+        border-color: #fff;
+        border-width: 0 0 5px 0;
+
+        opacity: 0;
+    }
+}
+
+////////////////////// content //////////////////////
+
+$nav-width: 200px;
+$content-width: calc(100vw - #{$nav-width});
+$content-block-width: calc(#{$content-width} - 120px - 50px);
+
+$font-header: 60px;
+$font-subheader: 30px;
+$font-main: 16px;
+
+content {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: $nav-width + 120px;
+
+    margin: 0;
+    padding: 0;
+    width: $content-width;
+    height: 100vh;
+}
+
+#content-header {
+    // text-align: center;
+    width: $content-width;
+    height: $nav-width;
+    line-height: $nav-width;
+
+    h1 {
+        margin: 0;
+        font-size: $font-header;
+
+        text-decoration: underline;
+        text-underline-position: under;
+    }
+}
