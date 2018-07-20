@@ -16,6 +16,7 @@ nav {
     background-color: #222;
 }
 
+
 #navi-logo {
     // fix default mouse position (0, 0) will hover over logo
     text-align: center;
@@ -107,8 +108,10 @@ ul {
 }
 
 #navi-media {
-    position: absolute;
-    bottom: 30px;
+    // position: absolute;
+    // bottom: 30px;
+    position: relative;
+    top: 30px;
 }
 
 #navi-email {

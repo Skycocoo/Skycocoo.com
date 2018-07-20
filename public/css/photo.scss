@@ -1,15 +1,20 @@
 // Created by Yuxi Luo; 2018
 
-////////////////////// general //////////////////////
-
-@import "general.scss";
-
-////////////////////// loader //////////////////////
-
-@import "loader.scss";
-
-////////////////////// nav //////////////////////
-
-@import "nav.scss";
+@import "general/general.scss";
+@import "general/loader.scss";
+@import "general/nav.scss";
 
 ////////////////////// photo content //////////////////////
+
+img {
+    display: inline-block;
+    margin: 10px;
+
+    height: 150px;
+    width: 150px;
+    background-size: cover;
+    background-position: center;
+
+    // border: 15px solid $grey;
+    // box-shadow: 0 0 20px #eeeeee;
+}

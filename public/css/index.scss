@@ -1,16 +1,8 @@
 // Created by Yuxi Luo; 2018
 
-////////////////////// general //////////////////////
-
-@import "general.scss";
-
-////////////////////// loader //////////////////////
-
-@import "loader.scss";
-
-////////////////////// nav //////////////////////
-
-@import "nav.scss";
+@import "general/general.scss";
+@import "general/loader.scss";
+@import "general/nav.scss";
 
 ////////////////////// index content //////////////////////
 
@@ -63,9 +55,10 @@
     width: calc(#{$content-block-width} - 200px);
     font-size: $font-main;
     line-height: 24px;
+    color: #dedede;
 
     a {
-        color: $orange;
+        color: $blue2;
     }
 }
 
@@ -74,6 +67,11 @@ th, td {
     text-align: left;
 }
 
-#content-skills th {
-    color: $blue2;
+#content-skills {
+    th {
+        color: $blue2;
+    }
+    td {
+        color: $blue;
+    }
 }

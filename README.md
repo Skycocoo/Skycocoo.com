@@ -2,6 +2,12 @@
 
 Personal website
 
+#### Todo
+
+- implement admin to modify database (POST)
+- test different map api for photography display (Google Map, MapFit, WebGLGlobe, 高德地图，MS Bing Map ...)
+- fix shortcut icon (strangely not working)
+
 #### NPM
 
 ```
