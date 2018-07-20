@@ -5,12 +5,12 @@
 body {
     overflow: hidden;
     margin: 0;
-    background-color: #111111;
+    background-color: #1e1e1e;
 }
 
 * {
     font-family: Arial, sans-serif;
-    color: #ffffff;
+    color: #dedede;
 }
 
 a {
@@ -42,7 +42,7 @@ nav {
     width: $nav-width;
     height: 100vh;
 
-    background-color: #222222;
+    background-color: #222;
     // box-shadow: 0 0 50px #666666;
 }
 
@@ -99,7 +99,7 @@ nav {
         // text-shadow: 0 0 10px #cccccc, 0 0 10px #cccccc;
         box-sizing: border-box;
         border-style: solid;
-        border-color: #ffffff;
+        border-color: #fff;
         border-width: 5px;
     }
 }
@@ -123,7 +123,7 @@ ul {
 
         &.active {
             border-style: solid;
-            border-color: #ffffff;
+            border-color: #fff;
             border-width: 0 5px 0 5px;
             a {
                 left: -5px;
@@ -137,7 +137,7 @@ ul {
 
             display: block;
             border-style: solid;
-            border-color: #ffffff;
+            border-color: #fff;
             border-width: 0 0 5px 0;
 
             opacity: 0;
@@ -149,7 +149,7 @@ ul {
         }
 
         &:hover a {
-            text-shadow: 0 0 10px #cccccc, 0 0 10px #cccccc;
+            text-shadow: 0 0 10px #ccc, 0 0 10px #ccc;
         }
     }
 }
@@ -164,7 +164,7 @@ ul {
     width: $nav-width;
     text-align: center;
     bottom: 10px;
-    color: #cccccc;
+    color: #ccc;
     font-size: 5px;
     letter-spacing: 2px;
 }
@@ -176,8 +176,17 @@ $content-width: calc(100vw - #{$nav-width});
 $content-block-width: calc(#{$content-width} - 120px - 50px);
 
 $font-header: 60px;
-$font-subheader: 35px;
+$font-subheader: 30px;
 $font-main: 16px;
+
+$blue: #8AD0EE;
+$blue2: #6CA3BB;
+$blue3: #40616E;
+$white: #D4E8F1;
+$grey: #616B6E;
+$pink: #F1A4B0;
+$yellow: #BBB65A;
+$orange: #EEC08A;
 
 content {
     display: block;
@@ -206,43 +215,41 @@ content {
             text-underline-position: under;
         }
     }
-
-    transition: text-shadow 0.1s linear;
-
 }
 
 .content-block {
     width: $content-block-width;
-    margin: 0 0 60px 0;
+    margin: 0 0 40px 0;
+
+    &:hover {
+        .content-name {
+            left: -4px;
+
+            border-style: solid;
+            border-color: #fff;
+            border-width: 0px 4px 0px 4px;
+            // text-decoration: underline;
+            // text-underline-position: under;
+
+        }
+        .content-main {
+            left: 42px;
+        }
+    }
 }
 
 
 .content-name {
     display: inline-block;
-    width: 80px;
-    height: 80px;
+    position: relative;
+    width: 150px;
+    height: 40px;
 
     font-size: $font-subheader;
     text-align: center;
-    line-height: 80px;
+    line-height: 40px;
 
-    vertical-align: middle;
-
-    &:hover {
-        text-decoration: underline;
-        text-underline-position: under;
-    }
-
-    &::after {
-        content: "";
-        display: block;
-        position: relative;
-        right: 30px;
-        border-style: solid;
-        border-color: transparent transparent transparent #ffffff;
-        border-width: 0px 15px 15px 15px;
-        transform: translate(80%, -140%) rotate(135deg);
-    }
+    vertical-align: top;
 
     transition: text-shadow 0.1s linear;
 }
@@ -250,12 +257,15 @@ content {
 .content-main {
     display: inline-block;
     position: relative;
-    left: 70px;
-    vertical-align: middle;
-    width: calc(#{$content-block-width} - 80px - 70px);
+    left: 50px;
 
+    width: calc(#{$content-block-width} - 200px);
     font-size: $font-main;
-    line-height: 20px;
+    line-height: 24px;
+
+    a {
+        color: $orange;
+    }
 }
 
 th, td {
@@ -263,7 +273,9 @@ th, td {
     text-align: left;
 }
 
-
+#content-skills th {
+    color: $blue;
+}
 
 
 
