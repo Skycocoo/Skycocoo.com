@@ -24,6 +24,21 @@ a {
 //     transform: translateY(-50%);
 // }
 
+@mixin div-afater() {
+    &::after {
+        content: "";
+        left: 0;
+        bottom: 0;
+
+        display: block;
+        border-style: solid;
+        border-color: #fff;
+        border-width: 0 0 5px 0;
+
+        opacity: 0;
+    }
+}
+
 ////////////////////// loader //////////////////////
 
 @import "loader.scss";
@@ -130,26 +145,15 @@ ul {
             }
         }
 
-        &::after {
-            content: "";
-            left: 0;
-            bottom: 0;
-
-            display: block;
-            border-style: solid;
-            border-color: #fff;
-            border-width: 0 0 5px 0;
-
-            opacity: 0;
-            transition: all 0.3s linear;
-        }
+        @include div-afater();
 
         &:hover:not(.active)::after {
             opacity: 1;
+            transition: opacity 0.2s linear;
         }
 
         &:hover a {
-            text-shadow: 0 0 10px #ccc, 0 0 10px #ccc;
+            text-shadow: 0 0 10px #ddd, 0 0 10px #ddd;
         }
     }
 }
@@ -222,36 +226,40 @@ content {
     margin: 0 0 40px 0;
 
     &:hover {
-        .content-name {
-            left: -4px;
-
-            border-style: solid;
-            border-color: #fff;
-            border-width: 0px 4px 0px 4px;
-            // text-decoration: underline;
-            // text-underline-position: under;
-
+        .content-name::after {
+            opacity: 1;
         }
-        .content-main {
-            left: 42px;
-        }
+        // .content-name {
+        //     left: -4px;
+        //     border-style: solid;
+        //     border-color: #fff;
+        //     border-width: 0px 4px 0px 4px;
+        //
+        // }
+        // .content-main {
+        //     left: 42px;
+        // }
     }
 }
 
 
-.content-name {
+.content-name-wrapper {
     display: inline-block;
     position: relative;
     width: 150px;
     height: 40px;
 
+    vertical-align: top;
+}
+
+.content-name {
+    display: inline-block;
     font-size: $font-subheader;
     text-align: center;
+    width: auto;
     line-height: 40px;
 
-    vertical-align: top;
-
-    transition: text-shadow 0.1s linear;
+    @include div-afater();
 }
 
 .content-main {
@@ -274,7 +282,7 @@ th, td {
 }
 
 #content-skills th {
-    color: $blue;
+    color: $blue2;
 }
 
 
