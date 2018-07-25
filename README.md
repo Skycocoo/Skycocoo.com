@@ -4,7 +4,10 @@ Personal website
 
 #### Todo
 
+- integrate with webpack
 - implement admin to modify database (POST)
+- auto-resize image when uploading to database (into a relatively smaller size to be stored)
+- photo sort by date? (parse image info when uploading)
 - test different map api for photography display (Google Map, MapFit, WebGLGlobe, 高德地图，MS Bing Map ...)
 - fix shortcut icon (strangely not working)
 
