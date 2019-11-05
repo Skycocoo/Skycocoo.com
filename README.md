@@ -32,7 +32,7 @@ start: ```$ npm start```
 
 #### mongodb
 
-[backup & restore mongodb container](https://blog.studiointeract.com/mongodump-and-mongorestore-for-mongodb-in-a-docker-container-8ad0eb747c62)
+[backup & restore mongodb container](https://medium.com/faun/how-to-backup-docker-containered-mongo-db-with-mongodump-and-mongorestore-b4eb1c0e7308)
 
 #### docker
 

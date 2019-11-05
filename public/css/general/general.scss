@@ -48,7 +48,7 @@ $content-width: calc(100vw - #{$nav-width});
 $content-block-width: calc(#{$content-width} - 120px - 50px);
 
 $font-header: 60px;
-$font-subheader: 30px;
+$font-subheader: 25px;
 $font-main: 16px;
 
 content {
@@ -61,6 +61,9 @@ content {
     padding: 0;
     width: $content-width;
     height: 100vh;
+
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 
 #content-header {
@@ -75,5 +78,61 @@ content {
 
         text-decoration: underline;
         text-underline-position: under;
+    }
+}
+
+.content-block {
+    width: $content-block-width;
+    margin: 0 0 40px 0;
+
+    &:hover {
+        .content-name::after {
+            opacity: 1;
+        }
+        // .content-name {
+        //     left: -4px;
+        //     border-style: solid;
+        //     border-color: #fff;
+        //     border-width: 0px 4px 0px 4px;
+        //
+        // }
+        // .content-main {
+        //     left: 42px;
+        // }
+    }
+}
+
+
+.content-name-wrapper {
+    display: inline-block;
+    position: relative;
+    width: 150px;
+    height: 40px;
+
+    vertical-align: top;
+}
+
+.content-name {
+    display: inline-block;
+    font-size: $font-subheader;
+    text-align: center;
+    width: auto;
+    line-height: 40px;
+
+    @include div-afater();
+}
+
+.content-main {
+    display: inline-block;
+    position: relative;
+    left: 50px;
+
+    width: calc(#{$content-block-width} - 200px);
+    font-size: $font-main;
+    line-height: 24px;
+    color: #dedede;
+
+    a {
+        color: $blue2;
     }
 }

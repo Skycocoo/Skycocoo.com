@@ -6,61 +6,6 @@
 
 ////////////////////// index content //////////////////////
 
-.content-block {
-    width: $content-block-width;
-    margin: 0 0 40px 0;
-
-    &:hover {
-        .content-name::after {
-            opacity: 1;
-        }
-        // .content-name {
-        //     left: -4px;
-        //     border-style: solid;
-        //     border-color: #fff;
-        //     border-width: 0px 4px 0px 4px;
-        //
-        // }
-        // .content-main {
-        //     left: 42px;
-        // }
-    }
-}
-
-
-.content-name-wrapper {
-    display: inline-block;
-    position: relative;
-    width: 150px;
-    height: 40px;
-
-    vertical-align: top;
-}
-
-.content-name {
-    display: inline-block;
-    font-size: $font-subheader;
-    text-align: center;
-    width: auto;
-    line-height: 40px;
-
-    @include div-afater();
-}
-
-.content-main {
-    display: inline-block;
-    position: relative;
-    left: 50px;
-
-    width: calc(#{$content-block-width} - 200px);
-    font-size: $font-main;
-    line-height: 24px;
-    color: #dedede;
-
-    a {
-        color: $blue2;
-    }
-}
 
 th, td {
     padding: 0 10px 4px 0;
