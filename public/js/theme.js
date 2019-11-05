@@ -61,6 +61,6 @@ var loader = {
 
 $(document).ready(function () {
     navi.init();
-    loader.init(10);
+    // loader.init(10);
     // loader.init(1980);
 });

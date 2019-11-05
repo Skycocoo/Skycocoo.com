@@ -1,7 +1,7 @@
 // Created by Yuxi Luo, July 2018
 
 (function($){
-    $(window).on('load', function(){
+    $(document).ready(function(){
         $.instagramFeed({
             'username': 'skycocooo',
             'container': "#ins1",
@@ -27,6 +27,9 @@
             // 'margin': 1
         });
     });
+    $(window).on('load', function() {
+        $("loader").addClass("loaded");
+    })
 })(jQuery);
 
 
