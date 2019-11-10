@@ -35,7 +35,7 @@ a {
         display: block;
         border-style: solid;
         border-color: #fff;
-        border-width: 0 0 5px 0;
+        border-width: 0 0 4px 0;
 
         opacity: 0;
     }
@@ -48,8 +48,8 @@ $content-width: calc(100vw - #{$nav-width});
 $content-block-width: calc(#{$content-width} - 120px - 50px);
 
 $font-header: 60px;
-$font-subheader: 25px;
-$font-main: 16px;
+$font-subheader: 22px;
+$font-main: 15px;
 
 content {
     display: block;
@@ -115,7 +115,7 @@ content {
 .content-name {
     display: inline-block;
     font-size: $font-subheader;
-    text-align: center;
+    text-align: left;
     width: auto;
     line-height: 40px;
 

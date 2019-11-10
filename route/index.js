@@ -3,6 +3,7 @@
 const express = require('express');
 const uploadRouter = require('./upload');
 const photoRouter = require('./photo');
+const projectRouter = require('./project');
 
 module.exports = () => {
     const router = express.Router();
@@ -13,6 +14,7 @@ module.exports = () => {
 
     router.use('/upload', uploadRouter());
     router.use('/photo', photoRouter());
+    router.use('/project', projectRouter());
 
     return router;
 };

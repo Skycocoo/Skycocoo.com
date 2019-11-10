@@ -1,0 +1,49 @@
+<!-- Created by Yuxi Luo; 2019 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- <%- include("general/head.ejs") %> -->
+    <link rel="stylesheet" href="css/photo.css">
+    <title> Project - Yuxi Luo </title>
+</head>
+
+<body>
+    <loader>
+        <div class="loader-wrapper">
+            <div id="load"></div>
+        </div>
+    </loader>
+
+    <%- include("general/nav.ejs") %>
+    <div id="map-container"></div>
+
+    <content>
+        <header id="content-header">
+            <h1> Project </h1>
+        </header>
+
+        <% for(let i = 0; i < data.length; i++) { %>
+            <div class="content-block">
+                <div class="content-name-wrapper">
+                    <div class="content-name"> <%= data[i].field %> </div>
+                    <div class="content-main">
+                        <%= data[i].proj %>
+                    </div>
+                </div>
+            </div>
+        <% } %>
+
+
+    </content>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.5/require.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous"></script>
+    <script src="js/jquery.instagramFeed.min.js"></script>
+    <script src="js/theme.js"></script>
+    <script src="js/photo.js"></script>
+
+</body>
