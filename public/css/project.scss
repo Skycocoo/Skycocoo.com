@@ -1,0 +1,30 @@
+// Created by Yuxi Luo; 2019
+@import "general/general.scss";
+@import "general/loader.scss";
+@import "general/nav.scss";
+
+////////////////////// project content //////////////////////
+
+.content-proj-name {
+    font-size: 18px;
+}
+
+.content-ul {
+    display: block;
+    position: relative;
+    padding: 0;
+    margin: 0;
+    list-style: circle;
+    list-style-position: inside;
+
+    li {
+        a {
+            display: block;
+            position: relative;
+            width: $nav-width;
+            line-height: 55px;
+            font-size: 22px;
+            text-align: center;
+        }
+    }
+}

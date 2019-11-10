@@ -4,7 +4,7 @@
 <html lang="en">
 <head>
     <!-- <%- include("general/head.ejs") %> -->
-    <link rel="stylesheet" href="css/photo.css">
+    <link rel="stylesheet" href="css/project.css">
     <title> Project - Yuxi Luo </title>
 </head>
 
@@ -27,13 +27,37 @@
             <div class="content-block">
                 <div class="content-name-wrapper">
                     <div class="content-name"> <%= data[i].field %> </div>
-                    <div class="content-main">
-                        <%= data[i].proj %>
-                    </div>
+                </div>
+
+                <div class="content-main">
+                    <% if (data[i].proj) { %>
+                    <% for(let j = 0; j < data[i].proj.length; j++) { %>
+                        <div class="content-block">
+                            <div class="content-proj-name">
+                                <% if(data[i].proj[j].link){ %>
+                                    <a href=<%= data[i].proj[j].link %>>
+                                        <%= data[i].proj[j].name %>
+                                    </a>
+                                <% } else{ %>
+                                    <%= data[i].proj[j].name %>
+                                <% } %>
+                            </div>
+                            <%= data[i].proj[j].date %> <br>
+                            <%= data[i].proj[j].subfield %> <br>
+
+                            <ul class="content-ul">
+                                <% for(let k = 0; k < data[i].proj[j].content.length; k++) { %>
+                                    <li>
+                                        <%= data[i].proj[j].content[k] %>
+                                    </li>
+                                <% } %>
+                            </ul>
+                        </div>
+                    <% } %>
+                    <% } %>
                 </div>
             </div>
         <% } %>
-
 
     </content>
 
