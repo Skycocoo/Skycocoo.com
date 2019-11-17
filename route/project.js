@@ -44,25 +44,59 @@ const data = [
         field: "Game Engineering",
         proj: [
             {
-                name: "",
-                link: "",
-                date: "",
-                subfield: "",
+                name: "Checkers Game",
+                link: "https://vimeo.com/266762101",
+                date: "April 2018",
+                subfield: "C++ | OpenGL | Artificial Intelligence",
                 content: [
-                    "",
+                    "Developed an interactive checker game with user interface created from scratch with OpenGL",
+                    "Implemented Min-Max Search with Alpha-Beta Pruning algorithm for AI logic",
+                ],
+            },
+            {
+                name: "Platformer Game - Racing",
+                link: "https://vimeo.com/298454239",
+                date: "April 2018",
+                subfield: "C++ | OpenGL | glsl (OpenGL Shading Language)",
+                content: [
+                    "Developed a 2-player platformer game from scratch with OpenGL",
+                    "Modified shader to display special lighting effect for the 2D game",
                 ],
             },
         ],
     },
     {
         field: "Web Development",
+        proj: [
+            {
+                name: "Software Engineering Intern @ Goldman Sachs",
+                link: "",
+                date: "June 2019 - August 2019",
+                subfield: "Full-Stack Development | Java ",
+                content: [
+                    "Developed a reusable backend micro-service for an internal web application with Java",
+                    "Refined local time and time zone difference calculation with latest Java SE8 Date / Time package"
+                ],
+            },
+        ],
     },
     {
         field: "Theory",
+        proj: [
+            {
+                name: "Rank Pairing Heap",
+                link: "https://skycocoo.github.io/Rank-Pairing-Heap/",
+                date: "May 2019",
+                subfield: "Data Structure | Visualization | JavaScript",
+                content: [
+                    "Visualized Rank Pairing Heap (a heap data structure with optimal time complexity) in JavaScript"
+                ],
+            },
+        ],
     },
-    {
-        field: "3D Modeling",
-    },
+    // {
+    //     field: "3D Modeling",
+    // },
 ];
 
 module.exports = () => {

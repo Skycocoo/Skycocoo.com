@@ -35,7 +35,7 @@
                         <div class="content-block">
                             <div class="content-proj-name">
                                 <% if(data[i].proj[j].link){ %>
-                                    <a href=<%= data[i].proj[j].link %>>
+                                    <a target="_blank" href=<%= data[i].proj[j].link %>>
                                         <%= data[i].proj[j].name %>
                                     </a>
                                 <% } else{ %>
@@ -46,10 +46,12 @@
                             <%= data[i].proj[j].subfield %> <br>
 
                             <ul class="content-ul">
+                                <% if (data[i].proj[j].content) { %>
                                 <% for(let k = 0; k < data[i].proj[j].content.length; k++) { %>
                                     <li>
                                         <%= data[i].proj[j].content[k] %>
                                     </li>
+                                <% } %>
                                 <% } %>
                             </ul>
                         </div>
