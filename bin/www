@@ -6,7 +6,7 @@ const config = require('../config/index');
 
 const debug = require('debug')('skycocoo.com:server');
 const http = require('http');
-const mongoose = require('mongoose');
+// const mongoose = require('mongoose');
 
 // normalize a port into a number, string, or false.
 function normalizePort(val) {
@@ -22,13 +22,13 @@ function normalizePort(val) {
      return false;
  }
 
- mongoose.connect(config.mongodb.dsn, { useNewUrlParser: true })
-    .then(() => {
-        debug('Successfully connected to MongoDb');
-    })
-    .catch((err) => {
-        debug('Catch a Promise error: ' + err.message);
-    });
+ // mongoose.connect(config.mongodb.dsn, { useNewUrlParser: true })
+ //    .then(() => {
+ //        debug('Successfully connected to MongoDb');
+ //    })
+ //    .catch((err) => {
+ //        debug('Catch a Promise error: ' + err.message);
+ //    });
 
 var port = normalizePort(process.env.PORT || '3000');
 app.set('port', port);
