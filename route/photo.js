@@ -1,7 +1,7 @@
 // Created by Yuxi Luo, July 2018
 
 const express = require('express');
-const imageService = require('../schema/ImageService');
+// const imageService = require('../schema/ImageService');
 
 module.exports = () => {
     const router = express.Router();
