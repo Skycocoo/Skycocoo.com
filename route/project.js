@@ -9,12 +9,12 @@ const data = [
             {
                 name: "Multiple Sclerosis Lesion Segmentation using 3D U-Net",
                 link: "https://github.com/Skycocoo/MS-Lesion-Segmentation",
-                date: "Jan 2019 - Present",
+                date: "Jan 2019 - May 2019",
                 subfield: "Image Segmentation | Python | Keras | U-Net",
                 content: [
-                    "Modified 2D U-Net structure to work on 3D Magnetic Resonance Imaging data with Keras framework",
-                    "Implemented sliding window approach to generate data patches based on only 15 available images",
-                    "Achieved 0.71 / 1.00 Dice Score training result trained with Dice Score loss function",
+		    "Built a 3D U-Net structure to process Magnetic Resonance Imaging (MRI) data in Python with Keras framework",
+		    "Implemented a sliding window approach to generate unique batches of training samples from only 15 available images",
+		    "The model achieved 71% cross-validation accuracy using the Dice Score loss function",
                 ],
             },
             {
@@ -23,9 +23,8 @@ const data = [
                 date: "June 2017 - Aug 2017",
                 subfield: "Image Processing | Python | OpenCV",
                 content: [
-                    "Authenticated 3D printed products based on Computed Tomography images",
-                    "Analyzed low-contrast images with histogram and improved the image quality with OpenCV package",
-                    "Implemented pixel-wise comparison and matching for the images and their corresponding references",
+		    "Analyzed low-contrast images with histogram and used OpenCV techniques to upsample images",
+		    "Implemented a pixel-wise comparison algorithm between sample images and their corresponding reference images",
                 ],
             },
             {
@@ -74,17 +73,28 @@ const data = [
                 date: "June 2019 - August 2019",
                 subfield: "Full-Stack Development | Java ",
                 content: [
-                    "Developed a reusable backend micro-service for an internal web application with Java",
-                    "Refined local time and time zone difference calculation with latest Java SE8 Date / Time package"
-                ],
+		    "Developed a backend micro-service to track business approval status across an in-house web management system in Java",
+		    "Revamped and implemented a business-oriented workflow that communicates with backend services of the application",
+		],
             },
+	    {
+		name: "Song List over Time - Parallel and Distributed Systems Course Project ",
+		link: "",
+		date: "Dec 2018",
+		subfield: "Full-Stack Development | Golang",
+		content: [
+		    "Built a distributed backend system from scratch and a frontend system in Golang with Iris web framework",
+		    "Implemented the reliable replica synchronization strategy - Raft consensus algorithm",
+		    "The application handled concurrent requests reliably and tested by Vegeta stress testing framework",
+		],
+	    },
         ],
     },
     {
         field: "Theory",
         proj: [
             {
-                name: "Rank Pairing Heap",
+                name: "Rank Pairing Heap - Algorithms 2 Course Project",
                 link: "https://skycocoo.github.io/Rank-Pairing-Heap/",
                 date: "May 2019",
                 subfield: "Data Structure | Visualization | JavaScript",
