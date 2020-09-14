@@ -29,6 +29,8 @@ development: ```$ npm run dev```
 
 start: ```$ npm start```
 
+local host: ```http://localhost:3000/```
+
 
 #### mongodb
 
