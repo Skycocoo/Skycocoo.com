@@ -12,9 +12,9 @@ const data = [
                 date: "Jan 2019 - May 2019",
                 subfield: "Image Segmentation | Python | Keras | U-Net",
                 content: [
-		    "Built a 3D U-Net structure to process Magnetic Resonance Imaging (MRI) data in Python with Keras framework",
-		    "Implemented a sliding window approach to generate unique batches of training samples from only 15 available images",
-		    "The model achieved 71% cross-validation accuracy using the Dice Score loss function",
+        		    "Built a 3D U-Net structure to process Magnetic Resonance Imaging (MRI) data in Python with Keras framework",
+        		    "Implemented a sliding window approach to generate unique batches of training samples from only 15 available images",
+        		    "Utilized Dice Score loss function to achieve a model with 71% cross-validation accuracy",
                 ],
             },
             {
@@ -23,8 +23,9 @@ const data = [
                 date: "June 2017 - Aug 2017",
                 subfield: "Image Processing | Python | OpenCV",
                 content: [
-		    "Analyzed low-contrast images with histogram and used OpenCV techniques to upsample images",
-		    "Implemented a pixel-wise comparison algorithm between sample images and their corresponding reference images",
+        		    "Analyzed low-contrast images with histogram and used OpenCV techniques to upsample images",
+        		    "Implemented a pixel-wise comparison algorithm between sample images and their corresponding reference images",
+                    "Published a paper in Advanced Engineering Materials titled “Embedding tracking codes in additive manufactured parts for product authentication”",
                 ],
             },
             {
@@ -43,6 +44,25 @@ const data = [
         field: "Game Engineering",
         proj: [
             {
+                name: "Game of Life Visualization - Programming Languages Course Project",
+                link: "https://skycocoo.github.io/CS3314-PL-GLSL-Presentation/",
+                date: "December 2019",
+                subfield: "C++ | OpenGL | glsl (OpenGL Shading Language)",
+                content: [
+                    "Presented in-class about GLSL language and Computer Graphics",
+                    "Demoed live to illustrate the ease of GLSL for visualization",
+                ],
+            },
+            {
+                name: "Kimetsu Game",
+                link: "https://vimeo.com/457815932",
+                date: "December 2019",
+                subfield: "GameMakerStudio | Dungeon Game",
+                content: [
+                    "Developed a dungeon game in a group of 3, featuring characters in the anime “Demon Slayer: Kimetsu no Yaiba”",
+                ],
+            },
+            {
                 name: "Checkers Game",
                 link: "https://vimeo.com/266762101",
                 date: "April 2018",
@@ -53,7 +73,7 @@ const data = [
                 ],
             },
             {
-                name: "Platformer Game - Racing",
+                name: "Platformer Game: Racing",
                 link: "https://vimeo.com/298454239",
                 date: "April 2018",
                 subfield: "C++ | OpenGL | glsl (OpenGL Shading Language)",
@@ -65,29 +85,19 @@ const data = [
         ],
     },
     {
-        field: "Web Development",
+        field: "Systems Development",
         proj: [
-            {
-                name: "Software Engineering Intern @ Goldman Sachs",
-                link: "",
-                date: "June 2019 - August 2019",
-                subfield: "Full-Stack Development | Java ",
-                content: [
-		    "Developed a backend micro-service to track business approval status across an in-house web management system in Java",
-		    "Revamped and implemented a business-oriented workflow that communicates with backend services of the application",
-		],
-            },
-	    {
-		name: "Song List over Time - Parallel and Distributed Systems Course Project ",
-		link: "",
-		date: "Dec 2018",
-		subfield: "Full-Stack Development | Golang",
-		content: [
-		    "Built a distributed backend system from scratch and a frontend system in Golang with Iris web framework",
-		    "Implemented the reliable replica synchronization strategy - Raft consensus algorithm",
-		    "The application handled concurrent requests reliably and tested by Vegeta stress testing framework",
-		],
-	    },
+    	    {
+        		name: "Song List over Time - Parallel and Distributed Systems Course Project ",
+        		link: "",
+        		date: "Dec 2018",
+        		subfield: "Full-Stack Development | Golang",
+        		content: [
+        		    "Built a distributed backend system from scratch and a frontend system in Golang with Iris web framework",
+        		    "Implemented the reliable replica synchronization strategy - Raft consensus algorithm",
+        		    "The application handled concurrent requests reliably and tested by Vegeta stress testing framework",
+        		],
+    	    },
         ],
     },
     {
@@ -113,7 +123,7 @@ module.exports = () => {
     const router = express.Router();
 
     router.get('/', (req, res) => {
-        res.render('proj', {data: data});
+        res.render('project', {data: data});
     });
 
     return router;

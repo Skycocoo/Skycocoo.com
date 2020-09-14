@@ -1,0 +1,75 @@
+<!-- Created by Yuxi Luo; 2019 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- <%- include("general/head.ejs") %> -->
+    <link rel="stylesheet" href="css/project.css">
+    <title> Experience - Yuxi Luo </title>
+</head>
+
+<body>
+    <loader>
+        <div class="loader-wrapper">
+            <div id="load"></div>
+        </div>
+    </loader>
+
+    <%- include("general/nav.ejs") %>
+    <div id="map-container"></div>
+
+    <content>
+        <header id="content-header">
+            <h1> Experience </h1>
+        </header>
+
+        <% for(let i = 0; i < data.length; i++) { %>
+            <div class="content-block">
+                <div class="content-name-wrapper">
+                    <div class="content-name"> <%= data[i].field %> </div>
+                </div>
+
+                <div class="content-main">
+                    <% if (data[i].proj) { %>
+                    <% for(let j = 0; j < data[i].proj.length; j++) { %>
+                        <div class="content-block">
+                            <div class="content-proj-name">
+                                <% if(data[i].proj[j].link){ %>
+                                    <a target="_blank" href=<%= data[i].proj[j].link %>>
+                                        <%= data[i].proj[j].name %>
+                                    </a>
+                                <% } else{ %>
+                                    <%= data[i].proj[j].name %>
+                                <% } %>
+                            </div>
+                            <%= data[i].proj[j].date %> <br>
+                            <%= data[i].proj[j].subfield %> <br>
+
+                            <ul class="content-ul">
+                                <% if (data[i].proj[j].content) { %>
+                                <% for(let k = 0; k < data[i].proj[j].content.length; k++) { %>
+                                    <li>
+                                        <%= data[i].proj[j].content[k] %>
+                                    </li>
+                                <% } %>
+                                <% } %>
+                            </ul>
+                        </div>
+                    <% } %>
+                    <% } %>
+                </div>
+            </div>
+        <% } %>
+
+    </content>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.5/require.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous"></script>
+    <script src="js/jquery.instagramFeed.min.js"></script>
+    <script src="js/theme.js"></script>
+    <script src="js/photo.js"></script>
+
+</body>
