@@ -113,7 +113,7 @@ module.exports = () => {
     const router = express.Router();
 
     router.get('/', (req, res) => {
-        res.render('project', {data: data});
+        res.render('proj', {data: data});
     });
 
     return router;

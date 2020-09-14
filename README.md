@@ -11,6 +11,17 @@ Personal website
 - test different map api for photography display (Google Map, MapFit, WebGLGlobe, 高德地图，MS Bing Map ...)
 - fix shortcut icon (strangely not working)
 
+## Deployment
+
+```
+$ pm2 ls
+$ pm2 stop npm
+$ pm2 delete npm
+$ pm2 start npm -- start
+```
+
+## Notes
+
 #### NPM
 
 ```
