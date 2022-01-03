@@ -1,13 +1,13 @@
 // Created by Yuxi Luo, July 2018
 
-// var feed = new Instafeed({
-//     accessToken: InstagramToken
-// });
+var feed = new Instafeed({
+    accessToken: InstagramToken
+});
 
 (function($){
-    // $(document).ready(function(){
-    //     feed.run();
-    // });
+    $(document).ready(function(){
+        feed.run();
+    });
 
     // $(document).ready(function(){
     //     $.instagramFeed({

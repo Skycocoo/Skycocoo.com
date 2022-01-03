@@ -64,3 +64,9 @@ $(document).ready(function () {
     // loader.init(10);
     // loader.init(1980);
 });
+
+(function ($) {
+    $(window).on('load', function () {
+        $("loader").addClass("loaded");
+    })
+})(jQuery);
