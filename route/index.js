@@ -20,7 +20,7 @@ module.exports = () => {
     });
 
     router.get('/resume', (req, res, next) => {
-        res.sendFile(path.resolve(__dirname, '../') + '/public/file/Yuxi_Luo_Resume_Objective.pdf');
+        res.sendFile(path.resolve(__dirname, '../') + '/public/file/Yuxi_Luo_Resume.pdf');
     });
 
     // router.use('/upload', uploadRouter());

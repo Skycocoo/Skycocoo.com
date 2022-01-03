@@ -4,6 +4,54 @@ const express = require('express');
 
 const data = [
     {
+        field: "Systems Development",
+        proj: [
+            {
+                name: "C0 Compiler",
+                link: "",
+                date: "December 2021",
+                subfield: "Compiler Development | OCaml",
+                content: [
+                    "Designed and implemented a C0 compiler from scratch in OCaml, which includes a number of optimizations to ensure that the generated assembly code is comparable to GCC -O1 performance, including Register Allocation, Single Static Assignment, Constant / Copy Propagation, Dead Code Elimination, Dataflow Analysis, and more",
+                ],
+            },
+            {
+                name: "x86-32 Kernel",
+                link: "",
+                date: "April 2021",
+                subfield: "Operating System | C | x86-64 Assembly",
+                content: [
+                    "Designed and implemented an x86-32 kernel from scratch in C, which supports context switching, interrupt handling, task and thread management, scheduling, virtual memory, synchronization primitives, and device drivers",
+                ],
+            },
+            {
+                name: "Song List over Time - A System Synchronized with Raft",
+                link: "",
+                date: "Dec 2018",
+                subfield: "Full-Stack Development | Golang",
+                content: [
+                    "Built a distributed backend system from scratch and a frontend system in Golang with Iris web framework",
+                    "Implemented the reliable replica synchronization strategy - Raft consensus algorithm",
+                    "Handled concurrent requests reliably which is tested by Vegeta stress testing framework",
+                ],
+            },
+        ],
+    },
+    {
+        field: "Data Science",
+        proj: [
+            {
+                name: "Donation Statistics Analysis",
+                link: "https://github.com/CMU-IDS-2020/fp-vectorization/blob/main/documents/Report.pdf",
+                date: "December 2020",
+                subfield: "Data Science | Visualization | Python",
+                content: [
+                    "Visualized donation statistics from DonorsChoose.org to help further analysis on education donations"
+                ],
+            },
+        ],
+    },
+    {
         field: "Computer Vision",
         proj: [
             {
@@ -44,7 +92,7 @@ const data = [
         field: "Game Engineering",
         proj: [
             {
-                name: "Game of Life Visualization - Programming Languages Course Project",
+                name: "Game of Life Visualization",
                 link: "https://skycocoo.github.io/CS3314-PL-GLSL-Presentation/",
                 date: "December 2019",
                 subfield: "C++ | OpenGL | glsl (OpenGL Shading Language)",
@@ -85,26 +133,10 @@ const data = [
         ],
     },
     {
-        field: "Systems Development",
-        proj: [
-    	    {
-        		name: "Song List over Time - Parallel and Distributed Systems Course Project ",
-        		link: "",
-        		date: "Dec 2018",
-        		subfield: "Full-Stack Development | Golang",
-        		content: [
-        		    "Built a distributed backend system from scratch and a frontend system in Golang with Iris web framework",
-        		    "Implemented the reliable replica synchronization strategy - Raft consensus algorithm",
-        		    "The application handled concurrent requests reliably and tested by Vegeta stress testing framework",
-        		],
-    	    },
-        ],
-    },
-    {
         field: "Theory",
         proj: [
             {
-                name: "Rank Pairing Heap - Algorithms 2 Course Project",
+                name: "Rank Pairing Heap",
                 link: "https://skycocoo.github.io/Rank-Pairing-Heap/",
                 date: "May 2019",
                 subfield: "Data Structure | Visualization | JavaScript",
@@ -114,9 +146,6 @@ const data = [
             },
         ],
     },
-    // {
-    //     field: "3D Modeling",
-    // },
 ];
 
 module.exports = () => {

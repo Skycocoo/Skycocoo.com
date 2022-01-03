@@ -4,8 +4,18 @@ const express = require('express');
 
 const data = [
     {
-        field: "Systems Development",
+        field: "Backend Development",
         proj: [
+            {
+                name: "Software Engineer Intern @ Robinhood",
+                link: "https://robinhood.com/",
+                date: "May 2021 - August 2021",
+                subfield: "Back-end Development | Python ",
+                content: [
+                    "Restructured a money movement workflow that handles > 10k transfers per day into multiple daemon processes in Python and Django, which provides flexibility of handling transfers, improves stability of the workflow, and reduces on-call burdens",
+                    "Designed a failure-handling mechanism for daemon processes to keep track of failures and retry any of them if necessary",
+                ],
+            },
             {
                 name: "Software Engineer Intern @ Genesis Global Trading",
                 link: "https://genesistrading.com/",
