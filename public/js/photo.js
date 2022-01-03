@@ -1,32 +1,40 @@
 // Created by Yuxi Luo, July 2018
 
+// var feed = new Instafeed({
+//     accessToken: InstagramToken
+// });
+
 (function($){
-    $(document).ready(function(){
-        $.instagramFeed({
-            'username': 'skycocooo',
-            'container': "#ins1",
-            'display_profile': false,
-            'display_biography': false,
-            'display_gallery': true,
-            'callback': null,
-            'styling': false,
-            'items': 12,
-            // 'items_per_row': 4,
-            // 'margin': 1
-        });
-        $.instagramFeed({
-            'username': 'sky_children_of_light',
-            'container': "#ins2",
-            'display_profile': false,
-            'display_biography': false,
-            'display_gallery': true,
-            'callback': null,
-            'styling': false,
-            'items': 12,
-            // 'items_per_row': 4,
-            // 'margin': 1
-        });
-    });
+    // $(document).ready(function(){
+    //     feed.run();
+    // });
+
+    // $(document).ready(function(){
+    //     $.instagramFeed({
+    //         'username': 'skycocooo',
+    //         'container': "#ins1",
+    //         'display_profile': false,
+    //         'display_biography': false,
+    //         'display_gallery': true,
+    //         'callback': null,
+    //         'styling': false,
+    //         'items': 12,
+    //         // 'items_per_row': 4,
+    //         // 'margin': 1
+    //     });
+    //     $.instagramFeed({
+    //         'username': 'sky_children_of_light',
+    //         'container': "#ins2",
+    //         'display_profile': false,
+    //         'display_biography': false,
+    //         'display_gallery': true,
+    //         'callback': null,
+    //         'styling': false,
+    //         'items': 12,
+    //         // 'items_per_row': 4,
+    //         // 'margin': 1
+    //     });
+    // });
     $(window).on('load', function() {
         $("loader").addClass("loaded");
     })
