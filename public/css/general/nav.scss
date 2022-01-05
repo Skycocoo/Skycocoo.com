@@ -1,7 +1,11 @@
 // Created by Yuxi Luo; 2018
 
+@import "other/media-queries.scss";
+
 ////////////////////// nav //////////////////////
+
 $nav-width: 200px;
+$nav-width-phone: 50px;
 
 nav {
     display: block;
@@ -14,6 +18,11 @@ nav {
     height: 100vh;
 
     background-color: #222;
+
+    @include xs {
+        width: 100vh;
+        height: $nav-width-phone;
+    }
 }
 
 
@@ -28,11 +37,22 @@ nav {
     position: relative;
     top: 0;
 
+    @include xs {
+        display: inline-block;
+        width: $nav-width-phone - 1px;
+        height: $nav-width-phone - 1px;
+    }
+
     a {
         display: block;
         position: relative;
         width: $nav-width;
         height: $nav-width;
+
+        @include xs {
+            width: $nav-width-phone;
+            height: $nav-width-phone;
+        }
 
         p {
             padding: 0;
@@ -45,6 +65,13 @@ nav {
             font-weight: bold;
             font-size: 42px;
             letter-spacing: 5px;
+
+            @include xs {
+                top: 0;
+                transform: translateY(50%) translate(0, 0px);
+                font-size: 10px;
+                letter-spacing: 1px;
+            }
         }
 
     }
@@ -58,6 +85,9 @@ nav {
         p {
             // center the logo for the border
             transform: translateY(50%);
+            @include xs {
+                transform: translateY(50%) translate(1px, -5px);
+            }
         }
 
         // text-shadow: 0 0 10px #cccccc, 0 0 10px #cccccc;
@@ -65,6 +95,10 @@ nav {
         border-style: solid;
         border-color: #fff;
         border-width: 5px;
+
+        @include xs {
+            border-width: 4px;
+        }
     }
 }
 
@@ -74,8 +108,13 @@ nav {
     padding: 0;
     margin: 0;
     list-style: none;
-
+    @include xs {
+        display: inline-block;
+    }
     li {
+        @include xs {
+            display: inline-block;
+        }
         a {
             display: block;
             position: relative;
@@ -83,14 +122,26 @@ nav {
             line-height: 55px;
             font-size: 22px;
             text-align: center;
+            @include xs {
+                width: $nav-width-phone;
+                line-height: 20px;
+                font-size: 12px;
+            }
         }
 
         &.active {
             border-style: solid;
             border-color: #fff;
             border-width: 0 5px 0 5px;
+            @include xs {
+                border-width: 0 4px 0 4px;
+            }
+
             a {
                 left: -5px;
+                @include xs {
+                    left: 0;
+                }
             }
         }
 
@@ -103,6 +154,9 @@ nav {
 
         &:hover a {
             text-shadow: 0 0 10px #ddd, 0 0 10px #ddd;
+            @include xs {
+                text-shadow: 0 0 4px #ddd, 0 0 4px #ddd;
+            }
         }
     }
 }
@@ -112,6 +166,12 @@ nav {
     // bottom: 30px;
     position: relative;
     top: 30px;
+
+    @include xs {
+        top: 0;
+        right: 10px;
+        display: inline-block;
+    }
 }
 
 #navi-email {
@@ -122,4 +182,8 @@ nav {
     color: #ccc;
     font-size: 5px;
     letter-spacing: 2px;
+
+    @include xs {
+        display: none;
+    }
 }

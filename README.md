@@ -62,6 +62,20 @@ systemctl status skycocoo-com.service
 - node.js v10.19.0 or above
 - npm v6.14.4 or above
 
+#### NPM
+
+```
+npm does not support Node.js v10.1.0
+```
+
+Work around with [nvm](https://github.com/creationix/nvm/issues/576) (using different versions of node) for a downgraded node
+
+```
+export NVM_DIR=~/.nvm
+source ~/.nvm/nvm.sh
+nvm install v8.9.0
+```
+
 #### express
 
 development: ```$ npm run dev```
