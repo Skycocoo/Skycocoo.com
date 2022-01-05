@@ -41,6 +41,11 @@ nav {
         display: inline-block;
         width: $nav-width-phone - 1px;
         height: $nav-width-phone - 1px;
+
+        box-sizing: border-box;
+        border-style: solid;
+        border-color: #fff;
+        border-width: 4px;
     }
 
     a {
@@ -50,6 +55,7 @@ nav {
         height: $nav-width;
 
         @include xs {
+            left: -5px;
             width: $nav-width-phone;
             height: $nav-width-phone;
         }
@@ -68,7 +74,7 @@ nav {
 
             @include xs {
                 top: 0;
-                transform: translateY(50%) translate(0, 0px);
+                transform: translateY(50%) translate(1px, -5px);
                 font-size: 10px;
                 letter-spacing: 1px;
             }
@@ -168,9 +174,7 @@ nav {
     top: 30px;
 
     @include xs {
-        top: 0;
-        right: 10px;
-        display: inline-block;
+        display: none;
     }
 }
 
