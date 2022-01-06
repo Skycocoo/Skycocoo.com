@@ -19,6 +19,7 @@ img {
     // box-shadow: 0 0 20px #eeeeee;
 
     @include xs {
-        height: 80px;
+        height: auto;
+        width: 60vw;
     }
 }

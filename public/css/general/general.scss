@@ -57,7 +57,7 @@ $font-main: 14px;
 
 $font-header-phone: 30px;
 $font-subheader-phone: 15px;
-$font-main-phone: 10px;
+$font-main-phone: 13.5px;
 
 content {
     display: block;
@@ -75,7 +75,7 @@ content {
 
     @include xs {
         left: 30px;
-        width: 95%;
+        width: 90%;
     }
 }
 
