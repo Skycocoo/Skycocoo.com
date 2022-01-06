@@ -1,6 +1,6 @@
 var feed = new Instafeed({
   accessToken: InstagramToken,
-  limit: 5
+  limit: 4
 });
 
 (function ($) {

@@ -10,6 +10,7 @@ $nav-width-phone: 50px;
 nav {
     display: block;
     position: absolute;
+    z-index: 1;
     top: 0;
     left: 0;
 
@@ -114,9 +115,11 @@ nav {
     padding: 0;
     margin: 0;
     list-style: none;
+
     @include xs {
         display: inline-block;
     }
+
     li {
         @include xs {
             display: inline-block;

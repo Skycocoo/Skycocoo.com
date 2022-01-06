@@ -17,4 +17,8 @@ img {
 
     // border: 15px solid $grey;
     // box-shadow: 0 0 20px #eeeeee;
+
+    @include xs {
+        height: 80px;
+    }
 }

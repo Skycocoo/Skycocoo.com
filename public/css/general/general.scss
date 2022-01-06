@@ -1,5 +1,7 @@
 // Created by Yuxi Luo; 2018
 
+@import "other/media-queries.scss";
+
 ////////////////////// general //////////////////////
 
 $blue: #8AD0EE;
@@ -44,12 +46,18 @@ a {
 ////////////////////// content //////////////////////
 
 $nav-width: 200px;
+$nav-width-phone: 100px;
+
 $content-width: calc(100vw - #{$nav-width});
 $content-block-width: calc(#{$content-width} - 120px - 50px);
 
 $font-header: 60px;
 $font-subheader: 22px;
 $font-main: 14px;
+
+$font-header-phone: 30px;
+$font-subheader-phone: 15px;
+$font-main-phone: 10px;
 
 content {
     display: block;
@@ -64,6 +72,11 @@ content {
 
     overflow-y: auto;
     overflow-x: hidden;
+
+    @include xs {
+        left: 30px;
+        width: 95%;
+    }
 }
 
 #content-header {
@@ -72,18 +85,33 @@ content {
     height: $nav-width;
     line-height: $nav-width;
 
+    @include xs {
+        margin: 50px 0 0 0;
+        width: 100%;
+        height: $nav-width-phone;
+        line-height: $nav-width-phone;
+    }
+
     h1 {
         margin: 0;
         font-size: $font-header;
 
         text-decoration: underline;
         text-underline-position: under;
+
+        @include xs {
+            font-size: $font-header-phone;
+        }
     }
 }
 
 .content-block {
     // width: $content-block-width;
     margin: 0 0 40px 0;
+
+    @include xs {
+        margin: 0 0 20px 0;
+    }
 
     &:hover {
         .content-name::after {
@@ -110,6 +138,10 @@ content {
     height: 40px;
 
     vertical-align: top;
+
+    @include xs {
+        width: 100%;
+    }
 }
 
 .content-name {
@@ -118,6 +150,11 @@ content {
     text-align: left;
     width: auto;
     line-height: 40px;
+
+    @include xs {
+        font-size: $font-subheader-phone;
+        line-height: 20px;
+    }
 
     @include div-afater();
 }
@@ -131,6 +168,12 @@ content {
     font-size: $font-main;
     line-height: 24px;
     // color: #dedede;
+
+    @include xs {
+        font-size: $font-main-phone;
+        line-height: 20px;
+        width: 80%;
+    }
 
     a {
         color: $blue2;

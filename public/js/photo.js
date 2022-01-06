@@ -1,7 +1,8 @@
 // Created by Yuxi Luo, July 2018
 
 var feed = new Instafeed({
-    accessToken: InstagramToken
+    accessToken: InstagramToken,
+    limit: 15
 });
 
 (function($){
