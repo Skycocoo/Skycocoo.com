@@ -35,7 +35,7 @@ app.set('port', port);
 
 // http server
 var server = http.createServer(app);
-server.listen(port);
+server.listen(port, '127.0.0.1');
 
 // logging error
 server.on('error', function(error) {

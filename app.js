@@ -1,7 +1,7 @@
 const createError = require('http-errors');
 const express = require('express');
 const path = require('path');
-const sassMiddleware = require('node-sass-middleware');
+const sassMiddleware = require('sass-middleware');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 
@@ -13,12 +13,9 @@ app.set('views', path.join(__dirname, 'public/view'));
 app.set('view engine', 'ejs');
 
 // sass dependency
-app.use(sassMiddleware({
+app.use('/css', sassMiddleware({
     src: path.join(__dirname, 'public/css'),
     dest: path.join(__dirname, 'public/css'),
-    indentedSyntax: false, // true = .sass and false = .scss
-    sourceMap: false,
-    prefix: '/css',
     debug: true,
     // outputStyle: 'compressed',
 }));
